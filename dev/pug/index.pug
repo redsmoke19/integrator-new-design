@@ -1,0 +1,12 @@
+extends layout/main
+
+block variables
+	-var title = 'Страница с ссылками'
+	-var pageClass = 'index-page'
+
+block content
+	main(class=pageClass)
+		.container
+			ul(style="padding-top:50px;")
+				li
+					a(href='crm-traning.html') crm-traning

@@ -1,0 +1,27 @@
+.crm-heading {
+  border-bottom: 1px solid $gray-color;
+  overflow: hidden;
+  margin: 0 0 35px 0;
+  padding: 20px 0 15px;
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0 0 20px 0;
+  }
+  &__slider {
+    overflow: initial;
+  }
+  &__list {
+    margin: 0 -20px;
+  }
+  &__item {
+    width: auto;
+  }
+  &__link {
+    color: $black;
+    font-family: $roboto-font;
+    line-height: 20px;
+    text-decoration: none;
+  }
+}

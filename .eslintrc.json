@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "no-console": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true, "peerDependencies": true}],
+    "semi": [2, "always"],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+.button {
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid $yellow-color;
+  border-radius: 25px;
+  color: $black;
+  cursor: pointer;
+  display: flex;
+  font-weight: 500;
+  line-height: 1;
+  justify-content: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: all ease-out .15s;
+  width: 100%;
+  &:hover {
+    background-color: rgba($yellow-color, .1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  }
+}
