@@ -1,0 +1,148 @@
+.crm-included {
+  padding: 55px 0;
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 0 8px 0;
+  }
+  &__sub-title {
+    color: $yellow-color;
+    font-family: $roboto-font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    margin: 0 0 31px 0;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $tablet-size) {
+      flex-direction: row;
+    }
+  }
+  &__item {
+    @media screen and (min-width: $tablet-size) {
+      border: 1px solid $dark-gray-color;
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 50%;
+      padding: 0 40px 50px;
+      &--gray {
+        background-color: rgba($light-gray-color, .5);
+        background-image: url('../images/common/logo-intergator-bg.svg');
+        background-repeat: no-repeat;
+        background-position: center calc(100% - 20px);
+        border-left: none;
+      }
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 0 40px 30px;
+      &--gray {
+        background-position: center 100%;
+      }
+    }
+    &:not(:last-child) {
+      margin: 0 0 38px 0;
+      @media screen and (min-width: $tablet-size) {
+        margin: 0;
+      }
+    }
+  }
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 26px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 -40px 25px;
+      padding: 15px;
+      &--yellow {
+        background-color: $yellow-color;
+        color: $black;
+      }
+      &--purple {
+        background-color: $purple-color;
+        color: $white;
+      }
+    }
+  }
+  &__tarif {
+    font-size: 20px;
+    line-height: 24px;
+    @media screen and (min-width: $tablet-size) {
+      text-align: center;
+    }
+  }
+  &__note {
+    font-family: $roboto-font;
+    font-weight: 700;
+    @media screen and (min-width: $tablet-size) {
+      text-align: center;
+    }
+  }
+  &__sub-list {
+    margin: 0 0 25px 0;
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__sub-item {
+    align-items: baseline;
+    display: flex;
+    @media screen and (min-width: $tablet-size) {
+      justify-content: center;
+    }
+    &:not(:last-child) {
+      margin: 0 0 20px 0;
+      @media screen and (min-width: $tablet-size) {
+        border-bottom: 1px solid;
+        border-image: linear-gradient(to right, #fff, #ccc, #fff) 10% 0%;
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        margin: 0 0 25px 0;
+        padding: 0 0 25px 0;
+      }
+    }
+  }
+  &__icon-arrow {
+    fill: $yellow-color;
+    flex: 0 0 auto;
+    margin: 0 10px 0 0;
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
+    &--purple {
+      fill: $purple-color;
+    }
+  }
+  &__include {
+    font-weight: 300;
+    line-height: 21px;
+    @media screen and (min-width: $tablet-size) {
+      text-align: center;
+    }
+  }
+  &__button {
+    @media screen and (min-width: $tablet-size) {
+      margin: auto 0 0 0;
+      &--yellow {
+        background-color: $purple-color;
+        border-color: $purple-color;
+        &:hover {
+          color: $black;
+        }
+      }
+      &--purple {
+        background-color: $yellow-color;
+        border-color: $yellow-color;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}

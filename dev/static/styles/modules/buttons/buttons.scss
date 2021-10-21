@@ -12,7 +12,16 @@
   padding: 15px 20px;
   text-decoration: none;
   transition: all ease-out .15s;
-  width: 100%;
+  width: auto;
+  &--fill {
+    background-color: $yellow-color;
+    color: $white;
+  }
+  &--purple {
+    background-color: $purple-color;
+    border-color: $purple-color;
+    color: $white;
+  }
   &:hover {
     background-color: rgba($yellow-color, .1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .2);

@@ -1,9 +1,24 @@
 .crm-efficiency {
+  border-bottom: 1px solid $gray-color;
+  &__inner {
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+    }
+  }
   &__title {
     font-size: 20px;
     font-weight: 700;
     line-height: 25px;
     margin: 0 0 30px 0;
+  }
+  &__box {
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
   }
   &__text {
     font-weight: 300;
@@ -12,5 +27,24 @@
     &:not(:last-of-type) {
       margin: 0 0 20px 0;
     }
+    @media screen and (min-width: $desktop-size) {
+      font-weight: 400;
+    }
+  }
+  &__picture {
+    display: block;
+    margin: 0 -20px;
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 auto;
+      margin: 10px -40px 0 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 -10px 0 0;
+    }
+  }
+  &__img {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
   }
 }
