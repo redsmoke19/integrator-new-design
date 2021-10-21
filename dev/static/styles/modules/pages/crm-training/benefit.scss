@@ -1,0 +1,61 @@
+.crm-benefit {
+  padding: 35px 0 20px;
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+  }
+  &__text {
+    color: $gray-text-color;
+    font-weight: 300;
+    line-height: 21px;
+    margin: 0 0 15px 0;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    border-top: 1px solid;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0) 5%, #ccc) 1 0%;
+    padding: 25px 0 25px;
+    position: relative;
+  }
+  &__box {
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__inner {
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 50%;
+    }
+  }
+  &__icon {
+    margin: 0 0 20px 0;
+  }
+  &__advantages {
+    color: $gray-text-color;
+    font-weight: 300;
+    line-height: 21px;
+    span {
+      color: $black;
+    }
+  }
+  &__img {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      bottom: 0;
+      display: block;
+      position: absolute;
+      &--right {
+        right: 0;
+      }
+    }
+  }
+}

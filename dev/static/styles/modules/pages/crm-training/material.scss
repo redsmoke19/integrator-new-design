@@ -91,6 +91,9 @@
     }
     @media screen and (min-width: $desktop-size) {
       margin: 70px auto 0 auto;
+      &:hover {
+        color: $black;
+      }
     }
   }
   &__nav {
