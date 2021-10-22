@@ -259,7 +259,17 @@
     breakpointDesktop.addListener(breakpointChecker);
     breakpointChecker();
   };
+  const getInputMask = () => {
+    const phoneElenet = document.querySelectorAll('._phone-mask');
+    const phoneMaskOption = {
+      mask: '+{7}(000)000-00-00'
+    }
+    phoneElenet.forEach(item => {
+      IMask(item, phoneMaskOption);
+    })
+  };
 
   dynamicAdaptiv();
   getSlider();
+  getInputMask();
 })();
