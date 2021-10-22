@@ -249,7 +249,7 @@
           navigation: {
             nextEl: '.crm-material__nav--next',
             prevEl: '.crm-material__nav--prev',
-            disabledClass: '.crm-material__nav--disabled'
+            disabledClass: 'crm-material__nav--disabled'
           }
         });
       }

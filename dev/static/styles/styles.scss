@@ -101,11 +101,14 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: $content;
   padding: 0 20px;
   width: 100%;
   @media screen and (min-width: $tablet-size) {
     padding: 0 40px;
+  }
+  @media screen and (min-width: $desktop-size) {
+    max-width: $content;
+    padding: 0 20px;
   }
 }
 

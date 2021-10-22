@@ -37,7 +37,10 @@
       padding: 20px 10px 0;
     }
     @media screen and (min-width: $desktop-size) {
-      flex: 0 0 auto;
+      flex: 0 0 27%;
+      &--button {
+        flex: 0 0 19%;
+      }
     }
   }
   &__input {

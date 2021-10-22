@@ -33,11 +33,15 @@
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0) 5%, #ccc) 1 0%;
     padding: 25px 0 25px;
     position: relative;
+    &:nth-child(even) {
+      background-color: $white-gray-color;
+      border-image: linear-gradient(to right, #ccc 5%, rgba(255, 255, 255, 0)) 1 0%;
+    }
     @media screen and (min-width: $tablet-size) {
       min-height: 250px;
       &:nth-child(even) {
-        background-color: $white-gray-color;
-        border-image: linear-gradient(to right, #ccc 5%, rgba(255, 255, 255, 0)) 1 0%;
+        //background-color: $white-gray-color;
+        //border-image: linear-gradient(to right, #ccc 5%, rgba(255, 255, 255, 0)) 1 0%;
       }
     }
     @media screen and (min-width: $desktop-size) {

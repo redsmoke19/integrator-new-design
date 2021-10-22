@@ -6,6 +6,7 @@
   @media screen and (min-width: $tablet-size) {
     background: $yellow-color url('../images/common/material-bg-tablet.png') no-repeat center top;
     background-size: 100% auto;
+    padding: 54px 0 60px;
   }
   @media screen and (min-width: $desktop-size) {
     background: $yellow-color url('../images/common/material-bg-desktop.png') no-repeat center top;
@@ -17,6 +18,7 @@
     line-height: 30px;
     margin: 0 0 54px 0;
     @media screen and (min-width: $tablet-size) {
+      margin: 0 0 50px 0;
       text-align: center;
     }
   }
@@ -91,9 +93,6 @@
     }
     @media screen and (min-width: $desktop-size) {
       margin: 70px auto 0 auto;
-      &:hover {
-        color: $black;
-      }
     }
   }
   &__nav {
@@ -104,8 +103,9 @@
       border: 3px solid $white;
       border-right: none;
       border-radius: 100% 0 0 100%/ 50% 0 0 50%;
+      cursor: pointer;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       left: 0;
       height: 60px;
       padding: 0;
@@ -118,7 +118,7 @@
         border-right: 3px solid $white;
         border-left: none;
         border-radius: 0 100% 100% 0/ 0 50% 50% 0;
-        justify-content: start;
+        justify-content: flex-start;
         left: unset;
         right: 0;
       }

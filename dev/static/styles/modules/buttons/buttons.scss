@@ -13,20 +13,27 @@
   text-decoration: none;
   transition: all ease-out .15s;
   width: auto;
+  &:hover {
+    background-color: rgba($yellow-color, 1);
+    color: $white;
+    opacity: 1;
+  }
   &--fill {
     background-color: $yellow-color;
     color: $white;
+    &:hover {
+      background-color: $white;
+      color: $yellow-color;
+    }
   }
   &--purple {
     background-color: $purple-color;
     border-color: $purple-color;
     color: $white;
-  }
-  &:hover {
-    background-color: rgba($yellow-color, .1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
-    opacity: 1;
-    transform: translateY(-3px);
+    &:hover {
+      background-color: $white;
+      color: $purple-color;
+    }
   }
   &:active {
     transform: translateY(-1px);
