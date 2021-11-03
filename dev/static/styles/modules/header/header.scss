@@ -1,3 +1,98 @@
-header {
+.header {
   flex: 0 0 auto;
+  &__top {
+    background-color: $white;
+    position: relative;
+    z-index: 30;
+    &._active {
+      &::before {
+        background: $gray-color;
+        bottom: 0;
+        content: "";
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+    &::before {
+      background: linear-gradient(90deg, rgba(95, 60, 157, 1) 0%, rgba(42, 8, 69, 1) 100%);
+      bottom: 0;
+      content: "";
+      height: 3px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+  &__content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    width: 100%;
+  }
+  &__actions {
+    align-items: center;
+    display: flex;
+  }
+  &__inner {
+    background-color: $bg-gray-color;
+    height: calc(var(--vh) * 100 - 60px);
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px 20px 30px;
+    position: fixed;
+    pointer-events: none;
+    top: 60px;
+    transform: translateX(100%);
+    transition: all ease-out .5s;
+    width: 100%;
+    z-index: 30;
+    &._active {
+      pointer-events: all;
+      transform: translateX(0);
+      //z-index: 50;
+    }
+  }
+  &__call {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+  }
+  &__call-text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+  }
+  &__call-link {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    text-decoration: none;
+  }
+  &__contacts {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0 0 0;
+  }
+  &__phones {
+    display: flex;
+    flex-direction: column;
+  }
+  &__phone {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    text-decoration: none;
+    &:not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+  }
 }
+@import "social";

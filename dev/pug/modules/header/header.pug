@@ -1,6 +1,22 @@
 header.header
-	.container
-		.header__content
-			a.header__logo-link(href=pageClass=== 'index-page' ? '' : 'index.html')
-				span.visually-hidden Ссылка на главную страницу
-				+icon('icon-logo', 'header__logo-icon', '202', '29')
+	.header__top
+		.container
+			.header__content
+				a.header__logo-link(href=pageClass === 'index-page' ? false : 'index.html')
+					span.visually-hidden Ссылка на главную страницу
+					+icon('icon-logo', 'header__logo-icon', '184', '28')
+				.header__actions
+					.header__search
+						include ../search/search
+					include sandwich
+	.header__inner
+		.header__call
+			p.header__call-text Звонок по РФ:
+			a.header__call-link(href="tel:+78006008581") +7 #[span.color-purple (800)] 600-85-81
+		.header__nav
+			include ../nav/nav
+		.header__contacts
+			.header__phones
+				a.header__phone(href="tel:+78122092797") +7 #[span.color-purple (812)] 209-27-97
+				a.header__phone(href="tel:+78122092797") +7 #[span.color-purple (495)] 109-27-97
+			include social

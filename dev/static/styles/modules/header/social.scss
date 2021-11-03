@@ -1,0 +1,18 @@
+.header-social {
+  align-items: center;
+  display: flex;
+  &__item {
+    &:not(:last-child) {
+      margin: 0 15px 0 0;
+    }
+  }
+  &__link {
+    align-items: center;
+    background-color: $purple-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+  }
+}

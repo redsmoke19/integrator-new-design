@@ -15,8 +15,31 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.15;
+  &::before {
+    background-color: rgba(63, 58, 58, .6);
+    backdrop-filter: blur(15px);
+    content: '';
+    display: block;
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    pointer-events: none;
+    transition: all ease-out .2s .5s;
+    top: 0;
+    width: 100%;
+    z-index: 15;
+  }
   &._lock {
     overflow: hidden;
+  }
+  &._overlay {
+    position: relative;
+    &::before {
+      opacity: 1;
+      pointer-events: all;
+      transition: all ease-out .2s;
+    }
   }
 }
 
@@ -122,6 +145,10 @@ a {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+.color-purple {
+  color: $purple-color;
 }
 @keyframes fadeIn {
   from {
