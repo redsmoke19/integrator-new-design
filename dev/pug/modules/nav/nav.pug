@@ -1,5 +1,5 @@
 mixin nav-items(link,text)
-	li.nav__item
+	li.nav__item.swiper-slide
 		a.nav__link(href=link) #{text}
 
 mixin nav-sub-items(classPage,link,text)
@@ -8,10 +8,10 @@ mixin nav-sub-items(classPage,link,text)
 			span.nav__sub-text #{text}
 
 nav.nav
-	.nav__inner
-		ul.nav__list
-			li.nav__item
-				a.nav__link(data-nav-link="sub-open")
+	.nav__inner.swiper
+		ul.nav__list.swiper-wrapper
+			li.nav__item.swiper-slide
+				a.nav__link.nav__link--icon(data-nav-link="sub-open")
 					span.nav__text Мы
 					+icon("icon-chevron", "nav__icon", "10", "10")
 				ul.nav__sub-list
@@ -24,8 +24,8 @@ nav.nav
 							span.nav__sub-text Мы
 					+nav-sub-items("company-page", "#", "Компания")
 					+nav-sub-items("buy-bitrix", "#", "Вакансии")
-			li.nav__item
-				a.nav__link(data-nav-link="sub-open")
+			li.nav__item.swiper-slide
+				a.nav__link.nav__link--icon(data-nav-link="sub-open")
 					span.nav__text Услуги
 					+icon("icon-chevron", "nav__icon", "10", "10")
 				ul.nav__sub-list

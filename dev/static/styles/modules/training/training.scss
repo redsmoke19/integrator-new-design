@@ -1,0 +1,10 @@
+.training {
+  padding: 20px 0 60px;
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0 0 20px 0;
+  }
+}
+@import "articles-list";

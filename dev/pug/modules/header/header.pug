@@ -4,7 +4,9 @@ header.header
 			.header__content
 				a.header__logo-link(href=pageClass === 'index-page' ? false : 'index.html')
 					span.visually-hidden Ссылка на главную страницу
-					+icon('icon-logo', 'header__logo-icon', '184', '28')
+					picture.header__logo-picture
+						source(media="(min-width: 768px)" srcset="static/images/common/icon-logo-tablet.svg")
+						img.header__logo-img(src="static/images/common/icon-logo.svg" alt="Логотип Интегратора" width="184" height="28")
 				.header__actions
 					.header__search
 						include ../search/search
@@ -12,11 +14,11 @@ header.header
 	.header__inner
 		.header__call
 			p.header__call-text Звонок по РФ:
-			a.header__call-link(href="tel:+78006008581") +7 #[span.color-purple (800)] 600-85-81
+			a.header__call-link(href="tel:+78006008581" data-da=".header__phones,768,0") +7 #[span.color-purple (800)] 600-85-81
 		.header__nav
 			include ../nav/nav
 		.header__contacts
-			.header__phones
+			.header__phones(data-da=".header__actions, 768, 0")
 				a.header__phone(href="tel:+78122092797") +7 #[span.color-purple (812)] 209-27-97
 				a.header__phone(href="tel:+78122092797") +7 #[span.color-purple (495)] 109-27-97
 			include social

@@ -1,0 +1,67 @@
+.article-list {
+  margin: 0 0 30px 0;
+  &__item {
+    &:not(:last-child) {
+      margin: 0 0 32px 0;
+    }
+  }
+  &__top {
+    align-items: center;
+    display: flex;
+    margin: 0 0 10px 0;
+  }
+  &__hashtag {
+    color: $text-note-color;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 20px 0 0;
+    position: relative;
+    &::before {
+      color: $yellow-color;
+      content: "#";
+      margin: 0 5px 0 0;
+    }
+  }
+  &__views {
+    color: $text-note-color;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 20px 0 0;
+    padding: 0 0 0 22px;
+    position: relative;
+    &::before {
+      background: url("../images/common/icon-eye.svg") no-repeat center;
+      content: "";
+      height: 15px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 17px;
+    }
+  }
+  &__title {
+    color: $text-color;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    margin: 0 0 16px 0;
+  }
+  &__text {
+    color: $text-color;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0 0 20px 0;
+  }
+  &__link {
+    border: 2px solid $yellow-color;
+    border-radius: 25px;
+    display: inline-block;
+    color: $black;
+    font-size: 16px;
+    line-height: 1;
+    padding: 13px 30px;
+    text-decoration: none;
+    width: auto;
+  }
+}

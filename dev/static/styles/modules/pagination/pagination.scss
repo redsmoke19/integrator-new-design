@@ -1,0 +1,13 @@
+.pagination {
+  &__button {
+    background-color: $yellow-color;
+    border-radius: 25px;
+    color: $white;
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+    padding: 17px 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+}

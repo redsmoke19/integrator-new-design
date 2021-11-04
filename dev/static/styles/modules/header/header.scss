@@ -3,7 +3,7 @@
   &__top {
     background-color: $white;
     position: relative;
-    z-index: 30;
+    z-index: 40;
     &._active {
       &::before {
         background: $gray-color;
@@ -13,6 +13,9 @@
         left: 0;
         position: absolute;
         width: 100%;
+        @media screen and (min-width: $tablet-size) {
+          display: none;
+        }
       }
     }
     &::before {
@@ -23,6 +26,9 @@
       left: 0;
       position: absolute;
       width: 100%;
+      @media screen and (min-width: $tablet-size) {
+        display: none;
+      }
     }
   }
   &__content {
@@ -32,9 +38,29 @@
     padding: 16px 0;
     width: 100%;
   }
+  &__logo-link {
+    padding: 0 20px 0 0;
+  }
+  &__logo-picture {
+    display: block;
+    height: 28px;
+    width: 184px;
+    @media screen and (min-width: $tablet-size) {
+      height: 41px;
+      width: 178px;
+    }
+  }
+  &__logo-img {
+    height: 100%;
+    width: 100%;
+  }
   &__actions {
     align-items: center;
     display: flex;
+    @media screen and (min-width: $tablet-size) {
+      flex: 1 0 auto;
+      justify-content: flex-end;
+    }
   }
   &__inner {
     background-color: $bg-gray-color;
@@ -50,10 +76,19 @@
     transition: all ease-out .5s;
     width: 100%;
     z-index: 30;
+    @media screen and (min-width: $tablet-size) {
+      background: linear-gradient(90.58deg, #5f3c9d -9.25%, #2a0845 111.8%);
+      height: unset;
+      overflow: unset;
+      padding: 0;
+      position: relative;
+      pointer-events: unset;
+      top: unset;
+      transform: unset;
+    }
     &._active {
       pointer-events: all;
       transform: translateX(0);
-      //z-index: 50;
     }
   }
   &__call {
@@ -61,6 +96,9 @@
     display: flex;
     justify-content: space-between;
     margin: 0 0 10px 0;
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
   }
   &__call-text {
     font-size: 14px;
@@ -73,16 +111,47 @@
     font-weight: 600;
     line-height: 19px;
     text-decoration: none;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 14px;
+      grid-row: 1 / -1;
+      line-height: 16px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      grid-row: auto;
+    }
+  }
+  &__nav {
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 auto;
+      max-width: $content;
+      padding: 0 20px;
+      width: 100%;
+    }
   }
   &__contacts {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin: 25px 0 0 0;
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
   }
   &__phones {
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: $tablet-size) {
+      display: grid;
+      gap: 5px 30px;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: auto auto;
+      margin: 0 30px 0 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: auto;
+      gap: 20px;
+    }
   }
   &__phone {
     color: $text-color;
@@ -90,8 +159,20 @@
     font-weight: 600;
     line-height: 19px;
     text-decoration: none;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 14px;
+      line-height: 16px;
+    }
     &:not(:last-child) {
       margin: 0 0 10px 0;
+      @media screen and (min-width: $tablet-size) {
+        margin: 0;
+      }
+    }
+  }
+  &__search {
+    @media screen and (min-width: $desktop-size) {
+      width: 20%;
     }
   }
 }

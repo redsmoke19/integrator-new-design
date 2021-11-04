@@ -178,6 +178,7 @@
     const da = new DynamicAdapt('min');
     da.init();
   }
+
   function bodyLock(delay) {
     const body = document.querySelector('body');
     if (body.classList.contains('_lock')) {
@@ -186,6 +187,7 @@
       bodyLockAdd(delay);
     }
   }
+
   function bodyLockRemove(delay) {
     const body = document.querySelector('body');
     if (unlock) {
@@ -205,6 +207,7 @@
       }, delay);
     }
   }
+
   function bodyLockAdd(delay) {
     const body = document.querySelector('body');
     if (unlock) {
@@ -228,10 +231,12 @@
       }, delay);
     }
   }
+
   const getPageVh = () => {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   };
+
   const getResize = () => {
     const breakpointTablet = window.matchMedia('(min-width: 1280px)');
     const breakpointMobile = window.matchMedia('(min-width: 768px)');
@@ -265,6 +270,7 @@
       }
     }
   }
+
   const getSandwich = () => {
     const sandwich = document.querySelector('.sandwich');
     const headerInner = document.querySelector('.header__inner');
@@ -293,28 +299,42 @@
       });
     }
   };
+
   const getNavSubMenu = () => {
-    const openSubMenuLink = document.querySelectorAll('[data-nav-link="sub-open"]');
-    openSubMenuLink.forEach((item) => {
-      item.addEventListener('click', () => {
-        const menu = item.nextElementSibling;
-        const closeButton = menu.querySelector('[data-nav-link="sub-close"]');
-        menu.classList.add('_active');
-        closeButton.addEventListener('click', closeSubMenuHandler);
-        function closeSubMenuHandler() {
-          menu.classList.remove('_active');
-          closeButton.removeEventListener('click', closeSubMenuHandler);
+    let currentTarget;
+    const menuClickHandler = (e) => {
+      const menuItem = e.target.nextElementSibling;
+      if (menuItem && menuItem.matches('._active')) {
+        const closeButton = menuItem.querySelector('[data-nav-link="sub-close"]');
+        menuItem.previousElementSibling.classList.remove('_active');
+        menuItem.classList.remove('_active');
+        return;
+      }
+      if (currentTarget) {
+        if (!e.target.closest('.nav__sub-list._active') || e.target.closest('[data-nav-link="sub-close"]')) {
+          currentTarget.previousElementSibling.classList.remove('_active');
+          currentTarget.classList.remove('_active');
         }
-      });
-    });
+      }
+      if (menuItem && menuItem.matches('.nav__sub-list')) {
+        menuItem.previousElementSibling.classList.add('_active');
+        menuItem.classList.add('_active');
+        currentTarget = menuItem;
+      }
+    };
+    document.body.addEventListener('click', menuClickHandler);
   };
+
   const getSlider = () => {
+    const breakpointMobile = window.matchMedia('(max-width: 767px');
     const breakpointTablet = window.matchMedia('(min-width: 768px)');
     const breakpointDesktop = window.matchMedia('(min-width: 1280px)');
     const crmTrainingHead = document.querySelector('.crm-heading__slider');
     const crmMaterial = document.querySelector('.crm-material__swiper');
+    const navMenu = document.querySelector('.nav__inner');
     let crmTrainingHeadSlider;
     let crmMaterialSlider;
+    let navSlider;
 
     const breakpointChecker = function () {
       let resizeTimeout;
@@ -323,6 +343,7 @@
           resizeTimeout = null;
           resizeHandlerTablet();
           resizeHandlerDesktop();
+          resizeBetween();
         }, 100);
       }
 
@@ -343,6 +364,16 @@
           }
         } else if (breakpointDesktop.matches === false) {
           getDesktopSliders();
+        }
+      }
+
+      function resizeBetween() {
+        if (breakpointDesktop.matches === true || breakpointMobile.matches === true) {
+          if (navSlider !== undefined) {
+            navSlider.destroy(true, true);
+          }
+        } else if (breakpointTablet.matches === true) {
+          getBetweenMobileAndDesktopSliders();
         }
       }
     };
@@ -387,10 +418,26 @@
       }
     };
 
+    const getBetweenMobileAndDesktopSliders = function() {
+      if (navMenu) {
+        navSlider = new Swiper(navMenu, {
+          direction: 'horizontal',
+          grabCursor: true,
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+          slidesOffsetBefore: 40,
+          slidesOffsetAfter: 40,
+        });
+      }
+    };
+
     breakpointTablet.addListener(breakpointChecker);
     breakpointDesktop.addListener(breakpointChecker);
     breakpointChecker();
   };
+
   const getInputMask = () => {
     const phoneElement = document.querySelectorAll('._phone-mask');
     const phoneMaskOption = {

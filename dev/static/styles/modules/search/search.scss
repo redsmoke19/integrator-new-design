@@ -1,6 +1,41 @@
 .search {
   margin: 0 20px 0 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0;
+  }
+  &__link {
+    @media screen and (min-width: $desktop-size) {
+      display: none;
+    }
+  }
   &__icon {
     fill: $purple-color;
+  }
+  &__form {
+    display: none;
+    @media screen and (min-width: $desktop-size) {
+      display: block;
+    }
+  }
+  &__box {
+    position: relative;
+  }
+  &__input {
+    border: 1px solid $gray-color;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 11px 40px 11px 20px;
+    width: 100%;
+  }
+  &__button {
+    background-color: transparent;
+    border: none;
+    fill: $purple-color;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }

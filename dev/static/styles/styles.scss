@@ -116,6 +116,12 @@ a {
   display: flex;
   flex-direction: column;
   height: 100%;
+  @media screen and (min-width: $tablet-size) {
+    overflow-x: hidden;
+  }
+  @media screen and (min-width: $desktop-size) {
+    overflow-x: unset;
+  }
 }
 
 .content {
