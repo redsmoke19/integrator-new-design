@@ -1,0 +1,10 @@
+extends layout/main
+
+block variables
+	-var title = 'Обучение Битрикс'
+	-var pageClass = 'bitrix-interface'
+
+block content
+	main(class=pageClass)
+		include pages/bitrix-training/bitrix-interface
+		include pages/crm-tutorial/answer

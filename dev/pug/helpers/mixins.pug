@@ -13,5 +13,12 @@ mixin breadcrumbs-item(text,href)
 		else
 			span.breadcrumbs__text=text
 
-//mixin pagination(link,text)
+mixin pagination-item(type,link,text)
+	if type === "text"
+		li.pagination__item
+			a.pagination__link.pagination__link--text(href=link) #{text}
+	if type === "number"
+		li.pagination__item
+			a.pagination__link(href=link)&attributes(attributes) #{text}
+
 

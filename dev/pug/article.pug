@@ -1,0 +1,11 @@
+extends layout/main
+
+block variables
+	-var title = 'Пульс компании - обзор инструмента'
+	-var pageClass = 'bitrix-article'
+
+block content
+	main(class=pageClass)
+		include pages/bitrix-training/bitrix-artile
+		include modules/any-questions/any-questions
+		include pages/crm-tutorial/answer

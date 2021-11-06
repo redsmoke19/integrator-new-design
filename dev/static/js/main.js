@@ -448,6 +448,21 @@
     })
   };
 
+  const getInputLabelFields = () => {
+    const inputs = document.querySelectorAll('._js-input-label');
+    inputs.forEach(item => {
+      const label = item.parentElement.querySelector('label');
+      item.addEventListener('focus', () => {
+        label.classList.add('_active');
+      });
+      item.addEventListener('blur', () => {
+        if (!item.value) {
+          label.classList.remove('_active');
+        }
+      });
+    });
+  };
+
   dynamicAdaptiv();
   getPageVh();
   getResize();
@@ -455,4 +470,5 @@
   getNavSubMenu();
   getSlider();
   getInputMask();
+  getInputLabelFields();
 })();

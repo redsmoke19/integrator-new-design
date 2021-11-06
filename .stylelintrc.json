@@ -36,7 +36,8 @@
       "vmax",
       "vmin",
       "s",
-      "deg"
+      "deg",
+      "fr"
     ]
   }
 }

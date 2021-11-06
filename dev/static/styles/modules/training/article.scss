@@ -1,0 +1,149 @@
+.article {
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0 0 25px 0;
+  }
+  &__top {
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__date,
+  &__views {
+    color: $text-note-color;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 20px 0 0;
+    padding: 0 0 0 25px;
+    position: relative;
+    &::before {
+      background: url("../images/common/icon-calendar.svg") no-repeat center;
+      content: "";
+      height: 16px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15px;
+    }
+  }
+  &__views {
+    margin: 0;
+    &::before {
+      background: url("../images/common/icon-eye.svg") no-repeat center;
+      content: "";
+      height: 15px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 17px;
+    }
+  }
+  &__hashtag {
+    color: $text-note-color;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 10px 0 0 0;
+    position: relative;
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+    }
+    &::before {
+      color: $yellow-color;
+      content: "#";
+      margin: 0 5px 0 0;
+    }
+  }
+  &__text {
+    margin: 0 0 60px 0;
+    p {
+      color: $text-color;
+      font-size: 16px;
+      line-height: 21px;
+      &:not(:last-of-type) {
+        margin: 0 0 20px 0;
+      }
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 26px;
+      margin: 0 0 15px 0;
+    }
+    img {
+      height: auto;
+      margin: 0 0 20px 0;
+      width: 100%;
+    }
+    ul {
+      margin: 0 0 10px 0;
+    }
+    li {
+      font-size: 16px;
+      line-height: 21px;
+      padding: 0 0 0 28px;
+      position: relative;
+      &::before {
+        background-color: $purple-color;
+        border-radius: 50%;
+        content: "";
+        height: 4px;
+        left: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+      }
+      &:not(:last-child) {
+        margin: 0 0 5px 0;
+      }
+    }
+  }
+}
+
+.article__author {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0 0 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0;
+  }
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 0 0;
+  }
+  &-name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0 0 5px 0;
+    text-align: right;
+  }
+  &-position {
+    color: $text-note-color;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+  }
+  &-picture {
+    border-radius: 50%;
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    width: 50px;
+  }
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}

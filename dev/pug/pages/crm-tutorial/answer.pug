@@ -4,11 +4,14 @@ section.crm-answer
 		form.crm-answer__form(action="#" method="POST")
 			ul.crm-answer__list
 				li.crm-answer__item
-					input.crm-answer__input(type="text" name="crmAnswerFIO" placeholder="ФИО")
+					label.crm-answer__label(for="answerFIO") ФИО
+					input.crm-answer__input._js-input-label(type="text" name="answerFIO" id="answerFIO")
 				li.crm-answer__item
-					input.crm-answer__input(type="email" name="crmAnswerMail" placeholder="E-mail")
+					label.crm-answer__label(for="answerEmail") E-mail
+					input.crm-answer__input._js-input-label(type="email" name="answerEmail" id="answerEmail")
 				li.crm-answer__item
-					input.crm-answer__input._phone-mask(type="tel" name="crmAnswerPhone" placeholder="+7(___) ___ - __ - __")
+					label.crm-answer__label(for="answerPhone") Телефон
+					input.crm-answer__input._phone-mask._js-input-label(type="tel" name="answerPhone" id="answerPhone")
 				li.crm-answer__item.crm-answer__item--button
 					button.button.button--purple.crm-answer__button(type="submit") Отправить
 		.crm-answer__box

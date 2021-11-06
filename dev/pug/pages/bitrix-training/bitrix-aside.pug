@@ -1,0 +1,40 @@
+mixin training-aside-sub-item(href,text)
+	li.training-aside__sub-item
+		a.training-aside__sub-link(href=href) #{text}
+
+aside.training-aside
+	ul.training-aside__list
+		li.training-aside__item
+			a.training-aside__link(href="#") Обучение Битрикс24
+			ul.training-aside__sub-list
+				+training-aside-sub-item("#","Интерфейс")
+				+training-aside-sub-item("#","Интеграция почты")
+				+training-aside-sub-item("#","CRM маркетинг")
+				+training-aside-sub-item("#","Настройки сервера")
+				+training-aside-sub-item("#","Интеграция сервисов")
+				+training-aside-sub-item("#","Лиды")
+				+training-aside-sub-item("#","Сделки")
+				+training-aside-sub-item("#","Задачи и проекты")
+				+training-aside-sub-item("#","Импорт данных")
+				+training-aside-sub-item("#","Генерация документов")
+				+training-aside-sub-item("#","Бизнес-процессы")
+				+training-aside-sub-item("#","Роботы")
+				+training-aside-sub-item("#","Отчеты")
+				+training-aside-sub-item("#","Интеграция телефонии")
+				+training-aside-sub-item("#","Контакт-центр")
+		li.training-aside__item
+			a.training-aside__link(href="#") Обучение amoCRM
+			ul.training-aside__sub-list
+				+training-aside-sub-item("#","Виджеты amoCRM")
+				+training-aside-sub-item("#","Интерфейс")
+				+training-aside-sub-item("#","AmoCRM и внешние сервисы")
+		li.training-aside__item
+			a.training-aside__link(href="#") Сквозная аналитика
+		li.training-aside__item
+			a.training-aside__link(href="#") Разработка ПО
+		li.training-aside__item
+			a.training-aside__link(href="#") Обучение БУС
+			ul.training-aside__sub-list
+				+training-aside-sub-item("#","Битрикс магазин")
+		li.training-aside__item
+			a.training-aside__link(href="#") IP телефония

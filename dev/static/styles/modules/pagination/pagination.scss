@@ -9,5 +9,49 @@
     padding: 17px 20px;
     text-align: center;
     text-decoration: none;
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
+  }
+  &__list {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    @media screen and (min-width: $desktop-size) {
+      justify-content: flex-start;
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin: 0 10px 0 0;
+    }
+  }
+  &__link {
+    align-items: center;
+    background-color: $pagination-color;
+    border-radius: 50%;
+    color: $text-color;
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    height: 30px;
+    line-height: 14px;
+    text-decoration: none;
+    width: 30px;
+    &--active {
+      background-color: $yellow-color;
+      color: $white;
+    }
+    &--text {
+      background-color: transparent;
+      border: 2px solid $pagination-color;
+      border-radius: 30px;
+      height: unset;
+      padding: 6px 10px;
+      width: unset;
+    }
   }
 }
