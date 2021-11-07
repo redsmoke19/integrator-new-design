@@ -1,5 +1,82 @@
 .training-aside {
+  &__list {
+    border: 2px solid $pagination-color;
+    border-radius: 25px;
+    //overflow: hidden;
+    //max-height: 50px;
+    //padding: 13px 30px;
+    padding: 15px 30px;
+    @media screen and (min-width: $desktop-size) {
+      overflow: unset;
+      max-height: unset;
+      padding: 15px 30px;
+    }
+  }
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    &:not(:last-child) {
+      margin: 0 0 12px 0;
+    }
+  }
+  &__link {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    text-decoration: none;
+    &._active {
+      color: $purple-color;
+    }
+  }
+  &__button {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    margin: 0 0 0 auto;
+    padding: 0;
+    width: 20px;
+    &._active {
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  &__icon {
+    stroke: black;
+    transition: all ease-out .2s;
+    transform: rotate(90deg);
+  }
   &__sub-list {
-    display: none;
+    flex: 0 0 100%;
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: all ease-out .2s;
+    &._active {
+      opacity: 1;
+      margin: 20px 0 10px 0;
+    }
+  }
+  &__sub-item {
+    //padding: 20px 10px 10px 20px;
+    padding: 0 10px 0 20px;
+    &:not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+  }
+  &__sub-link {
+    color: $text-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    text-decoration: none;
+    &._active {
+      color: $purple-color;
+    }
   }
 }

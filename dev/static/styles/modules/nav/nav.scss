@@ -57,6 +57,7 @@
     width: 100%;
     @media screen and (min-width: $tablet-size) {
       color: $white;
+      cursor: pointer;
       font-family: $main-font;
       font-size: 14px;
       line-height: 16px;

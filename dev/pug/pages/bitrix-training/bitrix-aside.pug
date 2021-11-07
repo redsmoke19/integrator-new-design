@@ -1,13 +1,15 @@
-mixin training-aside-sub-item(href,text)
+mixin training-aside-sub-item(href,text,pageName)
 	li.training-aside__sub-item
-		a.training-aside__sub-link(href=href) #{text}
+		a.training-aside__sub-link(class=pageClass===pageName ? "_active" : false href=pageClass===pageName ? false : href) #{text}
 
 aside.training-aside
 	ul.training-aside__list
 		li.training-aside__item
-			a.training-aside__link(href="#") Обучение Битрикс24
-			ul.training-aside__sub-list
-				+training-aside-sub-item("#","Интерфейс")
+			a.training-aside__link(class=pageClass==="bitrix-training" ? "_active" : false href=pageClass==="bitrix-training" ? false : "bitrix-training.html") Обучение Битрикс24
+			button.training-aside__button._active
+				+icon("icon-chevron", "training-aside__icon", "6", "10")
+			ul.training-aside__sub-list._active
+				+training-aside-sub-item("interface-overview.html","Интерфейс","bitrix-interface")
 				+training-aside-sub-item("#","Интеграция почты")
 				+training-aside-sub-item("#","CRM маркетинг")
 				+training-aside-sub-item("#","Настройки сервера")
@@ -24,6 +26,8 @@ aside.training-aside
 				+training-aside-sub-item("#","Контакт-центр")
 		li.training-aside__item
 			a.training-aside__link(href="#") Обучение amoCRM
+			button.training-aside__button
+				+icon("icon-chevron", "training-aside__icon", "6", "10")
 			ul.training-aside__sub-list
 				+training-aside-sub-item("#","Виджеты amoCRM")
 				+training-aside-sub-item("#","Интерфейс")
@@ -34,6 +38,8 @@ aside.training-aside
 			a.training-aside__link(href="#") Разработка ПО
 		li.training-aside__item
 			a.training-aside__link(href="#") Обучение БУС
+			button.training-aside__button
+				+icon("icon-chevron", "training-aside__icon", "6", "10")
 			ul.training-aside__sub-list
 				+training-aside-sub-item("#","Битрикс магазин")
 		li.training-aside__item

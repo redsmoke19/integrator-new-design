@@ -332,9 +332,11 @@
     const crmTrainingHead = document.querySelector('.crm-heading__slider');
     const crmMaterial = document.querySelector('.crm-material__swiper');
     const navMenu = document.querySelector('.nav__inner');
+    const otherMaterials = document.querySelector('.other-materials__wrapper');
     let crmTrainingHeadSlider;
     let crmMaterialSlider;
     let navSlider;
+    let otherMaterialsSlider;
 
     const breakpointChecker = function () {
       let resizeTimeout;
@@ -351,6 +353,9 @@
         if (breakpointTablet.matches === true) {
           if (crmTrainingHeadSlider !== undefined) {
             crmTrainingHeadSlider.destroy(true, true);
+          }
+          if (otherMaterialsSlider !== undefined) {
+            otherMaterialsSlider.destroy(true, true);
           }
         } else if (breakpointTablet.matches === false) {
           getTabletSlider();
@@ -388,6 +393,18 @@
           slidesPerView: 'auto',
           spaceBetween: 20,
           slidesOffsetBefore: 20,
+          slidesOffsetAfter: 0,
+        });
+      }
+      if (otherMaterials) {
+        otherMaterialsSlider = new Swiper(otherMaterials, {
+          direction: 'horizontal',
+          grabCursor: true,
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 1,
+          spaceBetween: 20,
+          slidesOffsetBefore: 0,
           slidesOffsetAfter: 0,
         });
       }
@@ -463,6 +480,25 @@
     });
   };
 
+  const getAsideAction = () => {
+    const accordionButton = document.querySelectorAll('.training-aside__button');
+    accordionButton.forEach((item) => {
+      const subList = item.nextElementSibling;
+      if (subList.classList.contains('_active')) {
+        subList.style.maxHeight = subList.scrollHeight + 'px';
+      }
+      item.addEventListener('click', () => {
+        item.classList.toggle('_active');
+        subList.classList.toggle('_active');
+        if (subList.style.maxHeight) {
+          subList.style.maxHeight = null;
+        } else {
+          subList.style.maxHeight = subList.scrollHeight + 'px';
+        }
+      });
+    });
+  };
+
   dynamicAdaptiv();
   getPageVh();
   getResize();
@@ -471,4 +507,5 @@
   getSlider();
   getInputMask();
   getInputLabelFields();
+  getAsideAction();
 })();
