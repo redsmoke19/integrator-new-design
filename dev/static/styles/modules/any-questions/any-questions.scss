@@ -29,9 +29,6 @@
   }
   &__box {
     position: relative;
-    @media screen and (min-width: $tablet-size) {
-
-    }
     &:focus-within {
       &::before {
         border: 2px solid $yellow-color;
