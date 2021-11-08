@@ -483,13 +483,10 @@
   const getAsideAction = () => {
     const accordionButton = document.querySelectorAll('.training-aside__button');
     accordionButton.forEach((item) => {
-      const subList = item.nextElementSibling;
-      if (subList.classList.contains('_active')) {
-        subList.style.maxHeight = subList.scrollHeight + 'px';
-      }
+      const subList = item.parentElement.querySelector('.training-aside__sub-list');
       item.addEventListener('click', () => {
-        item.classList.toggle('_active');
-        subList.classList.toggle('_active');
+        item.classList.toggle('_open');
+        subList.classList.toggle('_open');
         if (subList.style.maxHeight) {
           subList.style.maxHeight = null;
         } else {
@@ -497,6 +494,11 @@
         }
       });
     });
+    // document.addEventListener('click', (e) => {
+    //   if (e.target.matches('.training-aside__button')) {
+    //     console.log('YESSS');
+    //   }
+    // });
   };
 
   dynamicAdaptiv();

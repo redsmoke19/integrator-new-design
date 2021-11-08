@@ -15,6 +15,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.15;
+  font-variant-numeric: lining-nums;
   &::before {
     background-color: rgba(63, 58, 58, .6);
     backdrop-filter: blur(15px);

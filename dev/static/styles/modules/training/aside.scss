@@ -34,19 +34,21 @@
     align-items: center;
     background-color: transparent;
     border: none;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     height: 20px;
     margin: 0 0 0 auto;
     padding: 0;
     width: 20px;
-    &._active {
+    &._open {
       svg {
         transform: rotate(-90deg);
       }
     }
   }
   &__icon {
+    pointer-events: none;
     stroke: black;
     transition: all ease-out .2s;
     transform: rotate(90deg);
@@ -56,10 +58,13 @@
     overflow: hidden;
     opacity: 0;
     max-height: 0;
+    position: relative;
     transition: all ease-out .2s;
-    &._active {
+    z-index: -1;
+    &._open {
       opacity: 1;
       margin: 20px 0 10px 0;
+      z-index: 1;
     }
   }
   &__sub-item {
