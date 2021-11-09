@@ -2,9 +2,6 @@
   &__list {
     border: 2px solid $pagination-color;
     border-radius: 25px;
-    //overflow: hidden;
-    //max-height: 50px;
-    //padding: 13px 30px;
     padding: 15px 30px;
     @media screen and (min-width: $desktop-size) {
       overflow: unset;

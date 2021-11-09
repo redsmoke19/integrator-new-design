@@ -1,6 +1,6 @@
 .nav {
   background-color: $white;
-  margin: 0 -20px;
+  margin: 0 -20px 15px;
   @media screen and (min-width: $tablet-size) {
     background-color: transparent;
     margin: 0;
@@ -14,7 +14,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 20px 25px 20px 60px;
+    padding: 0;
     position: relative;
     @media screen and (min-width: $tablet-size) {
       box-sizing: content-box;
@@ -28,16 +28,30 @@
   }
   &__item {
     display: flex;
-    position: static;
+    flex-direction: column;
+    padding: 0 20px 15px;
+    position: relative;
     @media screen and (min-width: $tablet-size) {
       padding: 17px 0;
-      position: relative;
       width: auto;
     }
     &:not(:last-child) {
-      margin: 0 0 18px 0;
+      margin: 0 0 15px 0;
+      &::before {
+        background: linear-gradient(90deg, rgba(112, 65, 197, 0) 0%, rgba(112, 65, 197, 1) 100%);
+        bottom: 0;
+        content: "";
+        height: 1px;
+        left: 0;
+        opacity: .5;
+        position: absolute;
+        width: 100%;
+      }
       @media screen and (min-width: $tablet-size) {
         margin: 0;
+        &::before {
+          display: none;
+        }
       }
       @media screen and (min-width: $desktop-size) {
         margin: 0 30px 0 0;
@@ -48,10 +62,9 @@
     align-items: center;
     color: $black;
     display: flex;
-    font-family: $roboto-font;
     font-size: 16px;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 22px;
     position: relative;
     text-decoration: none;
     width: 100%;
@@ -64,6 +77,11 @@
       white-space: nowrap;
     }
     &--icon {
+      &._active {
+        svg {
+          transform: translateY(-50%) rotate(-90deg);
+        }
+      }
       @media screen and (min-width: $tablet-size) {
         padding: 0 20px 0 0;
         &._active {
@@ -81,27 +99,32 @@
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(90deg);
+    transition: all ease-out .2s;
     stroke: $black;
     pointer-events: none;
     @media screen and (min-width: $tablet-size) {
-      transform: translateY(-50%) rotate(90deg);
+      height: 10px;
       transition: all ease-out .2s;
       stroke: $white;
+      width: 10px;
     }
   }
   &__sub-list {
     background-color: $white;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    //height: 100%;
     left: 0;
-    padding: 20px 25px 20px 60px;
-    position: absolute;
+    overflow: hidden;
+    //padding: 20px 25px 20px 60px;
+    max-height: 0;
+    padding: 0;
+    //position: absolute;
     top: 0;
-    transform: translateX(-100%);
+    //transform: translateX(-100%);
     transition: all ease-out .3s;
-    width: 100%;
+    //width: 100%;
     z-index: 1;
     @media screen and (min-width: $tablet-size) {
       box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, .2);
@@ -110,15 +133,18 @@
       min-width: 250px;
       padding: 20px;
       pointer-events: none;
+      position: absolute;
       top: 100%;
       transform: translate(0, 50px);
       transition: all ease-out .2s;
       z-index: -1;
     }
     &._active {
+      margin: 15px 0 0;
       transform: translateX(0);
       @media screen and (min-width: $tablet-size) {
         opacity: 1;
+        margin: 0;
         pointer-events: all;
       }
     }
@@ -140,31 +166,29 @@
     }
   }
   &__sub-link {
-    color: $gray-text-color;
-    font-family: $roboto-font;
-    font-size: 16px;
-    line-height: 20px;
+    color: $black;
+    font-size: 14px;
+    line-height: 18px;
     position: relative;
     text-decoration: none;
     @media screen and (min-width: $tablet-size) {
-      font-family: $main-font;
       font-size: 14px;
       line-height: 16px;
     }
     &--active {
       font-weight: 500;
     }
-    &--back,
-    &--title {
-      color: $black;
-      font-weight: 500;
-    }
+    //&--back,
+    //&--title {
+    //  color: $black;
+    //  font-weight: 500;
+    //}
   }
-  &__sub-icon {
-    left: -40px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) rotate(180deg);
-    stroke: $black;
-  }
+  //&__sub-icon {
+  //  left: -40px;
+  //  position: absolute;
+  //  top: 50%;
+  //  transform: translateY(-50%) rotate(180deg);
+  //  stroke: $black;
+  //}
 }

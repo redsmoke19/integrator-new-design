@@ -4,26 +4,13 @@
     background-color: $white;
     position: relative;
     z-index: 40;
-    &._active {
-      &::before {
-        background: $gray-color;
-        bottom: 0;
-        content: "";
-        height: 3px;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        @media screen and (min-width: $tablet-size) {
-          display: none;
-        }
-      }
-    }
     &::before {
-      background: linear-gradient(90deg, rgba(95, 60, 157, 1) 0%, rgba(42, 8, 69, 1) 100%);
+      background: linear-gradient(90deg, rgba(209, 184, 255, 1) 0%, rgba(110, 26, 177, 1) 100%);
       bottom: 0;
       content: "";
-      height: 3px;
+      height: 1px;
       left: 0;
+      opacity: .3;
       position: absolute;
       width: 100%;
       @media screen and (min-width: $tablet-size) {
@@ -34,7 +21,6 @@
   &__content {
     align-items: center;
     display: flex;
-    justify-content: space-between;
     padding: 16px 0;
     width: 100%;
   }
@@ -57,22 +43,23 @@
   &__actions {
     align-items: center;
     display: flex;
+    margin: 0 0 0 auto;
     @media screen and (min-width: $tablet-size) {
       flex: 1 0 auto;
       justify-content: flex-end;
     }
   }
   &__inner {
-    background-color: $bg-gray-color;
+    background-color: $white;
     height: calc(var(--vh) * 100 - 60px);
     left: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    padding: 10px 20px 30px;
+    padding: 20px 20px 30px;
     position: fixed;
     pointer-events: none;
     top: 60px;
-    transform: translateX(100%);
+    transform: translateX(-100%);
     transition: all ease-out .5s;
     width: 100%;
     z-index: 30;
@@ -95,29 +82,40 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 0 0 10px 0;
     @media screen and (min-width: $tablet-size) {
       display: none;
     }
   }
-  &__call-text {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17px;
-  }
   &__call-link {
+    align-items: center;
     color: $text-color;
+    display: flex;
+    justify-content: center;
     font-size: 16px;
     font-weight: 600;
+    height: 24px;
     line-height: 19px;
     text-decoration: none;
+    width: 24px;
     @media screen and (min-width: $tablet-size) {
+      align-items: unset;
       font-size: 14px;
       grid-row: 1 / -1;
+      justify-content: unset;
       line-height: 16px;
+      height: unset;
+      width: unset;
     }
-    @media screen and (min-width: $desktop-size) {
-      grid-row: auto;
+  }
+  &__call-number {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+    }
+  }
+  &__call-icon {
+    @media screen and (min-width: $tablet-size) {
+      display: none;
     }
   }
   &__nav {
@@ -132,20 +130,21 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 25px 0 0 0;
     @media screen and (min-width: $tablet-size) {
       display: none;
     }
   }
   &__phones {
     display: flex;
-    flex-direction: column;
+    margin: 0 0 20px 0;
+    width: 100%;
     @media screen and (min-width: $tablet-size) {
       display: grid;
       gap: 5px 30px;
       grid-template-columns: repeat(2, auto);
       grid-template-rows: auto auto;
       margin: 0 30px 0 0;
+      width: auto;
     }
     @media screen and (min-width: $desktop-size) {
       grid-template-columns: repeat(3, auto);
@@ -154,20 +153,30 @@
     }
   }
   &__phone {
+    align-items: center;
     color: $text-color;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 19px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
     text-decoration: none;
     @media screen and (min-width: $tablet-size) {
       font-size: 14px;
+      font-weight: 600;
       line-height: 16px;
     }
-    &:not(:last-child) {
-      margin: 0 0 10px 0;
-      @media screen and (min-width: $tablet-size) {
-        margin: 0;
-      }
+  }
+  &__phone-separate {
+    display: block;
+    margin: 0 10px;
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
+  }
+  &__phone-icon {
+    margin: 0 8px 0 0;
+    @media screen and (min-width: $tablet-size) {
+      display: none;
     }
   }
   &__search {

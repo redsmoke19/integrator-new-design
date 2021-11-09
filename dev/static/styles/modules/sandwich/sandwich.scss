@@ -3,11 +3,12 @@
   background-color: $white;
   cursor: pointer;
   display: flex;
-  height: 15px;
+  height: 16px;
   justify-content: center;
+  margin: 0 15px 0 0;
   position: relative;
   padding: 0;
-  width: 15px;
+  width: 18px;
   z-index: 25;
   @media screen and (min-width: $tablet-size) {
     display: none;
@@ -20,7 +21,7 @@
         left: -1px;
         top: 6px;
         transform: rotate(45deg);
-        width: 20px;
+        width: 22px;
       }
       &--middle {
         transform: translateX(-10px);
@@ -32,7 +33,7 @@
         left: -1px;
         top: 6px;
         transform: rotate(-45deg);
-        width: 20px;
+        width: 22px;
       }
     }
   }
@@ -43,7 +44,7 @@
     left: 0;
     position: absolute;
     transition: all ease-out .3s;
-    width: 15px;
+    width: 18px;
     &--top {
       top: 0;
     }

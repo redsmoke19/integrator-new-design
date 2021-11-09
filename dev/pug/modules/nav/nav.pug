@@ -13,29 +13,15 @@ nav.nav
 			li.nav__item.swiper-slide
 				a.nav__link.nav__link--icon(data-nav-link="sub-open")
 					span.nav__text Мы
-					+icon("icon-chevron", "nav__icon", "10", "10")
+					+icon("icon-chevron", "nav__icon", "15", "15")
 				ul.nav__sub-list
-					li.nav__sub-item.nav__sub-item--back
-						a.nav__sub-link.nav__sub-link--back(data-nav-link="sub-close")
-							span.nav__sub-text Назад
-							+icon("icon-chevron", "nav__sub-icon", "10", "10")
-					li.nav__sub-item.nav__sub-item--title
-						a.nav__sub-link.nav__sub-link--title
-							span.nav__sub-text Мы
 					+nav-sub-items("company-page", "#", "Компания")
 					+nav-sub-items("buy-bitrix", "#", "Вакансии")
 			li.nav__item.swiper-slide
 				a.nav__link.nav__link--icon(data-nav-link="sub-open")
 					span.nav__text Услуги
-					+icon("icon-chevron", "nav__icon", "10", "10")
+					+icon("icon-chevron", "nav__icon", "15", "15")
 				ul.nav__sub-list
-					li.nav__sub-item.nav__sub-item--back
-						a.nav__sub-link.nav__sub-link--back(data-nav-link="sub-close")
-							span.nav__sub-text Назад
-							+icon("icon-chevron", "nav__sub-icon", "10", "10")
-					li.nav__sub-item.nav__sub-item--title
-						a.nav__sub-link.nav__sub-link--title
-							span.nav__sub-text Услуги
 					+nav-sub-items("create-landing-page", "#", "Создание Landing-page")
 					+nav-sub-items("buy-bitrix", "#", "Купить Битрикс24")
 					+nav-sub-items("but-amocrm", "#", "Купить amoCRM")
