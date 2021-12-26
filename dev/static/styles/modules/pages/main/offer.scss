@@ -1,0 +1,79 @@
+.main-offer {
+  border-bottom: 1px solid $pagination-color;
+  margin: 0 0 35px 0;
+  padding: 35px 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 40px 0;
+    padding: 55px 0 55px;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      line-height: 30px;
+      margin: 0 0 30px 0;
+    }
+  }
+  &__list {
+    display: grid;
+    gap: 20px;
+    @media screen and (min-width: $tablet-size) {
+      gap: 22px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width: $desktop-size) {
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &__item {
+    border: 1px solid $pagination-color;
+    border-radius: 10px;
+    padding: 26px 26px 22px;
+    @media screen and (min-width: $tablet-size) {
+      padding: 28px 20px 24px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      padding: 28px 20px 24px;
+    }
+  }
+  &__top {
+    align-items: center;
+    display: flex;
+    margin: 0 0 10px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 15px 0;
+    }
+  }
+  &__icon {
+    flex: 0 0 auto;
+    filter: drop-shadow(0 0 15px rgba(98, 63, 162, .1));
+    margin: 0 5px 0 0;
+    width: 42px;
+    @media screen and (min-width: $tablet-size) {
+      height: 50px;
+      margin: 0 10px 0 0;
+      width: 50px;
+    }
+  }
+  &__item-title {
+    color: $purple-dark-color;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
