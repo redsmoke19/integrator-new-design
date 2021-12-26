@@ -25,7 +25,8 @@ trim_trailing_whitespace = false
 indent_style = tab
 indent_size = 4
 
-[{.gitignore,.prettierrc,README.md}]
+#Ignore paths
+[{.gitignore,.prettierrc,README.md,Makefile}]
 charset = unset
 end_of_line = unset
 insert_final_newline = unset
@@ -33,10 +34,19 @@ trim_trailing_whitespace = unset
 indent_style = unset
 indent_size = unset
 
-[dev/static/js/files/sliders.js]
+[dev/static/js/files/*.*]
 charset = unset
 end_of_line = unset
 insert_final_newline = unset
 trim_trailing_whitespace = unset
 indent_style = unset
 indent_size = unset
+
+[dev/static/js/vendor/*.*]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
+
