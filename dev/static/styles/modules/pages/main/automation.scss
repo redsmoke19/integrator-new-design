@@ -1,4 +1,32 @@
 .main-automation {
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 20px 0;
+  }
+  &__content {
+    @media screen and (min-width: $tablet-size) {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: auto 48%;
+      grid-template-rows: minmax(449px, auto) 1fr;
+    }
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+      gap: 45px;
+      grid-template-columns: 1fr 50%;
+      grid-template-rows: auto;
+    }
+  }
+  &__info {
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      align-self: center;
+      grid-column: 2 / -1;
+      margin: 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      align-self: unset;
+    }
+  }
   &__title {
     font-size: 24px;
     font-weight: 600;
@@ -32,5 +60,89 @@
   &__item-text {
     font-size: 16px;
     line-height: 21px;
+  }
+  &__number-list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, auto);
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(3, auto);
+      margin: 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      grid-column: unset;
+      margin: 20px 0 0 0;
+    }
+  }
+  &__number-item {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $tablet-size) {
+      align-items: baseline;
+      flex-direction: row;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex-direction: column;
+    }
+    &:last-child {
+      grid-column: 1 / -1;
+      @media screen and (min-width: $tablet-size) {
+        grid-column: unset;
+      }
+    }
+  }
+  &__number-count {
+    color: $yellow-color;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 55px;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 10px 0 0;
+    }
+  }
+  &__number-desc {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  &__image {
+    @media screen and (min-width: $tablet-size) {
+      grid-column: 1 / 2;
+      grid-row: 1;
+      position: relative;
+    }
+    @media screen and (min-width: $desktop-size) {
+      grid-row: 1 / -1;
+    }
+  }
+  &__picture {
+    display: block;
+    height: 338px;
+    margin: 0 auto;
+    width: 280px;
+    @media screen and (min-width: $tablet-size) {
+      height: 449px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(calc(-50% - 20px), -50%);
+      width: 373px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 477px;
+      left: unset;
+      margin: 0 0 0 auto;
+      position: relative;
+      top: unset;
+      transform: unset;
+      width: 396px;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
   }
 }
