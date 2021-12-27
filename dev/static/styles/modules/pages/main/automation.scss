@@ -1,0 +1,36 @@
+.main-automation {
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 15px 0;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  &__list {
+    margin: 9px 0;
+  }
+  &__item {
+    padding: 0 0 0 15px;
+    position: relative;
+    &::before {
+      content: "";
+      border-radius: 50%;
+      border: 1px solid $purple-color;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 4px;
+    }
+    &:not(:last-child) {
+      margin: 0 0 5px 0;
+    }
+  }
+  &__item-text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
