@@ -325,6 +325,7 @@
 
   const getAllBreakpointsSlider = () => {
     const mainAreasTabs = document.querySelector('.main-areas__controls');
+    const mainBlogMaterial = document.querySelector('.main-blog__wrapper');
     if (mainAreasTabs) {
       new Swiper(mainAreasTabs, {
         direction: 'horizontal',
@@ -338,6 +339,29 @@
         breakpoints: {
           1280: {
             slidesOffsetAfter: 0,
+          }
+        }
+      });
+    }
+    if (mainBlogMaterial) {
+      new Swiper(mainBlogMaterial, {
+        direction: 'horizontal',
+        grabCursor: true,
+        preventClicks: true,
+        preventClicksPropagation: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+        autoHeight: true,
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            autoHeight: false,
+          },
+          1280: {
+            slidesPerView: 3,
+            autoHeight: false,
           }
         }
       });
@@ -418,6 +442,7 @@
       if (otherMaterials) {
         otherMaterialsSlider = new Swiper(otherMaterials, {
           direction: 'horizontal',
+          autoHeight: true,
           grabCursor: true,
           preventClicks: true,
           preventClicksPropagation: true,
