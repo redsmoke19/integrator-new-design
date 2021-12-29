@@ -323,6 +323,27 @@
     document.body.addEventListener('click', menuClickHandler);
   };
 
+  const getAllBreakpointsSlider = () => {
+    const mainAreasTabs = document.querySelector('.main-areas__controls');
+    if (mainAreasTabs) {
+      new Swiper(mainAreasTabs, {
+        direction: 'horizontal',
+        grabCursor: true,
+        preventClicks: true,
+        preventClicksPropagation: true,
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 20,
+        breakpoints: {
+          1280: {
+            slidesOffsetAfter: 0,
+          }
+        }
+      });
+    }
+  }
+
   const getSlider = () => {
     const breakpointMobile = window.matchMedia('(max-width: 767px');
     const breakpointTablet = window.matchMedia('(min-width: 768px)');
@@ -494,13 +515,23 @@
     });
   };
 
+  let tabs;
+
+  const initTabs = () => {
+    tabs = new Tabs();
+    // Используйте в разработке экспортируемую переменную tabs, window сделан для бэкэнда
+    window.tabs = tabs;
+  };
+
   dynamicAdaptiv();
   getPageVh();
   getResize();
   getSandwich();
   getNavSubMenu();
+  getAllBreakpointsSlider();
   getSlider();
   getInputMask();
   getInputLabelFields();
   getAsideAction();
+  initTabs();
 })();
