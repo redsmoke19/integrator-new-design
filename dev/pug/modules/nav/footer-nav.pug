@@ -1,0 +1,65 @@
+mixin sub-item(text)
+	li.footer-nav__sub-item
+		a.footer-nav__link(href="#")= text
+
+nav.footer-nav
+	ul.footer-nav__list
+		li.footer-nav__item
+			.footer-nav__head
+				h3.footer-nav__heading Компания
+				button.footer-nav__button(aria-label="Открыть список")
+					+icon("icon-arrow-bottom", "footer-nav__button-icon", "16", "10")
+			ul.footer-nav__sub-list
+				+sub-item("О компании")
+				+sub-item("Вакансии")
+				+sub-item("Все о Битрикс24")
+				+sub-item("Все об amoCRM")
+				+sub-item("Новости CRM")
+				+sub-item("Магазин")
+				+sub-item("Контакты")
+		li.footer-nav__item
+			.footer-nav__head
+				h3.footer-nav__heading Услуги
+				button.footer-nav__button(aria-label="Открыть список")
+					+icon("icon-arrow-bottom", "footer-nav__button-icon", "16", "10")
+			ul.footer-nav__sub-list
+				+sub-item("Внедрение CRM")
+				+sub-item("Внедрение Битрикс24")
+				+sub-item("Внедрение amoCRM")
+				+sub-item("Интеграция 1С и Битрикс24")
+				+sub-item("Интеграция поставщиков")
+				+sub-item("Сквозная аналитика")
+				+sub-item("Мобильные приложения")
+				+sub-item("Создание Landing-page")
+				+sub-item("Настройка рекламы")
+				+sub-item("Организация удаленной работы")
+				+sub-item("Обучение CRM")
+				+sub-item("Купить Битрикс24 в СПб")
+				+sub-item("Купить Битрикс24 в Москве")
+				+sub-item("Купить amoCRM")
+		li.footer-nav__item
+			.footer-nav__head
+				h3.footer-nav__heading Магазин лицензий
+				button.footer-nav__button(aria-label="Открыть список")
+					+icon("icon-arrow-bottom", "footer-nav__button-icon", "16", "10")
+			ul.footer-nav__sub-list
+				+sub-item("Купить Битрикс24")
+				+sub-item("Купить amoCRM")
+				+sub-item("Готовые бизнес-процессы Битрикс24")
+				+sub-item("amoCRM виджеты")
+				+sub-item("Интеграции CRM")
+				+sub-item("Готовые CRM")
+				+sub-item("Типовые услуги")
+				+sub-item("IP телефония")
+		li.footer-nav__item
+			.footer-nav__head
+				h3.footer-nav__heading Обучение CRM
+				button.footer-nav__button(aria-label="Открыть список")
+					+icon("icon-arrow-bottom", "footer-nav__button-icon", "16", "10")
+			ul.footer-nav__sub-list
+				+sub-item("Обучение Битрикс24")
+				+sub-item("Обучение amoCRM")
+				+sub-item("Сквозная аналитика")
+				+sub-item("Разработка ПО")
+				+sub-item("Обучение БУС")
+				+sub-item("IP телефония")

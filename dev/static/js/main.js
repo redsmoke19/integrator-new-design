@@ -242,6 +242,8 @@
     const breakpointMobile = window.matchMedia('(min-width: 768px)');
     const headerInner = document.querySelector('.header__inner');
     const sandwich = document.querySelector('.sandwich');
+    const footerSubList = document.querySelectorAll('.footer-nav__head');
+    const footerSubOpenButton = document.querySelectorAll('.footer-nav__button');
     if (breakpointTablet.matches === false) {
     }
     if (breakpointMobile.matches === false) {
@@ -253,7 +255,7 @@
         resizeTimeout = setTimeout(function () {
           resizeTimeout = null;
           actualResizeHandler();
-        }, 88);
+        }, 100);
       }
     }
     function actualResizeHandler() {
@@ -264,7 +266,14 @@
         body.classList.remove('_overlay');
         body.classList.remove('_lock');
       }
-      if (breakpointTablet.matches === false) {
+      if (breakpointTablet.matches === true) {
+        if (footerSubList.length > 0) {
+          footerSubList.forEach(item => {
+            if (item.classList.contains('is-active')) {
+              item.classList.remove('is-active');
+            }
+          });
+        }
       }
     }
   }
@@ -323,6 +332,17 @@
     document.body.addEventListener('click', menuClickHandler);
   };
 
+  const getSubItemsFooter = () => {
+    const toggleButton = document.querySelectorAll('.footer-nav__button');
+    toggleButton.forEach(item => {
+      item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        parent.classList.toggle('is-active');
+        // sublist.classList.toggle('is-active');
+      });
+    });
+  }
+
   const getAllBreakpointsSlider = () => {
     const mainAreasTabs = document.querySelector('.main-areas__controls');
     const mainBlogMaterial = document.querySelector('.main-blog__wrapper');
@@ -353,15 +373,15 @@
         spaceBetween: 20,
         slidesOffsetBefore: 0,
         slidesOffsetAfter: 0,
-        autoHeight: true,
+        // autoHeight: true,
         breakpoints: {
           768: {
             slidesPerView: 2,
-            autoHeight: false,
+            // autoHeight: false,
           },
           1280: {
             slidesPerView: 3,
-            autoHeight: false,
+            // autoHeight: false,
           }
         }
       });
@@ -553,6 +573,7 @@
   getResize();
   getSandwich();
   getNavSubMenu();
+  getSubItemsFooter();
   getAllBreakpointsSlider();
   getSlider();
   getInputMask();

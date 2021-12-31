@@ -5,17 +5,17 @@ footer.footer
 				h2.footer__title Свяжитесь с нами:
 				ul.footer__social
 					li.footer__social-item
-						a.footer__social-link(href="#")
-							span.visually-hidden Ссылка на Whats App
+						a.footer__social-link(href="#" aria-label="Ссылка на Whats App")
+							+icon("icon-whatsapp-purple", "footer__social-icon", "30", "30")
 					li.footer__social-item
-						a.footer__social-link(href="#")
-							span.visually-hidden Ссылка на Telegram
+						a.footer__social-link(href="#" aria-label="Ссылка на Telegram")
+							+icon("icon-telegramm-purple", "footer__social-icon", "30", "30")
 					li.footer__social-item
-						a.footer__social-link(href="#")
-							span.visually-hidden Ссылка на Вконтакте
+						a.footer__social-link(href="#" aria-label="Ссылка на Вконтакте")
+							+icon("icon-vk-purple", "footer__social-icon", "30", "30")
 					li.footer__social-item
-						a.footer__social-link(href="#")
-							span.visually-hidden Ссылка на YouTube
+						a.footer__social-link(href="#" aria-label="Ссылка на YouTube")
+							+icon("icon-youtube-purple", "footer__social-icon", "30", "30")
 			ul.footer__contacts
 				li.footer__contacts-item
 					span.footer__contacts-city Санкт-Петербург
@@ -35,3 +35,9 @@ footer.footer
 				li.footer__contacts-item
 					span.footer__contacts-city Новосибирск
 					a.footer__contacts-link(href="tel:+73833122797") +7 #[span.footer__contacts-link--yellow (383)] 312 27 97
+			include ../nav/footer-nav
+	.footer__copy
+		.container
+			.footer__copy-box
+				p.footer__copy-copyright © 2021 Все права защищены.
+				p.footer__copy-text Интегратор — внедрение CRM Интегратор, 2010-2021
