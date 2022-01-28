@@ -1,0 +1,14 @@
+.landing-hero {
+  overflow: hidden;
+  &__images {
+    margin: 0 -20px;
+    position: relative;
+  }
+  &__phone-picture {
+    box-shadow: 0 15px 40px rgba(44, 44, 44, .15);
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: -30px;
+  }
+}

@@ -8,7 +8,7 @@ const jpegRecompress = require('imagemin-jpeg-recompress');
 
 module.exports = function imageMinify() {
   return src([
-    'dev/static/images/**/*.{gif,png,jpg,svg,webp}',
+    'dev/static/images/**/**/*.{gif,png,jpg,svg,webp}',
     '!dev/static/images/sprite/**/*',
   ])
     .pipe(newer('dist/static/images/'))

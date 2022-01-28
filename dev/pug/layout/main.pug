@@ -17,7 +17,8 @@ html(lang="ru-RU")
 			include ../modules/header/header
 			.content
 				block content
-			include ../modules/footer/footer
+			if pageClass !== "landing-page"
+				include ../modules/footer/footer
 		block script
 			script(src="static/js/libs.js")
 			script(src="static/js/main.js")

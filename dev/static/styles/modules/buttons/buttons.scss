@@ -38,6 +38,18 @@
       color: $purple-color;
     }
   }
+  &--round {
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 20px 20px;
+  }
+  &--yellow {
+    background-color: $yellow-color;
+    box-shadow: 0 12px 30px rgba(255, 203, 104, .2);
+  }
   &:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
