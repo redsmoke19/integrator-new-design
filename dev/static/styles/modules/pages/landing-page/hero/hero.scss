@@ -1,14 +1,193 @@
 .landing-hero {
+  background-color: $purple-light-color;
   overflow: hidden;
-  &__images {
-    margin: 0 -20px;
-    position: relative;
+  &__content {
+    padding: 0 0 40px;
+    @media screen and (min-width: $small-desktop-size) {
+      padding: 0;
+    }
   }
-  &__phone-picture {
-    box-shadow: 0 15px 40px rgba(44, 44, 44, .15);
+  &__wrapper {
+    overflow: inherit;
+  }
+  &__item {
+    @media screen and (min-width: $small-desktop-size) {
+      display: flex;
+      overflow: hidden;
+    }
+  }
+  &__images {
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 0 65%);
+    position: relative;
+    @media screen and (min-width: $tablet-size) {
+      clip-path: polygon(0 0, 100% 0, 100% 78%, 0 63%);
+    }
+    @media screen and (min-width: $small-desktop-size) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+      flex: 0 0 auto;
+      order: 2;
+      margin: 0;
+      max-width: 527px;
+      transform: translateX(-100%);
+    }
+  }
+  &__picture {
     display: block;
-    position: absolute;
-    top: 60px;
-    right: -30px;
+    overflow: hidden;
+    max-height: 460px;
+    @media screen and (min-width: $tablet-size) {
+      max-height: 652px;
+    }
+  }
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__info {
+    margin: -135px 0 40px;
+    padding: 40px 0 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: -175px 0 40px;
+    }
+    @media screen and (min-width: $small-desktop-size) {
+      flex: 0 0 100%;
+      margin: 0 0 100px;
+      padding: 60px 0 0;
+      width: 100%;
+    }
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $tablet-size) {
+      align-items: flex-start;
+    }
+    @media screen and (min-width: $small-desktop-size) {
+      width: 48.4%;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    margin: 0 0 30px 0;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 36px;
+      line-height: 52px;
+    }
+  }
+  &__description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0 0 40px 0;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 400px;
+    }
+  }
+  &__navigation {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: $small-desktop-size) {
+      bottom: 40px;
+      position: absolute;
+      width: 48.4%;
+      z-index: 5;
+    }
+  }
+  &__nav-bullets {
+    align-items: center;
+    display: flex;
+  }
+  &__nav-bullet {
+    cursor: pointer;
+    height: 20px;
+    position: relative;
+    transition: all ease-out .2s;
+    width: 20px;
+    &:not(:last-child) {
+      margin: 0 12px 0 0;
+    }
+    &::after {
+      content: "";
+      border: 2px solid $purple-color;
+      border-radius: 50%;
+      height: 8px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all ease-out .2s;
+      width: 8px;
+    }
+    &--active {
+      &::after {
+        background-color: $purple-color;
+        height: 13px;
+        width: 13px;
+      }
+    }
+    @media screen and (min-width: $tablet-size) {
+      height: 24px;
+      width: 24px;
+      &:not(:last-child) {
+        margin: 0 16px 0 0;
+      }
+      &::after {
+        height: 10px;
+        width: 10px;
+      }
+      &--active {
+        &::after {
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
+  }
+  &__nav-arrows {
+    align-items: center;
+    display: flex;
+  }
+  &__nav {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    height: 24px;
+    padding: 0;
+    transition: all ease-out .15s;
+    width: 24px;
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+    &--next {
+      transform: rotate(180deg);
+    }
+    &--disabled {
+      opacity: .5;
+    }
+    &:hover {
+      opacity: .7;
+    }
+    @media screen and (min-width: $tablet-size) {
+      height: 32px;
+      width: 32px;
+    }
+  }
+  &__nav-icon {
+    stroke: $purple-color;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    @media screen and (min-width: $tablet-size) {
+      height: 16px;
+      width: 8px;
+    }
   }
 }

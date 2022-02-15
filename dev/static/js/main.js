@@ -346,6 +346,7 @@
   const getAllBreakpointsSlider = () => {
     const mainAreasTabs = document.querySelector('.main-areas__controls');
     const mainBlogMaterial = document.querySelector('.main-blog__wrapper');
+    const landingHeroSlider = document.querySelector('.landing-hero__wrapper');
     if (mainAreasTabs) {
       new Swiper(mainAreasTabs, {
         direction: 'horizontal',
@@ -382,6 +383,38 @@
           1280: {
             slidesPerView: 3,
             // autoHeight: false,
+          }
+        }
+      });
+    }
+    if (landingHeroSlider) {
+      new Swiper(landingHeroSlider, {
+        direction: 'horizontal',
+        grabCursor: true,
+        preventClicks: true,
+        preventClicksPropagation: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+        navigation: {
+          nextEl: '.landing-hero__nav--next',
+          prevEl: '.landing-hero__nav--prev',
+          disabledClass: 'landing-hero__nav--disabled'
+        },
+        pagination: {
+          el: '.landing-hero__nav-bullets',
+          type: 'bullets',
+          bulletClass: 'landing-hero__nav-bullet',
+          bulletActiveClass: 'landing-hero__nav-bullet--active',
+          clickable: true
+        },
+        breakpoints: {
+          768: {
+            spaceBetween: 20,
+          },
+          1024: {
+            spaceBetween: 0,
           }
         }
       });
@@ -560,6 +593,20 @@
     });
   };
 
+  const getMorePartners = () => {
+    const partnersList = document.querySelector('.main-partners__list');
+    const morePartnersButton = document.querySelector('.main-partners__link');
+    morePartnersButton.addEventListener('click', () => {
+      if (partnersList.classList.contains('_active')) {
+        partnersList.style.maxHeight = '';
+        partnersList.classList.remove('_active');
+      } else {
+        partnersList.classList.add('_active');
+        partnersList.style.maxHeight = partnersList.scrollHeight + 'px';
+      }
+    });
+  }
+
   let tabs;
 
   const initTabs = () => {
@@ -579,4 +626,5 @@
   getInputLabelFields();
   getAsideAction();
   initTabs();
+  getMorePartners();
 })();
