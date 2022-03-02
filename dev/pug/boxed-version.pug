@@ -1,0 +1,9 @@
+extends layout/main
+
+block variables
+	-var title = 'Коробочная версия'
+	-var pageClass = 'boxed'
+
+block content
+	main(class=pageClass)
+		include pages/boxed-version/hero

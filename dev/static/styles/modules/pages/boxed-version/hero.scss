@@ -1,0 +1,30 @@
+.boxed-hero {
+  background-color: $purple-light-color;
+  padding: 41px 0 43px;
+  &__info {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+  &__subtitle {
+    color: $purple-color;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 6px 0;
+  }
+  &__logo-picture {
+    display: block;
+    margin: 0 0 10px 0;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0 0 20px 0;
+    &--purple {
+      color: $purple-dark-color;
+      font-weight: 800;
+    }
+  }
+}

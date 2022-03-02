@@ -596,6 +596,7 @@
   const getMorePartners = () => {
     const partnersList = document.querySelector('.main-partners__list');
     const morePartnersButton = document.querySelector('.main-partners__link');
+    if (!morePartnersButton) return;
     morePartnersButton.addEventListener('click', () => {
       if (partnersList.classList.contains('_active')) {
         partnersList.style.maxHeight = '';
@@ -605,7 +606,7 @@
         partnersList.style.maxHeight = partnersList.scrollHeight + 'px';
       }
     });
-  }
+  };
 
   let tabs;
 
