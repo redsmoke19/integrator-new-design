@@ -1,7 +1,9 @@
 .boxed-hero {
   background-color: $purple-light-color;
+  margin: 0 0 35px 0;
   padding: 41px 0 43px;
   @media screen and (min-width: $tablet-size) {
+    margin: 0 0 55px 0;
     padding: 30px 0 37px;
   }
   @media screen and (min-width: $desktop-size) {
@@ -23,6 +25,7 @@
     flex-direction: column;
     @media screen and (min-width: $tablet-size) {
       margin: 0 37px 0 0;
+      min-width: 333px;
     }
     @media screen and (min-width: $desktop-size) {
       margin: 0 27px 0 0;
@@ -73,6 +76,7 @@
     @media screen and (min-width: $tablet-size) {
       display: block;
       flex: 0 0 auto;
+      width: 315px;
     }
     @media screen and (min-width: $desktop-size) {
       height: 360px;
