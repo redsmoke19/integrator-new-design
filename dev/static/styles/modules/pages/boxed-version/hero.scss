@@ -1,10 +1,33 @@
 .boxed-hero {
   background-color: $purple-light-color;
   padding: 41px 0 43px;
+  @media screen and (min-width: $tablet-size) {
+    padding: 30px 0 37px;
+  }
+  @media screen and (min-width: $desktop-size) {
+    padding: 45px 0;
+  }
+  &__content {
+    @media screen and (min-width: $tablet-size) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    @media screen and (min-width: $desktop-size) {
+      justify-content: flex-start;
+    }
+  }
   &__info {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 37px 0 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 27px 0 0;
+      max-width: 516px;
+    }
   }
   &__subtitle {
     color: $purple-color;
@@ -12,10 +35,21 @@
     font-weight: 700;
     line-height: 1;
     margin: 0 0 6px 0;
+    @media screen and (min-width: $tablet-size) {
+      font-size: 30px;
+      line-height: 37px;
+    }
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 50px;
+    }
   }
   &__logo-picture {
     display: block;
     margin: 0 0 10px 0;
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 17px 0;
+    }
   }
   &__text {
     font-size: 16px;
@@ -25,6 +59,31 @@
     &--purple {
       color: $purple-dark-color;
       font-weight: 800;
+    }
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 16px 0;
+      &--purple {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+  &__picture {
+    display: none;
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      flex: 0 0 auto;
+    }
+    @media screen and (min-width: $desktop-size) {
+      height: 360px;
+      width: 360px;
+    }
+  }
+  &__img {
+    @media screen and (min-width: $tablet-size) {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
     }
   }
 }
