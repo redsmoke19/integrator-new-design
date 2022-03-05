@@ -609,10 +609,16 @@
   };
 
   let tabs;
+  let accordions;
 
   const initTabs = () => {
     tabs = new Tabs();
     window.tabs = tabs;
+  };
+
+  const initAccordions = () => {
+    accordions = new Accordions();
+    window.accordions = accordions;
   };
 
   dynamicAdaptiv();
@@ -627,5 +633,6 @@
   getInputLabelFields();
   getAsideAction();
   initTabs();
+  initAccordions();
   getMorePartners();
 })();
