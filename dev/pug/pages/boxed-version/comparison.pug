@@ -2,7 +2,7 @@ section.boxed-comparison
   .container
     .boxed-comparison__content
       h2.boxed-comparison__title Сравнение редакций коробочной Битрикс24
-      .boxed-comparison__accordion(data-accordion='parent', data-close-inner)
+      .boxed-comparison__accordion.boxed-comparison__accordion--hide-tablet(data-accordion='parent', data-close-inner)
         .boxed-comparison__accordion-element(data-accordion='element')
           .boxed-comparison__accordion-button(data-accordion='button')
             .boxed-comparison__accordion-inner
@@ -90,4 +90,71 @@ section.boxed-comparison
                   +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
                 li.boxed-comparison__accordion-item.boxed-comparison__accordion-item--buy
                   a.boxed-comparison__accordion-buy.button.button--fill(href="#") Купить
+      .boxed-comparison__table.boxed-comparison__table--hide-mobile
+        ul.boxed-comparison__row-top
+          li.boxed-comparison__col-top.boxed-comparison__col-top--key
+            p.boxed-comparison__text-top Свойство
+          li.boxed-comparison__col-top
+            p.boxed-comparison__text-top Интернет-магазин + CRM
+            p.boxed-comparison__text-top.boxed-comparison__text-top--bold 99 000 руб.
+          li.boxed-comparison__col-top
+            p.boxed-comparison__text-top Корпоративный портал
+            p.boxed-comparison__text-top.boxed-comparison__text-top--bold 139 000 руб.
+          li.boxed-comparison__col-top
+            p.boxed-comparison__text-top Энтерпрайз
+            p.boxed-comparison__text-top.boxed-comparison__text-top--bold 999 000 + руб.
+        ul.boxed-comparison__row
+          li.boxed-comparison__col.boxed-comparison__col--key
+            p.boxed-comparison__text Пользователи
+          li.boxed-comparison__col
+            p.boxed-comparison__text 12
+          li.boxed-comparison__col
+            p.boxed-comparison__text 50&emsp;100&emsp;250&emsp;500
+          li.boxed-comparison__col
+            p.boxed-comparison__text 100+
+        ul.boxed-comparison__row
+          li.boxed-comparison__col.boxed-comparison__col--key
+            p.boxed-comparison__text Экстранет
+          li.boxed-comparison__col
+            +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
+          li.boxed-comparison__col
+            +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
+          li.boxed-comparison__col
+            +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
+        ul.boxed-comparison__row
+          li.boxed-comparison__col.boxed-comparison__col--key
+            p.boxed-comparison__text eCommerce-платформа
+          li.boxed-comparison__col
+            +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
+          li.boxed-comparison__col
+            +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
+          li.boxed-comparison__col
+            +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
+        ul.boxed-comparison__row
+          li.boxed-comparison__col.boxed-comparison__col--key
+            p.boxed-comparison__text Веб-кластер
+          li.boxed-comparison__col
+            +icon("icon-purple-x", "boxed-comparison__accordion-value--icon", "22", "22")
+          li.boxed-comparison__col
+            +icon("icon-purple-x", "boxed-comparison__accordion-value--icon", "22", "22")
+          li.boxed-comparison__col
+            +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
+        ul.boxed-comparison__row
+          li.boxed-comparison__col.boxed-comparison__col--key
+            p.boxed-comparison__text Многодепартаментность
+          li.boxed-comparison__col
+            +icon("icon-purple-x", "boxed-comparison__accordion-value--icon", "22", "22")
+          li.boxed-comparison__col
+            +icon("icon-purple-x", "boxed-comparison__accordion-value--icon", "22", "22")
+          li.boxed-comparison__col
+            +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
+        ul.boxed-comparison__row
+          li.boxed-comparison__col.boxed-comparison__col--key
+            p.boxed-comparison__text Техподдержка на весь срок лицении
+          li.boxed-comparison__col
+            +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
+          li.boxed-comparison__col
+            +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
+          li.boxed-comparison__col
+            +icon("icon-yellow-check", "boxed-comparison__accordion-value--icon", "22", "22")
       a.boxed-comparison__link(href="#") Узнать больше об этом

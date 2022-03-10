@@ -617,7 +617,10 @@
   };
 
   const initAccordions = () => {
+    const comparisonAccordion = document.querySelector('.boxed-comparison__accordion');
+
     accordions = new Accordions();
+    console.log(accordions);
     window.accordions = accordions;
   };
 
