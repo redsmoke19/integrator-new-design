@@ -37,7 +37,7 @@
     margin: 0 0 30px 0;
     max-height: 325px;
     overflow: hidden;
-    transition: all ease-out 0.15s;
+    transition: all ease-out .15s;
     @media screen and (min-width: $tablet-size) {
       gap: 17px;
       grid-template-columns: repeat(3, 1fr);
