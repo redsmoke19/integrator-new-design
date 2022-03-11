@@ -19,5 +19,4 @@ jobs:
       - run: make install
       - run: make stylelint
       - run: npm run build
-      - run: npm run html
 
