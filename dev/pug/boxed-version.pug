@@ -1,11 +1,13 @@
 extends layout/main
 
 block variables
-	-var title = 'Коробочная версия'
-	-var pageClass = 'boxed'
+  -var title = 'Коробочная версия'
+  -var pageClass = 'boxed'
 
 block content
-	main(class=pageClass)
-		include pages/boxed-version/hero
-		include pages/boxed-version/advantages
-		include pages/boxed-version/comparison
+  main(class=pageClass)
+    include pages/boxed-version/hero
+    include pages/boxed-version/advantages
+    include pages/boxed-version/comparison
+    include pages/boxed-version/about
+    include pages/boxed-version/help

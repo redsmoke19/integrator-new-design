@@ -347,6 +347,7 @@
     const mainAreasTabs = document.querySelector('.main-areas__controls');
     const mainBlogMaterial = document.querySelector('.main-blog__wrapper');
     const landingHeroSlider = document.querySelector('.landing-hero__wrapper');
+    const boxedAboutSlider = document.querySelector('.boxed-about__slider');
     if (mainAreasTabs) {
       new Swiper(mainAreasTabs, {
         direction: 'horizontal',
@@ -417,6 +418,26 @@
             spaceBetween: 0,
           }
         }
+      });
+    }
+    if (boxedAboutSlider) {
+      new Swiper(boxedAboutSlider, {
+        direction: 'horizontal',
+        autoHeight: true,
+        grabCursor: true,
+        preventClicks: true,
+        preventClicksPropagation: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+        pagination: {
+          el: '.boxed-about__nav-bullets',
+          type: 'bullets',
+          bulletClass: 'boxed-about__nav-bullet',
+          bulletActiveClass: 'boxed-about__nav-bullet--active',
+          clickable: true
+        },
       });
     }
   }
@@ -555,7 +576,7 @@
   const getInputMask = () => {
     const phoneElement = document.querySelectorAll('._phone-mask');
     const phoneMaskOption = {
-      mask: '+{7}(000)000-00-00'
+      mask: '+{7} (000) 000-00-00'
     }
     phoneElement.forEach(item => {
       IMask(item, phoneMaskOption);
@@ -620,7 +641,6 @@
     const comparisonAccordion = document.querySelector('.boxed-comparison__accordion');
 
     accordions = new Accordions();
-    console.log(accordions);
     window.accordions = accordions;
   };
 

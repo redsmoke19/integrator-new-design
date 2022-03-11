@@ -1,0 +1,65 @@
+.boxed-about {
+  padding: 0 0 50px 0;
+  &__item {
+    @media screen and (min-width: $desktop-size) {
+      align-items: flex-start;
+      display: flex;
+    }
+  }
+  &__picture {
+    display: block;
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+    }
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 500px;
+      margin: 0 30px 0 0;
+    }
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    @media screen and (min-width: $tablet-size) {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 14px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 16px 0;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 21px;
+    p {
+      &:not(:last-child) {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+  &__nav-bullets {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0 0;
+  }
+  &__nav-bullet {
+    background-color: $pagination-color;
+    border-radius: 50%;
+    height: 10px;
+    transition: all ease-out .2s;
+    width: 10px;
+    &--active {
+      background-color: $purple-dark-color;
+    }
+    &:not(:last-child) {
+      margin: 0 8px 0 0;
+    }
+  }
+}
