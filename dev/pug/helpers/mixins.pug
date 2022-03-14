@@ -1,24 +1,24 @@
 mixin icon(name,mod,width,height)
-	if(mod)
-		svg(class="svg-sprite-icon icon-" + name + ' ' + mod width=width height=height)
-			use(xlink:href="static/images/sprite/symbol/sprite.svg#" + name)
-	else
-		svg(class="svg-sprite-icon icon-" + name)
-			use(xlink:href="static/images/sprite/symbol/sprite.svg#" + name)
+  if(mod)
+    svg(class="svg-sprite-icon icon-" + name + ' ' + mod width=width height=height)
+      use(xlink:href="static/images/sprite/symbol/sprite.svg#" + name)
+  else
+    svg(class="svg-sprite-icon icon-" + name)
+      use(xlink:href="static/images/sprite/symbol/sprite.svg#" + name)
 
 mixin breadcrumbs-item(text,href)
-	li.breadcrumbs__item
-		if(href)
-			a.breadcrumbs__link(href=href)=text
-		else
-			span.breadcrumbs__text=text
+  li.breadcrumbs__item
+    if(href)
+      a.breadcrumbs__link(href=href)=text
+    else
+      span.breadcrumbs__text=text
 
 mixin pagination-item(type,link,text)
-	if type === "text"
-		li.pagination__item
-			a.pagination__link.pagination__link--text(href=link) #{text}
-	if type === "number"
-		li.pagination__item
-			a.pagination__link(href=link)&attributes(attributes) #{text}
+  if type === "text"
+    li.pagination__item
+      a.pagination__link.pagination__link--text(href=link) #{text}
+  if type === "number"
+    li.pagination__item
+      a.pagination__link(href=link)&attributes(attributes) #{text}
 
 

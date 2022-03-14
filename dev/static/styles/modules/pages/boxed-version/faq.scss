@@ -1,0 +1,61 @@
+.boxed-faq {
+  margin: 0 0 35px 0;
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 50px 0;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+      text-align: center;
+    }
+  }
+}
+
+.boxed-faq__accordion {
+  border: 1px solid $pagination-color;
+  border-radius: 10px;
+  &-element {
+    &.is-active {
+      .boxed-faq__accordion-icon {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid $pagination-color;
+    }
+  }
+  &-button {
+    align-items: center;
+    background-color: $white;
+    border: none;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    padding: 20px 35px 20px 28px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+  &-icon {
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all ease-out .2s;
+  }
+  &-wrapper {
+    padding: 0 35px 15px 28px;
+    p {
+      font-size: 16px;
+      line-height: 21px;
+      &:not(:last-child) {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}

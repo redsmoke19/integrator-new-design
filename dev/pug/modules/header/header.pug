@@ -1,29 +1,29 @@
 header.header
-	.header__top
-		.container
-			.header__content
-				include sandwich
-				a.header__logo-link(href=pageClass === 'index-page' ? false : 'index.html')
-					span.visually-hidden Ссылка на главную страницу
-					picture.header__logo-picture
-						source(media="(min-width: 768px)" srcset="static/images/common/icon-logo-tablet.svg")
-						img.header__logo-img(src="static/images/common/icon-logo.svg" alt="Логотип Интегратора" width="184" height="28")
-				.header__actions
-					.header__call
-						a.header__call-link(href="tel:+78006008581" data-da=".header__phones,768,0")
-							span.header__call-number +7 #[span.color-purple (800)] 600-85-81
-							+icon("icon-phone", "header__call-icon", "18", "18")
-	.header__inner
-		.header__contacts
-			.header__phones(data-da=".header__actions, 768, 0")
-				a.header__phone(href="tel:+78122092797")
-					+icon("icon-phone-black", "header__phone-icon", "18", "18")
-					span +7 #[span.color-purple (495)] 109-27-97
-				span.header__phone-separate |
-				a.header__phone(href="tel:+78122092797")
-					span +7 #[span.color-purple (812)] 209-27-97
-		.header__search(data-da=".header__actions,768,last")
-			include ../search/search
-		.header__nav
-			include ../nav/nav
-		include social
+  .header__top
+    .container
+      .header__content
+        include sandwich
+        a.header__logo-link(href=pageClass === 'index-page' ? false : 'index.html')
+          span.visually-hidden Ссылка на главную страницу
+          picture.header__logo-picture
+            source(media="(min-width: 768px)" srcset="static/images/common/icon-logo-tablet.svg")
+            img.header__logo-img(src="static/images/common/icon-logo.svg" alt="Логотип Интегратора" width="184" height="28")
+        .header__actions
+          .header__call
+            a.header__call-link(href="tel:+78006008581" data-da=".header__phones,768,0")
+              span.header__call-number +7 #[span.color-purple (800)] 600-85-81
+              +icon("icon-phone", "header__call-icon", "18", "18")
+  .header__inner
+    .header__contacts
+      .header__phones(data-da=".header__actions, 768, 0")
+        a.header__phone(href="tel:+78122092797")
+          +icon("icon-phone-black", "header__phone-icon", "18", "18")
+          span +7 #[span.color-purple (495)] 109-27-97
+        span.header__phone-separate |
+        a.header__phone(href="tel:+78122092797")
+          span +7 #[span.color-purple (812)] 209-27-97
+    .header__search(data-da=".header__actions,768,last")
+      include ../search/search
+    .header__nav
+      include ../nav/nav
+    include social

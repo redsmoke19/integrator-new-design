@@ -1,38 +1,38 @@
 mixin nav-items(link,text)
-	li.nav__item.swiper-slide
-		a.nav__link(href=link) #{text}
+  li.nav__item.swiper-slide
+    a.nav__link(href=link) #{text}
 
 mixin nav-sub-items(classPage,link,text)
-	li.nav__sub-item
-		a.nav__sub-link(class=pageClass === classPage ? "nav__sub-link--active": false href=pageClass === classPage ? false : link)
-			span.nav__sub-text #{text}
+  li.nav__sub-item
+    a.nav__sub-link(class=pageClass === classPage ? "nav__sub-link--active" : false href=pageClass === classPage ? false : link)
+      span.nav__sub-text #{text}
 
 nav.nav
-	.nav__inner.swiper
-		ul.nav__list.swiper-wrapper
-			li.nav__item.swiper-slide
-				a.nav__link.nav__link--icon(data-nav-link="sub-open")
-					span.nav__text Мы
-					+icon("icon-chevron", "nav__icon", "15", "15")
-				ul.nav__sub-list
-					+nav-sub-items("company-page", "#", "Компания")
-					+nav-sub-items("buy-bitrix", "#", "Вакансии")
-			li.nav__item.swiper-slide
-				a.nav__link.nav__link--icon(data-nav-link="sub-open")
-					span.nav__text Услуги
-					+icon("icon-chevron", "nav__icon", "15", "15")
-				ul.nav__sub-list
-					+nav-sub-items("create-landing-page", "#", "Создание Landing-page")
-					+nav-sub-items("buy-bitrix", "#", "Купить Битрикс24")
-					+nav-sub-items("but-amocrm", "#", "Купить amoCRM")
-					+nav-sub-items("remote-work", "#", "Организация удаленной работы")
-					+nav-sub-items("settings-add", "#", "Настройка рекламы")
-					+nav-sub-items("analytics", "#", "Сквозная аналитика")
-			+nav-items("#", "Внедрение CRM")
-			+nav-items("#", "Битрикс24")
-			+nav-items("#", "amoCRM")
-			+nav-items("#", "Мобильные приложения")
-			+nav-items("#", "Обучение CRM")
-			+nav-items("#", "Магазин")
-			+nav-items("#", "Контакты")
+  .nav__inner.swiper
+    ul.nav__list.swiper-wrapper
+      li.nav__item.swiper-slide
+        a.nav__link.nav__link--icon(data-nav-link="sub-open")
+          span.nav__text Мы
+          +icon("icon-chevron", "nav__icon", "15", "15")
+        ul.nav__sub-list
+          +nav-sub-items("company-page", "#", "Компания")
+          +nav-sub-items("buy-bitrix", "#", "Вакансии")
+      li.nav__item.swiper-slide
+        a.nav__link.nav__link--icon(data-nav-link="sub-open")
+          span.nav__text Услуги
+          +icon("icon-chevron", "nav__icon", "15", "15")
+        ul.nav__sub-list
+          +nav-sub-items("create-landing-page", "#", "Создание Landing-page")
+          +nav-sub-items("buy-bitrix", "#", "Купить Битрикс24")
+          +nav-sub-items("but-amocrm", "#", "Купить amoCRM")
+          +nav-sub-items("remote-work", "#", "Организация удаленной работы")
+          +nav-sub-items("settings-add", "#", "Настройка рекламы")
+          +nav-sub-items("analytics", "#", "Сквозная аналитика")
+      +nav-items("#", "Внедрение CRM")
+      +nav-items("#", "Битрикс24")
+      +nav-items("#", "amoCRM")
+      +nav-items("#", "Мобильные приложения")
+      +nav-items("#", "Обучение CRM")
+      +nav-items("#", "Магазин")
+      +nav-items("#", "Контакты")
 

@@ -1,35 +1,35 @@
 section.any-questions
-	.container
-		.any-questions__content
-			form.any-questions__form(action="#" method="POST")
-				h2.any-questions__title У вас остались какие-то вопросы?
-				p.any-questions__text Задайте их в форме ниже и мы обязательно с вами свяжемся!
-				.any-questions__row
-					.any-questions__box
-						label.any-questions__label(for="anyQuestionsName") Ваше имя
-						input.any-questions__input._js-input-label(type="text" name="anyQuestionsName" id="anyQuestionsName")
-					.any-questions__box
-						label.any-questions__label(for="anyQuestionsPhone") Телефон #[span *]
-						input.any-questions__input._js-input-label._phone-mask(type="tel" name="anyQuestionsPhone" id="anyQuestionsPhone")
-					.any-questions__box
-						label.any-questions__label(for="anyQuestionsMail") E-mail
-						input.any-questions__input._js-input-label(type="email" name="anyQuestionsMail" id="anyQuestionsMail")
-					.any-questions__box.any-questions__box--textarea
-						label.any-questions__label(for="anyQuestionsText") Вопрос
-						textarea.any-questions__input.any-questions__input--textarea._js-input-label(name="anyQuestionsText" id="anyQuestionsText")
-					button.any-questions__button.button.button--fill(type="submit") Задать вопрос
-			.any-questions__share
-				p.any-questions__share-text Поделитесь материалом и получите скидку:
-				ul.any-questions__share-list
-					li.any-questions__share-item
-						a.any-questions__share-link(href="#")
-							span.visually-hidden Ссылка на Вконтакте
-							+icon("icon-vk", "any-questions__share-icon", "16", "16")
-					li.any-questions__share-item
-						a.any-questions__share-link(href="#")
-							span.visually-hidden Ссылка на Facebook
-							+icon("icon-fb", "any-questions__share-icon", "16", "16")
-					li.any-questions__share-item
-						a.any-questions__share-link(href="#")
-							span.visually-hidden Ссылка на twitter
-							+icon("icon-tw", "any-questions__share-icon", "16", "16")
+  .container
+    .any-questions__content
+      form.any-questions__form(action="#" method="POST")
+        h2.any-questions__title У вас остались какие-то вопросы?
+        p.any-questions__text Задайте их в форме ниже и мы обязательно с вами свяжемся!
+        .any-questions__row
+          .any-questions__box
+            label.any-questions__label(for="anyQuestionsName") Ваше имя
+            input.any-questions__input._js-input-label(type="text" name="anyQuestionsName" id="anyQuestionsName")
+          .any-questions__box
+            label.any-questions__label(for="anyQuestionsPhone") Телефон #[span *]
+            input.any-questions__input._js-input-label._phone-mask(type="tel" name="anyQuestionsPhone" id="anyQuestionsPhone")
+          .any-questions__box
+            label.any-questions__label(for="anyQuestionsMail") E-mail
+            input.any-questions__input._js-input-label(type="email" name="anyQuestionsMail" id="anyQuestionsMail")
+          .any-questions__box.any-questions__box--textarea
+            label.any-questions__label(for="anyQuestionsText") Вопрос
+            textarea.any-questions__input.any-questions__input--textarea._js-input-label(name="anyQuestionsText" id="anyQuestionsText")
+          button.any-questions__button.button.button--fill(type="submit") Задать вопрос
+      .any-questions__share
+        p.any-questions__share-text Поделитесь материалом и получите скидку:
+        ul.any-questions__share-list
+          li.any-questions__share-item
+            a.any-questions__share-link(href="#")
+              span.visually-hidden Ссылка на Вконтакте
+              +icon("icon-vk", "any-questions__share-icon", "16", "16")
+          li.any-questions__share-item
+            a.any-questions__share-link(href="#")
+              span.visually-hidden Ссылка на Facebook
+              +icon("icon-fb", "any-questions__share-icon", "16", "16")
+          li.any-questions__share-item
+            a.any-questions__share-link(href="#")
+              span.visually-hidden Ссылка на twitter
+              +icon("icon-tw", "any-questions__share-icon", "16", "16")
