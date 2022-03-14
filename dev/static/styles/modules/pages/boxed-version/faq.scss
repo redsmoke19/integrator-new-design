@@ -30,6 +30,7 @@
   }
   &-button {
     align-items: center;
+    color: $black;
     background-color: $white;
     border: none;
     display: flex;
@@ -53,9 +54,21 @@
     p {
       font-size: 16px;
       line-height: 21px;
+      margin: 0 0 10px 0;
+    }
+    ul {
+      list-style: disc;
+      margin: 0 0 10px 0;
+      padding-left: 1.5em;
+    }
+    li {
       &:not(:last-child) {
         margin: 0 0 10px 0;
       }
+    }
+    a {
+      color: blue;
+      text-decoration: none;
     }
   }
 }
