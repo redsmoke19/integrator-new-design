@@ -1,0 +1,27 @@
+mixin city-phone(city, href, tel)
+  li.contacts-contact__item
+    span.contacts-contact__city= city
+      a.contacts-contact__phone(href=`tel:${href}`)= tel
+
+section.contacts-contact
+  .container
+    h1.contacts-contact__title Контакты integrator.Digital
+    .contacts-contact__content
+      .contacts-contact__info
+        h2.contacts-contact__info-title Наш адрес
+        p.contacts-contact__info-value г. Санкт-Петербург, Пр. Ленина, дом 77 Офис 316
+      .contacts-contact__info
+        h2.contacts-contact__info-title E-mail
+        a.contacts-contact__info-value(href="mailto:sales@integrator.digital") sales@integrator.digital
+      .contacts-contact__info.contacts-contact__info--phones
+        h2.contacts-contact__info-title Бесплатный телефон по всей России
+        a.contacts-contact__info-value(href="tel:+78006008581") +7(800) 600-85-81
+        ul.contacts-contact__list
+          +city-phone("Санкт-Петербург", "+78122092797", "+7 (812) 209-27-97")
+          +city-phone("Москва", "+74951092797", "+7 (495) 109-27-97")
+          +city-phone("Барнаул", "+73852595097", "+7 (3852) 59-50-97")
+          +city-phone("Екатеринбург", "+73433022797", "+7 (343) 302-27-97")
+          +city-phone("Ростов-на-Дону", "+78633092797", "+7 (863) 309-27-97")
+          +city-phone("Новосибирск", "+73833122797", "+7 (383) 312-27-97")
+
+
