@@ -1,8 +1,10 @@
 .boxed-competencies {
   margin: 35px 0;
+
   @media screen and (min-width: $tablet-size) {
     margin: 55px 0 60px;
   }
+
   @media screen and (min-width: $desktop-size) {
     margin: 50px 0;
   }
@@ -11,6 +13,7 @@
     font-weight: 600;
     line-height: 30px;
     margin: 0 0 10px 0;
+
     @media screen and (min-width: $tablet-size) {
       text-align: center;
     }
@@ -20,6 +23,7 @@
     font-weight: 500;
     line-height: 22px;
     margin: 0 0 20px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 0 30px 0;
       text-align: center;
@@ -28,9 +32,11 @@
   &__list {
     display: grid;
     gap: 20px;
+
     @media screen and (min-width: $tablet-size) {
       grid-template-columns: 1fr 1fr;
     }
+
     @media screen and (min-width: $desktop-size) {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -41,6 +47,7 @@
     overflow: hidden;
     padding: 21px 9px 12px 9px;
     position: relative;
+
     @media screen and (min-width: $desktop-size) {
       display: flex;
       flex-direction: column;
@@ -61,6 +68,7 @@
     line-height: 21px;
     margin: 0 0 13px 0;
     transition: all ease-out .2s;
+
     @media screen and (min-width: $desktop-size) {
       margin: 0 0 34px 0;
     }
@@ -68,6 +76,7 @@
   &__icon {
     margin: 0 0 0 -20px;
     transition: all ease-out .2s;
+
     @media screen and (min-width: $desktop-size) {
       margin: auto 0 0 -20px;
       &--crm {

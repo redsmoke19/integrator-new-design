@@ -2,10 +2,12 @@
   background-color: $purple-light-color;
   margin: 0 0 35px 0;
   padding: 41px 0 43px;
+
   @media screen and (min-width: $tablet-size) {
     margin: 0 0 55px 0;
     padding: 30px 0 37px;
   }
+
   @media screen and (min-width: $desktop-size) {
     padding: 45px 0;
   }
@@ -15,6 +17,7 @@
       display: flex;
       justify-content: space-between;
     }
+
     @media screen and (min-width: $desktop-size) {
       justify-content: flex-start;
     }
@@ -23,10 +26,12 @@
     align-items: flex-start;
     display: flex;
     flex-direction: column;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 37px 0 0;
       min-width: 333px;
     }
+
     @media screen and (min-width: $desktop-size) {
       margin: 0 27px 0 0;
       max-width: 516px;
@@ -38,10 +43,12 @@
     font-weight: 700;
     line-height: 1;
     margin: 0 0 6px 0;
+
     @media screen and (min-width: $tablet-size) {
       font-size: 30px;
       line-height: 37px;
     }
+
     @media screen and (min-width: $desktop-size) {
       font-size: 40px;
       line-height: 50px;
@@ -50,6 +57,7 @@
   &__logo-picture {
     display: block;
     margin: 0 0 10px 0;
+
     @media screen and (min-width: $desktop-size) {
       margin: 0 0 17px 0;
     }
@@ -63,6 +71,7 @@
       color: $purple-dark-color;
       font-weight: 800;
     }
+
     @media screen and (min-width: $desktop-size) {
       margin: 0 0 16px 0;
       &--purple {
@@ -73,11 +82,13 @@
   }
   &__picture {
     display: none;
+
     @media screen and (min-width: $tablet-size) {
       display: block;
       flex: 0 0 auto;
       width: 315px;
     }
+
     @media screen and (min-width: $desktop-size) {
       height: 360px;
       width: 360px;

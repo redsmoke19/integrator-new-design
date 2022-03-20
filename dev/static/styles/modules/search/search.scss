@@ -1,13 +1,16 @@
 .search {
   margin: 0 0 30px 0;
+
   @media screen and (min-width: $tablet-size) {
     margin: 0;
   }
   &__link {
     display: none;
+
     @media screen and (min-width: $tablet-size) {
       display: block;
     }
+
     @media screen and (min-width: $desktop-size) {
       display: none;
     }
@@ -19,6 +22,7 @@
     @media screen and (min-width: $tablet-size) {
       display: none;
     }
+
     @media screen and (min-width: $desktop-size) {
       display: block;
     }
@@ -28,6 +32,7 @@
   }
   &__box-icon {
     fill: $black;
+
     @media screen and (min-width: $desktop-size) {
       fill: $gray-color;
     }
@@ -41,6 +46,7 @@
     line-height: 16px;
     padding: 15px 40px 15px 20px;
     width: 100%;
+
     @media screen and (min-width: $desktop-size) {
       background-color: $white;
       border-color: $gray-color;

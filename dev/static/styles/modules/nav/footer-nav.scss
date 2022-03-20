@@ -5,6 +5,7 @@
       gap: 22px;
       grid-template-columns: 1fr 1fr;
     }
+
     @media screen and (min-width: $desktop-size) {
       grid-template-columns: repeat(4, auto);
     }
@@ -31,6 +32,7 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
+
     @media screen and (min-width: $tablet-size) {
       font-size: 24px;
       line-height: 32px;
@@ -45,6 +47,7 @@
     height: 24px;
     padding: 0;
     width: 24px;
+
     @media screen and (min-width: $desktop-size) {
       display: none;
     }
@@ -63,6 +66,7 @@
   &__sub-list {
     display: none;
     padding: 16px 0 10px;
+
     @media screen and (min-width: $desktop-size) {
       display: block;
     }

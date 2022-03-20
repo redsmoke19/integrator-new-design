@@ -9,9 +9,11 @@
   &__picture {
     display: block;
     margin: 0 0 20px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 0 30px 0;
     }
+
     @media screen and (min-width: $desktop-size) {
       flex: 0 0 500px;
       margin: 0 30px 0 0;
@@ -20,6 +22,7 @@
   &__img {
     height: 100%;
     width: 100%;
+
     @media screen and (min-width: $tablet-size) {
       max-width: 700px;
       margin: 0 auto;
@@ -30,6 +33,7 @@
     font-weight: 600;
     line-height: 30px;
     margin: 0 0 14px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 0 16px 0;
     }

@@ -8,6 +8,7 @@
   }
   &__top {
     margin: 0 0 20px 0;
+
     @media screen and (min-width: $tablet-size) {
       display: flex;
       justify-content: space-between;
@@ -114,6 +115,7 @@
   display: flex;
   justify-content: flex-end;
   margin: 20px 0 0 0;
+
   @media screen and (min-width: $tablet-size) {
     margin: 0;
   }

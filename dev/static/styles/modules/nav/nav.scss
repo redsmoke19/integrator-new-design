@@ -1,6 +1,7 @@
 .nav {
   background-color: $white;
   margin: 0 -20px 15px;
+
   @media screen and (min-width: $tablet-size) {
     background-color: transparent;
     margin: 0;
@@ -16,11 +17,13 @@
     flex-direction: column;
     padding: 0;
     position: relative;
+
     @media screen and (min-width: $tablet-size) {
       box-sizing: content-box;
       flex-direction: row;
       padding: 0;
     }
+
     @media screen and (min-width: $desktop-size) {
       box-sizing: border-box;
       flex-wrap: wrap;
@@ -31,6 +34,7 @@
     flex-direction: column;
     padding: 0 20px 15px;
     position: relative;
+
     @media screen and (min-width: $tablet-size) {
       padding: 17px 0;
       width: auto;
@@ -47,12 +51,14 @@
         position: absolute;
         width: 100%;
       }
+
       @media screen and (min-width: $tablet-size) {
         margin: 0;
         &::before {
           display: none;
         }
       }
+
       @media screen and (min-width: $desktop-size) {
         margin: 0 30px 0 0;
       }
@@ -68,6 +74,7 @@
     position: relative;
     text-decoration: none;
     width: 100%;
+
     @media screen and (min-width: $tablet-size) {
       color: $white;
       cursor: pointer;
@@ -82,6 +89,7 @@
           transform: translateY(-50%) rotate(-90deg);
         }
       }
+
       @media screen and (min-width: $tablet-size) {
         padding: 0 20px 0 0;
         &._active {
@@ -103,6 +111,7 @@
     transition: all ease-out .2s;
     stroke: $black;
     pointer-events: none;
+
     @media screen and (min-width: $tablet-size) {
       height: 10px;
       transition: all ease-out .2s;
@@ -126,6 +135,7 @@
     transition: all ease-out .3s;
     //width: 100%;
     z-index: 1;
+
     @media screen and (min-width: $tablet-size) {
       box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, .2);
       height: auto;
@@ -142,6 +152,7 @@
     &._active {
       margin: 15px 0 0;
       transform: translateX(0);
+
       @media screen and (min-width: $tablet-size) {
         opacity: 1;
         margin: 0;
@@ -171,6 +182,7 @@
     line-height: 18px;
     position: relative;
     text-decoration: none;
+
     @media screen and (min-width: $tablet-size) {
       font-size: 14px;
       line-height: 16px;

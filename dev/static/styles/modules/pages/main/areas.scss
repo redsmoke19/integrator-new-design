@@ -3,6 +3,7 @@
   overflow: hidden;
   margin: 0 0 35px 0;
   padding: 0 0 30px;
+
   @media screen and (min-width: $tablet-size) {
     margin: 0 0 55px 0;
     padding: 0 0 55px;
@@ -12,9 +13,11 @@
     font-weight: 600;
     line-height: 30px;
     margin: 0 0 20px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 0 30px 0;
     }
+
     @media screen and (min-width: $desktop-size) {
       font-size: 24px;
       line-height: 30px;
@@ -23,6 +26,7 @@
   &__controls {
     overflow: inherit;
     margin: 0 0 20px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 0 30px 0;
     }
@@ -36,6 +40,7 @@
     font-weight: 500;
     text-decoration: underline;
     transition: all ease-out .15s;
+
     @media screen and (min-width: $tablet-size) {
       font-size: 18px;
       line-height: 25px;
@@ -48,9 +53,11 @@
     display: grid;
     gap: 20px;
     width: 100%;
+
     @media screen and (min-width: $tablet-size) {
       grid-template-columns: 1fr 1fr;
     }
+
     @media screen and (min-width: $desktop-size) {
       gap: 30px;
     }
@@ -62,10 +69,12 @@
     overflow: hidden;
     margin: 0 0 15px 0;
     width: 100%;
+
     @media screen and (min-width: $tablet-size) {
       height: 171px;
       margin: 0 0 20px 0;
     }
+
     @media screen and (min-width: $desktop-size) {
       height: 255px;
       margin: 0 0 25px 0;
@@ -81,11 +90,13 @@
     font-weight: 600;
     line-height: 25px;
     margin: 0 0 10px 0;
+
     @media screen and (min-width: $tablet-size) {
       font-size: 18px;
       line-height: 23px;
       margin: 0 0 12px 0;
     }
+
     @media screen and (min-width: $desktop-size) {
       font-size: 20px;
       line-height: 25px;

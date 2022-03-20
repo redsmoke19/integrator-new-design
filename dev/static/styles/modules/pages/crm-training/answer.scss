@@ -1,6 +1,7 @@
 .crm-answer {
   background: $yellow-color url("../images/common/answer-bg-mobile.png") no-repeat left top;
   padding: 34px 0 60px;
+
   @media screen and (min-width: $tablet-size) {
     padding: 54px 0 60px;
   }
@@ -9,12 +10,14 @@
     font-weight: 600;
     line-height: 30px;
     margin: 0 0 25px 0;
+
     @media screen and (min-width: $tablet-size) {
       text-align: center;
     }
   }
   &__form {
     margin: 0 0 25px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 0 30px 0;
     }
@@ -22,9 +25,11 @@
   &__list {
     display: grid;
     gap: 20px;
+
     @media screen and (min-width: $tablet-size) {
       grid-template-columns: 50% 50%;
     }
+
     @media screen and (min-width: $desktop-size) {
       grid-template-columns: 26% 26% 26% auto;
     }
@@ -61,6 +66,7 @@
   &__box {
     display: flex;
     flex-direction: column;
+
     @media screen and (min-width: $tablet-size) {
       flex-direction: row;
     }
@@ -70,12 +76,14 @@
     font-size: 12px;
     line-height: 16px;
     margin: 0 0 25px 0;
+
     @media screen and (min-width: $tablet-size) {
       order: 2;
     }
   }
   &__social {
     display: flex;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 30px 0 0;
     }

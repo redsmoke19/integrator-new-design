@@ -9,6 +9,7 @@
       grid-template-columns: auto 48%;
       grid-template-rows: minmax(449px, auto) 1fr;
     }
+
     @media screen and (min-width: $desktop-size) {
       align-items: center;
       gap: 45px;
@@ -18,11 +19,13 @@
   }
   &__info {
     margin: 0 0 20px 0;
+
     @media screen and (min-width: $tablet-size) {
       align-self: center;
       grid-column: 2 / -1;
       margin: 0;
     }
+
     @media screen and (min-width: $desktop-size) {
       align-self: unset;
     }
@@ -66,11 +69,13 @@
     gap: 20px;
     grid-template-columns: repeat(2, auto);
     margin: 0 0 20px 0;
+
     @media screen and (min-width: $tablet-size) {
       grid-column: 1 / -1;
       grid-template-columns: repeat(3, auto);
       margin: 0;
     }
+
     @media screen and (min-width: $desktop-size) {
       grid-column: unset;
       margin: 20px 0 0 0;
@@ -79,15 +84,18 @@
   &__number-item {
     display: flex;
     flex-direction: column;
+
     @media screen and (min-width: $tablet-size) {
       align-items: baseline;
       flex-direction: row;
     }
+
     @media screen and (min-width: $desktop-size) {
       flex-direction: column;
     }
     &:last-child {
       grid-column: 1 / -1;
+
       @media screen and (min-width: $tablet-size) {
         grid-column: unset;
       }
@@ -98,6 +106,7 @@
     font-size: 42px;
     font-weight: 800;
     line-height: 55px;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 10px 0 0;
     }
@@ -113,6 +122,7 @@
       grid-row: 1;
       position: relative;
     }
+
     @media screen and (min-width: $desktop-size) {
       grid-row: 1 / -1;
     }
@@ -122,6 +132,7 @@
     height: 338px;
     margin: 0 auto;
     width: 280px;
+
     @media screen and (min-width: $tablet-size) {
       height: 449px;
       left: 50%;
@@ -130,6 +141,7 @@
       transform: translate(calc(-50% - 20px), -50%);
       width: 373px;
     }
+
     @media screen and (min-width: $desktop-size) {
       height: 477px;
       left: unset;

@@ -3,11 +3,13 @@
   background-size: 100% auto;
   overflow: hidden;
   padding: 35px 0 60px;
+
   @media screen and (min-width: $tablet-size) {
     background: $yellow-color url('../images/common/material-bg-tablet.png') no-repeat center top;
     background-size: 100% auto;
     padding: 54px 0 60px;
   }
+
   @media screen and (min-width: $desktop-size) {
     background: $yellow-color url('../images/common/material-bg-desktop.png') no-repeat center top;
     background-size: 100% auto;
@@ -17,6 +19,7 @@
     font-weight: 600;
     line-height: 30px;
     margin: 0 0 54px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 0 50px 0;
       text-align: center;
@@ -44,6 +47,7 @@
     @media screen and (min-width: $tablet-size) {
       padding: 0 90px;
     }
+
     @media screen and (min-width: $desktop-size) {
       display: flex;
       flex-direction: column;
@@ -76,6 +80,7 @@
     font-size: 18px;
     line-height: 1;
     text-decoration: none;
+
     @media screen and (min-width: $desktop-size) {
       margin: auto 0 0 0;
     }
@@ -87,16 +92,19 @@
   &__button {
     margin: 40px 0 0 0;
     width: 100%;
+
     @media screen and (min-width: $tablet-size) {
       margin: 40px auto 0 auto;
       width: auto;
     }
+
     @media screen and (min-width: $desktop-size) {
       margin: 70px auto 0 auto;
     }
   }
   &__nav {
     display: none;
+
     @media screen and (min-width: $tablet-size) {
       align-items: center;
       background-color: transparent;
@@ -126,6 +134,7 @@
         opacity: .2;
       }
     }
+
     @media screen and (min-width: $desktop-size) {
       display: none;
     }

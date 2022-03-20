@@ -13,6 +13,7 @@
   }
   &__box {
     margin: 0 0 20px 0;
+
     @media screen and (min-width: $tablet-size) {
       align-items: flex-start;
       display: flex;
@@ -27,6 +28,7 @@
     &:not(:last-of-type) {
       margin: 0 0 20px 0;
     }
+
     @media screen and (min-width: $desktop-size) {
       font-weight: 400;
     }
@@ -34,10 +36,12 @@
   &__picture {
     display: block;
     margin: 0 -20px;
+
     @media screen and (min-width: $tablet-size) {
       flex: 0 0 auto;
       margin: 10px -40px 0 0;
     }
+
     @media screen and (min-width: $desktop-size) {
       margin: 0 -10px 0 0;
     }
@@ -48,6 +52,7 @@
     max-width: 400px;
     margin: 0 auto;
     width: 100%;
+
     @media screen and (min-width: $tablet-size) {
       max-width: unset;
       margin: unset;

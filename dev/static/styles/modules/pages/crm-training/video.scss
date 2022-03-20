@@ -1,10 +1,12 @@
 .crm-video {
   border-bottom: 1px solid $gray-color;
   padding: 35px 0 60px;
+
   @media screen and (min-width: $tablet-size) {
     padding: 55px 0 70px;
     text-align: center;
   }
+
   @media screen and (min-width: $desktop-size) {
     padding: 55px 0 60px;
   }
@@ -13,6 +15,7 @@
     font-weight: 600;
     line-height: 30px;
     margin: 0 0 23px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 0 33px 0;
     }
@@ -20,6 +23,7 @@
   &__list {
     display: flex;
     flex-direction: column;
+
     @media screen and (min-width: $tablet-size) {
       flex-direction: row;
       flex-wrap: wrap;
@@ -28,6 +32,7 @@
   }
   &__item {
     display: flex;
+
     @media screen and (min-width: $tablet-size) {
       flex-direction: column;
       flex: 0 0 50%;
@@ -35,6 +40,7 @@
     }
     &:not(:last-child) {
       margin: 0 0 20px 0;
+
       @media screen and (min-width: $tablet-size) {
         margin: 0;
       }
@@ -47,11 +53,13 @@
     max-width: 320px;
     min-height: 160px;
     width: 100%;
+
     @media screen and (min-width: $tablet-size) {
       max-width: 330px;
       height: 185px;
       min-height: 185px;
     }
+
     @media screen and (min-width: $desktop-size) {
       height: 280px;
       max-width: 500px;
@@ -60,6 +68,7 @@
   }
   &__text {
     display: none;
+
     @media screen and (min-width: $tablet-size) {
       display: block;
       font-family: $second-font;
@@ -71,10 +80,12 @@
   &__button {
     margin: 40px 0 0 0;
     width: 100%;
+
     @media screen and (min-width: $tablet-size) {
       margin: 35px auto 0;
       width: auto;
     }
+
     @media screen and (min-width: $desktop-size) {
       margin: 40px auto 0;
     }

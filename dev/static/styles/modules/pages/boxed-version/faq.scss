@@ -1,5 +1,6 @@
 .boxed-faq {
   margin: 0 0 35px 0;
+
   @media screen and (min-width: $tablet-size) {
     margin: 0 0 50px 0;
   }
@@ -8,6 +9,7 @@
     font-weight: 600;
     line-height: 30px;
     margin: 0 0 20px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 0 30px 0;
       text-align: center;

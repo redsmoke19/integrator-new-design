@@ -2,6 +2,7 @@
   background: linear-gradient(90deg, #fff 0%, #faf9fc 100%);
   margin: 0 0 35px 0;
   padding: 35px 0;
+
   @media screen and (min-width: $tablet-size) {
     margin: 0 0 50px 0;
     padding: 54px 0;
@@ -14,10 +15,12 @@
   }
   &__description {
     margin: 0 0 15px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 48px 0 0;
       width: 50%;
     }
+
     @media screen and (min-width: $desktop-size) {
       margin: 0 138px 0 0;
       width: 44%;
@@ -36,9 +39,11 @@
   &__form {
     display: flex;
     flex-direction: column;
+
     @media screen and (min-width: $tablet-size) {
       flex: 1 0 auto;
     }
+
     @media screen and (min-width: $desktop-size) {
       align-items: flex-start;
       flex-direction: row;
@@ -51,6 +56,7 @@
     line-height: 1;
     margin: 0 0 20px 0;
     padding: 14px 20px;
+
     @media screen and (min-width: $desktop-size) {
       margin: 0 20px 0 0;
     }

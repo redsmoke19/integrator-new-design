@@ -1,6 +1,7 @@
 .main-blog {
   overflow: hidden;
   padding: 0 0 30px;
+
   @media screen and (min-width: $tablet-size) {
     padding: 0 0 55px;
   }
@@ -9,10 +10,12 @@
     font-weight: 600;
     line-height: 26px;
     margin: 0 0 26px 0;
+
     @media screen and (min-width: $tablet-size) {
       font-size: 24px;
       line-height: 30px;
     }
+
     @media screen and (min-width: $desktop-size) {
       margin: 0 0 30px 0;
     }
@@ -20,6 +23,7 @@
   &__wrapper {
     overflow: inherit;
     margin: 0 0 20px 0;
+
     @media screen and (min-width: $desktop-size) {
       overflow: hidden;
     }
@@ -30,6 +34,7 @@
     display: flex;
     flex-direction: column;
     padding: 30px 27px 32px;
+
     @media screen and (min-width: $tablet-size) {
       height: auto;
       padding: 30px;
@@ -52,6 +57,7 @@
     font-size: 14px;
     line-height: 18px;
     margin: 0 0 12px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 0 30px 0;
     }

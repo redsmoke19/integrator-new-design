@@ -9,17 +9,20 @@
     padding: 17px 20px;
     text-align: center;
     text-decoration: none;
+
     @media screen and (min-width: $tablet-size) {
       display: none;
     }
   }
   &__list {
     display: none;
+
     @media screen and (min-width: $tablet-size) {
       align-items: center;
       display: flex;
       justify-content: center;
     }
+
     @media screen and (min-width: $desktop-size) {
       justify-content: flex-start;
     }

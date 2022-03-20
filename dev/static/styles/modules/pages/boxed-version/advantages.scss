@@ -1,11 +1,13 @@
 .boxed-advantages {
   margin: 0 0 35px 0;
+
   @media screen and (min-width: $tablet-size) {
     margin: 0 0 55px 0;
   }
   &__content {
     border-bottom: 1px solid $pagination-color;
     padding: 0 0 35px 0;
+
     @media screen and (min-width: $tablet-size) {
       padding: 0 0 55px 0;
     }
@@ -15,6 +17,7 @@
     font-weight: 700;
     line-height: 30px;
     margin: 0 0 20px 0;
+
     @media screen and (min-width: $tablet-size) {
       margin: 0 0 30px 0;
     }
@@ -23,9 +26,11 @@
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr;
+
     @media screen and (min-width: $tablet-size) {
       grid-template-columns: 1fr 1fr;
     }
+
     @media screen and (min-width: $desktop-size) {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -36,6 +41,7 @@
     border-radius: 10px;
     display: flex;
     padding: 17px 21px;
+
     @media screen and (min-width: $tablet-size) {
       padding: 22px;
     }
@@ -70,6 +76,7 @@
   &__text {
     font-size: 14px;
     line-height: 18px;
+
     @media screen and (min-width: $tablet-size) {
       font-size: 16px;
       line-height: 21px;
