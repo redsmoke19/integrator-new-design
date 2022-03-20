@@ -1,0 +1,10 @@
+.contacts-map {
+  &__map {
+    min-height: 300px;
+    width: 100%;
+
+    @media screen and (min-width: $tablet-size) {
+      min-height: 400px;
+    }
+  }
+}

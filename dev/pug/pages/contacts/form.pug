@@ -1,0 +1,19 @@
+section.contacts-form
+  .container
+    .contacts-form__content
+      h2.contacts-form__title Напишите нам
+      form.contacts-form__form(action="#" method="POST" name="contacts-form")
+        .contacts-form__box
+          label.contacts-form__label(for="contactsName") Ваше имя
+          input.contacts-form__input._js-input-label(type="text" name="contactsName" id="contactsName")
+        .contacts-form__box
+          label.contacts-form__label(for="contactsPhone") Телефон
+          input.contacts-form__input._js-input-label._phone-mask(type="tel" name="contactsPhone" id="contactsPhone")
+        .contacts-form__box
+          label.contacts-form__label(for="contactsEmail") E-mail
+          input.contacts-form__input._js-input-label(type="email" name="contactsEmail" id="contactsEmail")
+        .contacts-form__box.contacts-form__box--textarea
+          label.contacts-form__label(for="contactsText") Сообщение
+          textarea.contacts-form__input.contacts-form__input--textarea._js-input-label(name="contactsText" id="contactsText")
+        button.contacts-form__button.button.button--fill Отправить
+      p.contacts-form__note Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных данных и соглашаюсь с политикой конфиденциальности

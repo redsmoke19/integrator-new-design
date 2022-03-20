@@ -13,6 +13,8 @@ html(lang="ru-RU")
     meta(name="keywords" content="")
     meta(name="format-detection" content="telephone=no")
     link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+    if pageClass === "contacts"
+      script(src="https://api-maps.yandex.ru/2.1/?apikey=API&lang=ru_RU", type="text/javascript")
   body
     .wrapper
       include ../modules/header/header

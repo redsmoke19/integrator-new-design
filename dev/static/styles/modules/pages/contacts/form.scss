@@ -1,0 +1,104 @@
+.contacts-form {
+  border-top: 1px solid $pagination-color;
+  margin: 0 0 35px 0;
+  padding: 35px 0 0 0;
+
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 55px 0;
+    padding: 55px 0 0 0;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    padding: 46px 0 0 0;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+    }
+  }
+  &__form {
+    display: grid;
+    gap: 20px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      gap: 16px 22px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, auto);
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      gap: 20px;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto auto;
+    }
+  }
+  &__box {
+    position: relative;
+
+    @media screen and (min-width: $desktop-size) {
+      grid-column: span 2;
+    }
+    &--textarea {
+      @media screen and (min-width: $tablet-size) {
+        grid-column: 2 / - 1;
+        grid-row: 1 / 3;
+      }
+
+      @media screen and (min-width: $desktop-size) {
+        grid-column: span 5;
+        grid-row: 2 / 3;
+      }
+    }
+  }
+  &__label {
+    color: #918f8f;
+    font-size: 16px;
+    line-height: 1;
+    left: 24px;
+    position: absolute;
+    top: 18px;
+    transition: all ease-out .15s;
+    &._active {
+      font-size: 11px;
+      transform: translateY(-10px);
+    }
+  }
+  &__input {
+    border: 1px solid #918f8f;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1;
+    padding: 20px 30px 10px 24px;
+    width: 100%;
+    &--textarea {
+      min-height: 100px;
+
+      @media screen and (min-width: $tablet-size) {
+        height: 100%;
+      }
+    }
+
+    @media screen and (min-width: $tablet-size) {
+      padding: 22px 30px 12px 24px;
+    }
+    &:focus {
+      border: 1px solid $yellow-color;
+      outline: none;
+    }
+  }
+  &__button {
+    @media screen and (min-width: $desktop-size) {
+      align-self: end;
+    }
+  }
+  &__note {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

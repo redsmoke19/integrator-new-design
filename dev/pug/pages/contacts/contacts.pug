@@ -1,7 +1,7 @@
 mixin city-phone(city, href, tel)
   li.contacts-contact__item
     span.contacts-contact__city= city
-      a.contacts-contact__phone(href=`tel:${href}`)= tel
+    a.contacts-contact__phone(href=`tel:${href}`)= tel
 
 section.contacts-contact
   .container
@@ -9,13 +9,20 @@ section.contacts-contact
     .contacts-contact__content
       .contacts-contact__info
         h2.contacts-contact__info-title Наш адрес
-        p.contacts-contact__info-value г. Санкт-Петербург, Пр. Ленина, дом 77 Офис 316
-      .contacts-contact__info
-        h2.contacts-contact__info-title E-mail
-        a.contacts-contact__info-value(href="mailto:sales@integrator.digital") sales@integrator.digital
+        p.contacts-contact__info-value
+          span г. Санкт-Петербург, Пр. Ленина, дом 77 Офис 316
+          +icon("icon-pin", "contacts-contact__info-icon", "18", "18")
+      .contacts-contact__info-pic
+        .contacts-contact__info
+          h2.contacts-contact__info-title E-mail
+          a.contacts-contact__info-value(href="mailto:sales@integrator.digital")
+            span sales@integrator.digital
+            +icon("icon-mail", "contacts-contact__info-icon", "18", "18")
       .contacts-contact__info.contacts-contact__info--phones
         h2.contacts-contact__info-title Бесплатный телефон по всей России
-        a.contacts-contact__info-value(href="tel:+78006008581") +7(800) 600-85-81
+        a.contacts-contact__info-value(href="tel:+78006008581")
+          span +7 (800) 600-85-81
+          +icon("icon-phone-2", "contacts-contact__info-icon", "18", "18")
         ul.contacts-contact__list
           +city-phone("Санкт-Петербург", "+78122092797", "+7 (812) 209-27-97")
           +city-phone("Москва", "+74951092797", "+7 (495) 109-27-97")

@@ -629,6 +629,45 @@
     });
   };
 
+  const getMap = () => {
+    const mapBlock = document.querySelector('#map');
+    let map;
+    let myPlacemark;
+
+    const init = () => {
+      if (!mapBlock) {
+        return;
+      }
+
+      const imgUrl = mapBlock.getAttribute('data-placemark');
+
+      map = new window.ymaps.Map('map', {
+          center: [59.733080, 30.085400],
+          zoom: 17,
+          controls: [],
+        },
+        {
+          autoFitToViewport: true,
+          suppressMapOpenBlock: true,
+        });
+
+      myPlacemark = new window.ymaps.Placemark(map.getCenter(), {},
+        {
+          iconLayout: 'default#image',
+          iconImageHref: imgUrl,
+          iconImageSize: [40, 40],
+          iconImageOffset: [-20, -50],
+        });
+
+      map.behaviors.disable('scrollZoom');
+      map.geoObjects.add(myPlacemark);
+    }
+
+    if (ymaps) {
+      ymaps.ready(init);
+    }
+  };
+
   let tabs;
   let accordions;
 
@@ -658,4 +697,5 @@
   initTabs();
   initAccordions();
   getMorePartners();
+  getMap();
 })();

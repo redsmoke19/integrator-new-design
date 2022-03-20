@@ -10,6 +10,7 @@
     font-display: swap;
   }
 }
+
 @include font-face('Open Sans', '../fonts/opensans/light/opensanslight', 300, 'normal');
 @include font-face('Open Sans', '../fonts/opensans/regular/opensans', 400, 'normal');
 @include font-face('Open Sans', '../fonts/opensans/bold/opensansbold', 700, 'normal');
