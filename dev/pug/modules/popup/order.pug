@@ -1,0 +1,22 @@
+.popup.popup_success-pay
+  .popup__content
+    .popup__body.popup-form
+      button.popup__close
+        +icon("icon-close", "popup__close-icon", "34", "34")
+      h2.popup-form__title Напишите нам
+      p.popup-form__text И наш менеджер свяжется с вами в кратчайшие сроки
+      form.contacts-form__form.popup-form__form(action="#" method="POST" name="popupForm")
+        .contacts-form__box
+          label.contacts-form__label(for="contactsName") Ваше имя
+          input.contacts-form__input._js-input-label(type="text" name="contactsName" id="contactsName")
+        .contacts-form__box
+          label.contacts-form__label(for="contactsPhone") Телефон
+          input.contacts-form__input._js-input-label._phone-mask(type="tel" name="contactsPhone" id="contactsPhone")
+        .contacts-form__box
+          label.contacts-form__label(for="contactsEmail") E-mail
+          input.contacts-form__input._js-input-label(type="email" name="contactsEmail" id="contactsEmail")
+        .contacts-form__box.contacts-form__box--textarea
+          label.contacts-form__label(for="contactsText") Сообщение
+          textarea.contacts-form__input.contacts-form__input--textarea._js-input-label(name="contactsText" id="contactsText")
+        button.contacts-form__button.button.button--fill Отправить
+      p.contacts-form__note Нажимая кнопку «Отправить», я даю согласие на обработку своих персональных данных и соглашаюсь с политикой конфиденциальности

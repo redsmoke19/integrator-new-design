@@ -1,0 +1,33 @@
+.popup-form {
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0 0 5px 0;
+  }
+  &__text {
+    color: $text-note-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0 0 30px 0;
+  }
+  &__form {
+    @media screen and (min-width: $desktop-size) {
+      gap: 16px 22px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+  .contacts-form__box {
+    @media screen and (min-width: $desktop-size) {
+      grid-column: unset;
+    }
+  }
+  .contacts-form__box--textarea {
+    @media screen and (min-width: $desktop-size) {
+      grid-column: 2 / -1;
+      grid-row: 1 / 3;
+    }
+  }
+}
