@@ -533,10 +533,12 @@
     const crmMaterial = document.querySelector('.crm-material__swiper');
     const navMenu = document.querySelector('.nav__inner');
     const otherMaterials = document.querySelector('.other-materials__wrapper');
+    const settingsAwards = document.querySelector('.settings-awards__swiper');
     let crmTrainingHeadSlider;
     let crmMaterialSlider;
     let navSlider;
     let otherMaterialsSlider;
+    let settingsAwardsSlider;
 
     const breakpointChecker = function () {
       let resizeTimeout;
@@ -566,6 +568,9 @@
         if (breakpointDesktop.matches === true) {
           if (crmMaterialSlider !== undefined) {
             crmMaterialSlider.destroy(true, true);
+          }
+          if (settingsAwardsSlider !== undefined) {
+            settingsAwardsSlider.destroy(true, true);
           }
         } else if (breakpointDesktop.matches === false) {
           getDesktopSliders();
@@ -632,6 +637,26 @@
             prevEl: '.crm-material__nav--prev',
             disabledClass: 'crm-material__nav--disabled'
           }
+        });
+      }
+
+      if (settingsAwards) {
+        settingsAwardsSlider = new Swiper(settingsAwards, {
+          direction: 'horizontal',
+          grabCursor: true,
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 'auto',
+          spaceBetween: 20,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+          pagination: {
+            el: '.settings-awards__bullets',
+            type: 'bullets',
+            bulletClass: 'settings-awards__bullet',
+            bulletActiveClass: 'settings-awards__bullet--active',
+            clickable: true
+          },
         });
       }
     };

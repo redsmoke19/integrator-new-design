@@ -1,0 +1,26 @@
+section.settings-hero
+  .container
+    h1.visually-hidden Коробочная версия битрикса
+    .settings-hero__content
+      .settings-hero__info
+        .settings-hero__top
+          h2.settings-hero__title Настройка
+          picture.settings-hero__logo-picture
+            source(media="(min-width: 1280px)", srcset="static/images/content/bitrix-img-desktop.png")
+            source(media="(min-width: 768px)", srcset="static/images/content/bitrix-img-tablet.png")
+            img.settings-hero__logo-img(src="static/images/content/bitrix-img-mobile.png" width="180" height="33" alt="Картинка надписи Битрикс 24")
+        p.settings-hero__subtitle по всей России
+        p.settings-hero__text Наш эксперт приедет к вам в офис для консультации и расчета эффективности совершенно бесплатно!
+        ul.settings-hero__list
+          li.settings-hero__item
+            p.settings-hero__item-text Объединение каналов продаж
+          li.settings-hero__item
+            p.settings-hero__item-text Повышение эффективности и увеличение продаж
+          li.settings-hero__item
+            p.settings-hero__item-text Увеличение продаж
+        form.settings-hero__form(action="#" method="POST")
+          input.settings-hero__input._phone-mask(type="phone" name="settingsPhone" placeholder="+7 ( ___ )  ___ - __ - __")
+          a.button.button--fill.settings-hero__button(href="#" data-mobile-text="Оставить заявку" data-desktop-text="Позвонить")
+      picture.settings-hero__picture
+        source(media="(min-width: 1280px)", srcset="static/images/content/settings/hero-picture.png")
+        img.settings-hero__img(src="static/images/content/settings/hero-picture-tablet.png" width="309", height="229" alt="Изображение продукта")

@@ -17,7 +17,7 @@
       }
     ],
     "rule-empty-line-before": ["always", {
-      "except": ["inside-block"]
+      "except": ["first-nested"]
     }],
     "scss/selector-no-redundant-nesting-selector": true,
     "scss/at-import-partial-extension": "never",

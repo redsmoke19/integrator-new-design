@@ -1,0 +1,79 @@
+.settings-awards {
+  border-bottom: 1px solid $pagination-color;
+  overflow: hidden;
+  margin: 0 0 35px 0;
+  padding: 0 0 35px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 5px 0;
+  }
+
+  &__note {
+    color: $text-note-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0 0 40px 0;
+    position: relative;
+
+    &::before {
+      background-color: $yellow-color;
+      bottom: -20px;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: 60px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 20px 0;
+  }
+
+  &__swiper {
+    overflow: inherit;
+  }
+
+  &__item {
+    width: auto;
+  }
+
+  &__bullets {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px;
+
+    @media screen and (min-width: $desktop-size) {
+      display: none;
+    }
+  }
+
+  &__bullet {
+    background-color: $pagination-color;
+    border-radius: 50px;
+    height: 10px;
+    width: 10px;
+
+    &--active {
+      background-color: $purple-dark-color;
+    }
+
+    &:not(:last-child) {
+      margin: 0 8px 0 0;
+    }
+  }
+
+  &__bottom {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: center;
+  }
+}
