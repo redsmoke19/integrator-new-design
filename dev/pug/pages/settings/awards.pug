@@ -1,16 +1,25 @@
 section.settings-awards
   .container
     .settings-awards__content
-      h2.settings-awards__title Входим в пятерку крупнейших интеграторов Битрикс24
-      p.settings-awards__note Имеем более 40 подтвержденных внедрений
-      p.settings-awards__text Имеем большой опыт настройки Битрикс24 в различных сферах бизнеса, внедрения CRM в отделах продаж, а также запуска электронного документооборота. Позвоните или напишите нам, мы поможем выбрать подходящее решение.
-      .settings-awards__swiper.swiper
-        ul.settings-awards__list.swiper-wrapper
-          li.settings-awards__item.swiper-slide
-            img.settings-awards__img(src="static/images/content/sertificat-1.jpg" width="280" height="382" alt="Диплом копании Integrator")
-          li.settings-awards__item.swiper-slide
-            img.settings-awards__img(src="static/images/content/sertificat-2.jpg" width="280" height="382" alt="Диплом копании Integrator")
-          li.settings-awards__item.swiper-slide
-            img.settings-awards__img(src="static/images/content/sertificat-3.jpg" width="280" height="382" alt="Диплом копании Integrator")
-        .settings-awards__bullets
-      p.settings-awards__bottom Всего, являемся обладателями 14 значимых наград.
+      .settings-awards__inner
+        h2.settings-awards__title Входим в пятерку крупнейших интеграторов Битрикс24
+        p.settings-awards__note Имеем более 40 подтвержденных внедрений
+        p.settings-awards__text Имеем большой опыт настройки Битрикс24 в различных сферах бизнеса, внедрения CRM в отделах продаж, а также запуска электронного документооборота. Позвоните или напишите нам, мы поможем выбрать подходящее решение.
+        p.settings-awards__bottom.settings-awards__tablet-block Всего, являемся обладателями 14 значимых наград.
+      .settings-awards__slider-box
+        .settings-awards__swiper.swiper
+          ul.settings-awards__list.swiper-wrapper
+            li.settings-awards__item.swiper-slide
+              picture.settings-awards__picture
+                source(media="(min-width: 1280px)", srcset="static/images/content/sertificat-1-desktop.jpg")
+                img.settings-awards__img(src="static/images/content/sertificat-1.jpg" width="280" height="382" alt="Диплом копании Integrator")
+            li.settings-awards__item.swiper-slide
+              picture.settings-awards__picture
+                source(media="(min-width: 1280px)", srcset="static/images/content/sertificat-2-desktop.jpg")
+                img.settings-awards__img(src="static/images/content/sertificat-2.jpg" width="280" height="382" alt="Диплом копании Integrator")
+            li.settings-awards__item.swiper-slide
+              picture.settings-awards__picture
+                source(media="(min-width: 1280px)", srcset="static/images/content/sertificat-3-desktop.jpg")
+                img.settings-awards__img(src="static/images/content/sertificat-3.jpg" width="280" height="382" alt="Диплом копании Integrator")
+          .settings-awards__bullets
+      p.settings-awards__bottom.settings-awards__tablet-none Всего, являемся обладателями 14 значимых наград.

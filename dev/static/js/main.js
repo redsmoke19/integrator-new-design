@@ -657,6 +657,12 @@
             bulletActiveClass: 'settings-awards__bullet--active',
             clickable: true
           },
+          breakpoints: {
+            768: {
+              slidesPerView: 1,
+              // spaceBetween: 0,
+            }
+          },
         });
       }
     };

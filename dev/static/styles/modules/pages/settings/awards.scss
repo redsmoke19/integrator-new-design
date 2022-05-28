@@ -4,11 +4,49 @@
   margin: 0 0 35px 0;
   padding: 0 0 35px;
 
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 55px 0;
+    padding: 0 0 50px 0;
+  }
+
+  &__content {
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      flex-direction: column;
+    }
+  }
+
+  &__inner {
+    @media screen and (min-width: $tablet-size) {
+      flex: 1 0 auto;
+      padding: 0 50px 0 0;
+      width: 48%;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
   &__title {
     font-size: 24px;
     font-weight: 600;
     line-height: 30px;
     margin: 0 0 5px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 10px 0;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 5px 0;
+      text-align: center;
+    }
   }
 
   &__note {
@@ -19,6 +57,11 @@
     margin: 0 0 40px 0;
     position: relative;
 
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 32px 0;
+      text-align: center;
+    }
+
     &::before {
       background-color: $yellow-color;
       bottom: -20px;
@@ -27,6 +70,11 @@
       left: 0;
       position: absolute;
       width: 60px;
+
+      @media screen and (min-width: $desktop-size) {
+        bottom: -16px;
+        left: calc(50% - 30px);
+      }
     }
   }
 
@@ -34,14 +82,58 @@
     font-size: 14px;
     line-height: 18px;
     margin: 0 0 20px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 21px;
+      margin: 0 0 50px 0;
+      text-align: center;
+    }
+  }
+
+  &__slider-box {
+    @media screen and (min-width: $tablet-size) {
+      min-width: 0;
+      width: 280px;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      width: 100%;
+    }
   }
 
   &__swiper {
     overflow: inherit;
+
+    @media screen and (min-width: $tablet-size) {
+      overflow: hidden;
+    }
+  }
+
+  &__list {
+    @media screen and (min-width: $desktop-size) {
+      justify-content: space-between;
+      margin: 0 0 30px 0;
+    }
   }
 
   &__item {
     width: auto;
+  }
+
+  &__picture {
+    @media screen and (min-width: $desktop-size) {
+      display: block;
+      height: 448px;
+      width: 328px;
+    }
+  }
+
+  &__img {
+    @media screen and (min-width: $desktop-size) {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &__bullets {
@@ -75,5 +167,35 @@
     font-weight: 600;
     line-height: 21px;
     text-align: center;
+
+    @media screen and (min-width: $tablet-size) {
+      text-align: left;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      text-align: center;
+    }
+  }
+
+  &__tablet-none {
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      display: block;
+    }
+  }
+
+  &__tablet-block {
+    display: none;
+
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      display: none;
+    }
   }
 }
