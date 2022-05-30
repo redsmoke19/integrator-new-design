@@ -1,0 +1,126 @@
+.settings-think {
+  background-color: $purple-light-color;
+  padding: 35px 0;
+
+  @media screen and (min-width: $tablet-size) {
+    padding: 35px 0 40px;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    background: linear-gradient(270deg, $purple-light-color 0%, rgba(249, 248, 251, 0) 100%);
+    padding: 55px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 5px 0;
+  }
+
+  &__note {
+    color: $text-note-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__inner {
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+    }
+  }
+
+  &__picture {
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 470px;
+      margin: -50px 0 0 0;
+    }
+  }
+
+  &__img {
+    @media screen and (min-width: $desktop-size) {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 22px 0 0;
+    }
+  }
+
+  &__item {
+    align-items: flex-start;
+    background: $white;
+    border: 1px solid $pagination-color;
+    border-radius: 10px;
+    display: flex;
+    padding: 22px 16px 22px 26px;
+
+    @media screen and (min-width: $tablet-size) {
+      padding: 22px 5px 22px 20px;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      padding: 21px;
+    }
+  }
+
+  &__number {
+    align-items: center;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(98, 63, 162, .1);
+    color: $yellow-color;
+    display: flex;
+    font-family: $roboto-font;
+    font-size: 22px;
+    font-weight: 800;
+    justify-content: center;
+    flex: 0 0 auto;
+    height: 50px;
+    line-height: 28px;
+    margin: 0 16px 0 0;
+    width: 50px;
+  }
+
+  &__heading {
+    color: $purple-dark-color;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0 0 8px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 20px;
+      line-height: 26px;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
