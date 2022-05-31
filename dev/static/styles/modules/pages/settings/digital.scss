@@ -1,0 +1,173 @@
+.settings-digital {
+  border-bottom: 1px solid $pagination-color;
+  margin: 0 0 35px 0;
+  padding: 35px 0;
+
+  @media screen and (min-width: $tablet-size) {
+    padding: 50px 0 40px;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 60px 0;
+    padding: 75px 0 40px;
+  }
+
+  &__content {
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      position: relative;
+
+      &::before {
+        background: url("../images/common/circle-bg.png") no-repeat center;
+        background-size: 100% 100%;
+        content: "";
+        height: 600px;
+        left: -40px;
+        position: absolute;
+        top: -130px;
+        transform: rotate(-60deg);
+        width: 600px;
+        z-index: -1;
+      }
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      &::before {
+        left: -30px;
+      }
+    }
+  }
+
+  &__inner {
+    @media screen and (min-width: $tablet-size) {
+      align-items: flex-start;
+      display: flex;
+      margin: 0 33px 0 0;
+      padding: 111px 0 0;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 35px 0 0;
+      width: 35%;
+    }
+  }
+
+  &__icon {
+    display: none;
+
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+      flex: 0 0 auto;
+      margin: 0 18px 0 0;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 5px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__note {
+    color: $text-note-color;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 auto;
+      width: 53%;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      gap: 30px;
+      width: auto;
+    }
+  }
+
+  &__item {
+    align-items: flex-start;
+    display: flex;
+
+    @media screen and (min-width: $desktop-size) {
+      &:nth-child(1) {
+        margin: 0 0 0 55px;
+      }
+
+      &:nth-child(2) {
+        margin: 0 0 0 105px;
+      }
+
+      &:nth-child(3) {
+        margin: 0 0 0 90px;
+      }
+    }
+  }
+
+  &__number {
+    align-items: center;
+    background-color: $purple-dark-color;
+    border-radius: 50%;
+    color: $white;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 21px;
+    height: 40px;
+    margin: 0 15px 0 0;
+    width: 40px;
+
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__heading {
+    color: $purple-dark-color;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0 0 8px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 20px;
+      line-height: 26px;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin: 0 0 8px 0;
+
+        @media screen and (min-width: $tablet-size) {
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
+}

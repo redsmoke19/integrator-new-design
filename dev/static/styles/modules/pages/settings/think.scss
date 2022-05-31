@@ -37,6 +37,8 @@
   }
 
   &__picture {
+    display: none;
+
     @media screen and (min-width: $tablet-size) {
       display: block;
       flex: 0 0 auto;
