@@ -1,0 +1,97 @@
+.settings-promo {
+  background: linear-gradient(90deg, #fff 0%, #faf9fc 100%);
+  margin: 0 0 35px 0;
+  padding: 35px 0;
+
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 55px 0;
+    padding: 35px 0 40px;
+  }
+
+  @media screen and (min-width: $tablet-size) {
+    padding: 47px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 5px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 10px 0;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 5px 0;
+      text-align: center;
+    }
+
+    span {
+      color: $yellow-color;
+    }
+  }
+
+  &__note {
+    color: $text-note-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0 0 15px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 20px 0;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 auto 30px;
+      max-width: 610px;
+      text-align: center;
+
+      a {
+        color: $purple-dark-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet-size) {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      flex-direction: row;
+      gap: unset;
+      justify-content: center;
+    }
+  }
+
+  &__input {
+    border: 1px solid $input-gray-color;
+    border-radius: 25px;
+    color: $black;
+    font-size: 16px;
+    margin: 0 0 20px 0;
+    padding: 15px 35px;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 20px 0 0;
+    }
+
+    &::placeholder {
+      color: $input-gray-color;
+    }
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+    }
+  }
+}

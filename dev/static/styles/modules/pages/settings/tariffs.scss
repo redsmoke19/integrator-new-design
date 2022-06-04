@@ -1,0 +1,255 @@
+.settings-tariffs {
+  margin: 0 0 35px 0;
+
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 55px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 5px 0;
+  }
+
+  &__note {
+    color: $text-note-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__bottom {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+
+    @media screen and (min-width: $tablet-size) {
+      text-align: center;
+    }
+  }
+}
+
+.tariffs-accordion {
+  margin: 0 0 30px 0;
+
+  @media screen and (min-width: $desktop-size) {
+    border-radius: 10px 10px 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+  }
+
+  &__element {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &.is-active {
+      .tariffs-accordion__button {
+        transform: rotate(180deg);
+      }
+      @media screen and (min-width: $tablet-size) {
+        .tariffs-accordion__head {
+          border-radius: 10px 10px 0 0;
+        }
+      }
+
+      @media screen and (min-width: $desktop-size) {
+        .tariffs-accordion__head {
+          border-radius: 0;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      @media screen and (min-width: $tablet-size) {
+        margin: 0 0 30px 0;
+      }
+
+      @media screen and (min-width: $desktop-size) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__head {
+    background-color: $white--dark-gray-color;
+    display: flex;
+    flex-direction: column;
+    margin: 0 -20px;
+    padding: 27px 20px;
+    position: relative;
+
+    @media screen and (min-width: $tablet-size) {
+      border-radius: 10px;
+      margin: 0;
+      padding: 27px 20px 30px;
+      transition: all ease-out .1s;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      border-radius: 0;
+    }
+
+    &--orange {
+      background-color: $yellow-color;
+    }
+
+    &--purple {
+      background-color: $purple-dark-color;
+      color: $white;
+
+      .tariffs-accordion__button-icon {
+        color: $white;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+  }
+
+  &__price {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0 0 5px 0;
+  }
+
+  &__period {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+  }
+
+  &__note {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+  }
+
+  &__button {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    top: 27px;
+    transition: all ease-out .3s;
+    width: 24px;
+
+    @media screen and (min-width: $desktop-size) {
+      display: none;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: $desktop-size) {
+      height: 100%;
+    }
+  }
+
+  &__inner {
+    padding: 0 0 30px;
+
+    @media screen and (min-width: $tablet-size) {
+      border: 1px solid $pagination-color;
+      border-top: none;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0 0 30px 0;
+    padding: 0;
+
+    @media screen and (min-width: $tablet-size) {
+      padding: 0 20px;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid $pagination-color;
+    padding: 20px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      border: none;
+      position: relative;
+
+      &::before {
+        background: url("../images/common/separator-big.svg") no-repeat center;
+        bottom: 0;
+        content: "";
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+
+      &:first-child {
+        padding: 40px 0 20px;
+
+        @media screen and (min-width: $desktop-size) {
+          padding: 20px 10px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+
+    @media screen and (min-width: $desktop-size) {
+      text-align: center;
+    }
+
+    br.desktop-only {
+      display: none;
+
+      @media screen and (min-width: $desktop-size) {
+        display: block;
+      }
+    }
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+
+  &__link {
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 auto;
+      max-width: 545px;
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      margin: auto auto 0;
+      max-width: 260px;
+    }
+  }
+}

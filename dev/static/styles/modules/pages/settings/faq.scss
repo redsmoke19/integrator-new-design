@@ -1,0 +1,80 @@
+.settings-faq {
+  margin: 0 0 35px 0;
+
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 55px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 30px 0;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      text-align: center;
+    }
+  }
+
+  &__accordion {
+    border: 1px solid $pagination-color;
+    border-radius: 10px;
+  }
+
+  &__element {
+    &.is-active {
+      .settings-faq__button-icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $pagination-color;
+    }
+  }
+
+  &__head {
+    padding: 20px 24px 20px 28px;
+    position: relative;
+  }
+
+  &__heading {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0;
+  }
+
+  &__button {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    left: 0;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__button-icon {
+    position: absolute;
+    right: 20px;
+    top: 27px;
+    transition: all ease-out .3s;
+  }
+
+  &__inner {
+    padding: 0 24px 20px 28px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}

@@ -1,0 +1,89 @@
+mixin tariffs(text, bold = false)
+  li.tariffs-accordion__item
+    p.tariffs-accordion__text(class=bold ? "tariffs-accordion__text--bold" : false)!=text
+
+section.settings-tariffs
+  .container
+    .settings-tariffs__content
+      h2.settings-tariffs__title Тарифы
+      h2.settings-tariffs__note Фиксированная стоимость настройки Битрикс24, закрепленная в договоре
+      .settings-tariffs__accordion.tariffs-accordion(data-accordion="parent", data-single, data-close-inner, data-destroy="(max-width: 1279px)")
+        .tariffs-accordion__element(data-accordion="element")
+          .tariffs-accordion__head
+            h3.tariffs-accordion__heading Базовый
+            span.tariffs-accordion__price 38 000 ₽
+            p.tariffs-accordion__period Срок внедрения 5 дней
+            p.tariffs-accordion__note 1 визит в офис заказчика, 5 часов онлайн обучения
+            button.tariffs-accordion__button(type="button" data-accordion="button")
+              +icon("icon-chevrone-button", "tariffs-accordion__button-icon", "12", "6")
+          .tariffs-accordion__content(data-accordion="content")
+            .tariffs-accordion__inner
+              ul.tariffs-accordion__list
+                +tariffs("Анализ отдела продаж в компании и интервью с группой внедрения клиента")
+                +tariffs("Приглашение сотрудников и руководителей в Битрикс24™")
+                +tariffs("Создание структуры Компании и настройка прав доступа")
+                +tariffs("Загрузка базы клиентов и товаров из Excel")
+                +tariffs("Настройка карточек Лида, Контакта, Компании и Сделки")
+                +tariffs("Выбор, настройка и подключение виртуальной АТС")
+                +tariffs("Настройка генерации шаблона договора (1 шаблон)")
+                +tariffs("Настройка личной и корпоративной почты")
+                +tariffs("Подключение Контакт-Центра WhatsApp/Telegram/Viber")
+                +tariffs("Настройка этапов воронки продаж и причин отказа")
+                +tariffs("Настройка роботов и триггеров")
+                +tariffs("Создание форм обратной связи для сайта")
+                +tariffs("Проведение двух обучающих занятий с записью видео")
+                +tariffs("Оказание услуг технической поддержки в течении месяца")
+              a.tariffs-accordion__link.button.button--purple(href="#") Хочу заказать
+        .tariffs-accordion__element(data-accordion="element")
+          .tariffs-accordion__head.tariffs-accordion__head--orange
+            h3.tariffs-accordion__heading Расширенный
+            span.tariffs-accordion__price 68 000 ₽
+            p.tariffs-accordion__period Срок внедрения 20 дней
+            p.tariffs-accordion__note 3 визита в офис заказчика, 9 часов онлайн обучения
+            button.tariffs-accordion__button(type="button" data-accordion="button")
+              +icon("icon-chevrone-button", "tariffs-accordion__button-icon", "12", "6")
+          .tariffs-accordion__content(data-accordion="content")
+            .tariffs-accordion__inner
+              ul.tariffs-accordion__list
+                +tariffs("Все опции тарифа<br class='desktop-only'> “Базовый”", "bold")
+                +tariffs("Настройка нескольких воронок и туннелей продаж")
+                +tariffs("Настройка модуля Задачи и<br class='desktop-only'> Проекты")
+                +tariffs("Настройка модуля CRM-Маркетинг, рассылок")
+                +tariffs("Настройка Смарт-Процессов")
+                +tariffs("Настройка автоматических уведомлений в воронках продаж")
+                +tariffs("Настройка генерации шаблона договора и коммерческого предложения (2 шаблона)")
+                +tariffs("Настройка справочников CRM Битрикс24")
+                +tariffs("Настройка отчетов CRM для руководителей")
+                +tariffs("Интеграция с внешними<br class='desktop-only'> календарями")
+                +tariffs("Настройка типовых фильтров и дашбордов Лидов, Сделок, Дел.")
+                +tariffs("Настройка шаблонов писем, WhatsApp и SMS-сообщений")
+                +tariffs("Проведение трех обучающих занятий с записью видео")
+                +tariffs("Оказание услуг технической поддержки в течении 6 месяцев")
+              a.tariffs-accordion__link.button.button--purple(href="#") Хочу заказать
+        .tariffs-accordion__element.is-active(data-accordion="element")
+          .tariffs-accordion__head.tariffs-accordion__head--purple
+            h3.tariffs-accordion__heading Комплексный
+            span.tariffs-accordion__price 129 000 ₽
+            p.tariffs-accordion__period Срок внедрения 25-30 дней
+            p.tariffs-accordion__note 6 визитов в офис заказчика, 15 часов онлайн обучения
+            button.tariffs-accordion__button(type="button" data-accordion="button")
+              +icon("icon-chevrone-button", "tariffs-accordion__button-icon", "12", "6")
+          .tariffs-accordion__content(data-accordion="content")
+            .tariffs-accordion__inner
+              ul.tariffs-accordion__list
+                +tariffs("Все опции тарифа<br class='desktop-only'> “Базовый” и “Расширенный”", "bold")
+                +tariffs("Настройка сервера и окружения Коробочного Битрикс24™")
+                +tariffs("Перенос из Облака в Коробку Битрикс24")
+                +tariffs("Создание и настройка универсальных списков")
+                +tariffs("Разработка бизнес-процессов для универсальных списков")
+                +tariffs("Настройка Сквозной аналитики")
+                +tariffs("Настройка генерации шаблона договора коммерческого предложения (3 шаблона)")
+                +tariffs("Разработка бизнес-процессов для воронок продаж")
+                +tariffs("Настройка штатных бизнес- процессов для живой ленты")
+                +tariffs("Интеграция Яндекс Метрики и Google Analitics")
+                +tariffs("Настройка индивидуальных отчетов CRM")
+                +tariffs("Настройка интеграции с интернет-магазином, для передачи заказов")
+                +tariffs("Проведение четырех обучающих занятий с записью видео")
+                +tariffs("Оказание услуг технической поддержки в течении 12 месяцев")
+              a.tariffs-accordion__link.button.button--purple(href="#") Хочу заказать
+      p.settings-tariffs__bottom Имеем большой опыт миграции с зарубежных CRM-систем на Битрикс24!

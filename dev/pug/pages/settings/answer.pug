@@ -1,0 +1,36 @@
+section.crm-answer
+  .container
+    .crm-answer__title Поговорим о Битрикс24 у вас в офисе
+    form.crm-answer__form(action="#" method="POST")
+      ul.crm-answer__list
+        li.crm-answer__item
+          label.crm-answer__label(for="answerFIO") ФИО
+          input.crm-answer__input._js-input-label(type="text" name="answerFIO" id="answerFIO")
+        li.crm-answer__item
+          label.crm-answer__label(for="answerEmail") E-mail
+          input.crm-answer__input._js-input-label(type="email" name="answerEmail" id="answerEmail")
+        li.crm-answer__item
+          label.crm-answer__label(for="answerPhone") Телефон
+          input.crm-answer__input._phone-mask._js-input-label(type="tel" name="answerPhone" id="answerPhone")
+        li.crm-answer__item.crm-answer__item--button
+          button.button.button--purple.crm-answer__button(type="submit") Отправить
+    .crm-answer__box
+      p.crm-answer__text Нажимая кнопку "Заказать", я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-Ф3 "О персональных данных", на условиях и для целей, определенных в Согласии на обработку персональных данных.
+      .crm-answer__social
+        a.crm-answer__link(href="#")
+          +icon('icon-whatsapp-footer', 'crm-answer__icon', '30', '30')
+        a.crm-answer__link(href="#")
+          .
+            <svg class="crm-answer__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C23.2846 0 30 6.71543 30 15C30 23.2846 23.2846 30 15 30C6.71543 30 0 23.2846 0 15C0 6.71543 6.71543 0 15 0Z" fill="url(#paint0_linear_514:7667)"/>
+            <path d="M21.7515 9.58073L19.6157 20.3473C19.6157 20.3473 19.3169 21.0938 18.496 20.7358L13.5683 16.9577L11.7759 16.0917L8.75949 15.0762C8.75949 15.0762 8.2966 14.9116 8.25206 14.5536C8.20695 14.195 8.77472 14.001 8.77472 14.001L20.7659 9.29714C20.7659 9.29714 21.7515 8.86413 21.7515 9.58073Z" fill="#FEFEFE"/>
+            <path d="M15.4929 18.6658L13.3946 20.5789C13.3946 20.5789 13.2312 20.7031 13.0513 20.6252C12.787 20.5871 12.0118 17.8238 11.5308 16.175L11.9333 15.9189L15.4929 18.6658Z" fill="#B5D2E5"/>
+            <path d="M13.0513 20.6253C12.7653 20.5983 11.6778 16.6567 11.5308 16.1751L19.3255 11.2245C19.731 10.9784 19.9478 11.1723 19.5985 11.4981C19.3577 11.7231 13.4755 17.0106 13.4755 17.0106L13.0513 20.6253Z" fill="#D3E7F2"/>
+            <defs>
+            <linearGradient id="paint0_linear_514:7667" x1="3.97441" y1="4.8293" x2="27.7846" y2="22.8504" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#28AAE0"/>
+            <stop offset="1" stop-color="#23B7EC"/>
+            </linearGradient>
+            </defs>
+            </svg>
+

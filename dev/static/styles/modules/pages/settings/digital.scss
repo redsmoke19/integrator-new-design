@@ -8,6 +8,7 @@
   }
 
   @media screen and (min-width: $desktop-size) {
+    border: none;
     margin: 0 0 60px 0;
     padding: 75px 0 40px;
   }
@@ -123,6 +124,7 @@
     background-color: $purple-dark-color;
     border-radius: 50%;
     color: $white;
+    flex: 0 0 auto;
     display: flex;
     font-size: 16px;
     font-weight: 600;
