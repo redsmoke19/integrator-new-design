@@ -9,5 +9,7 @@
 [data-accordion="content"] {
   max-height: 0;
   transition: max-height .3s;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
   overflow: hidden;
 }

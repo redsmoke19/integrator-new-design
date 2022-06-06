@@ -53,7 +53,7 @@
       justify-content: center;
       position: relative;
 
-      &.is-active {
+      &:hover {
         .settings-why-choice__text {
           color: $white;
           background-color: $purple-dark-color;
@@ -113,6 +113,7 @@
       margin: 0;
       position: absolute;
       top: 50%;
+      transition: all ease-out .3s;
       transform: translate(-50%, -50%);
     }
   }
@@ -151,8 +152,9 @@
       border-radius: 10px;
       font-size: 16px;
       line-height: 21px;
-      padding: 17px 28px;
       max-width: 470px;
+      padding: 17px 28px;
+      transition: all ease-out .3s;
       width: 100%;
     }
   }
