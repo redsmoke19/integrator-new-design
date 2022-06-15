@@ -146,6 +146,59 @@ a {
   }
 }
 
+.landing-wrapper .container {
+  @media screen and (min-width: $small-desktop-size) {
+    max-width: unset;
+    padding: 0 40px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $large-size) {
+    padding: 0 100px;
+  }
+
+  @media screen and (min-width: $big-size) {
+    max-width: $content;
+    padding: 0 20px;
+  }
+}
+
+.landing-wrapper .header__nav {
+  @media screen and (min-width: $small-desktop-size) {
+    padding: 0;
+    max-width: unset;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    padding: 0 40px;
+  }
+
+  @media screen and (min-width: $large-size) {
+    padding: 0 100px;
+  }
+
+  @media screen and (min-width: $big-size) {
+    max-width: $content;
+    padding: 0 20px;
+  }
+}
+
+.container-landing {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+
+  @media screen and (min-width: $tablet-size) {
+    padding: 0 40px;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    max-width: 1240px;
+    padding: 0 20px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;

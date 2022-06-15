@@ -431,6 +431,7 @@
     const mainBlogMaterial = document.querySelector('.main-blog__wrapper');
     const landingHeroSlider = document.querySelector('.landing-hero__wrapper');
     const boxedAboutSlider = document.querySelector('.boxed-about__slider');
+    const landingExampleSlider = document.querySelector('.landing-examples__swiper');
     if (mainAreasTabs) {
       new Swiper(mainAreasTabs, {
         direction: 'horizontal',
@@ -523,22 +524,65 @@
         },
       });
     }
+    if (landingExampleSlider) {
+      new Swiper(landingExampleSlider, {
+        direction: 'horizontal',
+        grabCursor: true,
+        preventClicks: true,
+        preventClicksPropagation: true,
+        slidesPerView: 1,
+        spaceBetween: 40,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+        navigation: {
+          nextEl: '.landing-examples__nav--next',
+          prevEl: '.landing-examples__nav--prev',
+          disabledClass: 'landing-examples__nav--disabled'
+        },
+        pagination: {
+          el: '.landing-examples__nav-bullets',
+          type: 'bullets',
+          bulletClass: 'landing-examples__nav-bullet',
+          bulletActiveClass: 'landing-examples__nav-bullet--active',
+          clickable: true
+        },
+        breakpoints: {
+          768: {
+            spaceBetween: '14.5%'
+          },
+          1024: {
+            spaceBetween: '20%'
+          },
+          1440: {
+            spaceBetween: '25%'
+          },
+          1920: {
+            spaceBetween: 20
+          }
+        }
+      });
+    }
   }
 
   const getSlider = () => {
     const breakpointMobile = window.matchMedia('(max-width: 767px');
     const breakpointTablet = window.matchMedia('(min-width: 768px)');
     const breakpointDesktop = window.matchMedia('(min-width: 1280px)');
+    const breakpointLarge = window.matchMedia('(max-width: 1919px)');
     const crmTrainingHead = document.querySelector('.crm-heading__slider');
     const crmMaterial = document.querySelector('.crm-material__swiper');
     const navMenu = document.querySelector('.nav__inner');
     const otherMaterials = document.querySelector('.other-materials__wrapper');
     const settingsAwards = document.querySelector('.settings-awards__swiper');
+    const landingOffer = document.querySelector('.landing-offers__sliders');
+    const landingIndustrial = document.querySelector('.landing-industries__swiper');
     let crmTrainingHeadSlider;
     let crmMaterialSlider;
     let navSlider;
     let otherMaterialsSlider;
     let settingsAwardsSlider;
+    let landingOfferSlider;
+    let landingIndustrialSlider;
 
     const breakpointChecker = function () {
       let resizeTimeout;
@@ -548,6 +592,7 @@
           resizeHandlerTablet();
           resizeHandlerDesktop();
           resizeBetween();
+          resizeMobileandLarge();
         }, 100);
       }
 
@@ -586,7 +631,83 @@
           getBetweenMobileAndDesktopSliders();
         }
       }
+
+      function resizeMobileandLarge() {
+        if (breakpointTablet.matches === true && breakpointLarge.matches === true) {
+          if (landingOfferSlider !== undefined) {
+            landingOfferSlider.destroy(true, true);
+          }
+          if (landingIndustrialSlider !== undefined) {
+            landingIndustrialSlider.destroy(true, true);
+          }
+        } else {
+          getMobilAndLargeSlider();
+        }
+      }
     };
+
+    const getMobilAndLargeSlider = function() {
+      if (landingOffer) {
+        landingOfferSlider = new Swiper(landingOffer, {
+          direction: 'horizontal',
+          grabCursor: true,
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 1,
+          spaceBetween: 20,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+          navigation: {
+            nextEl: '.landing-offers__nav--next',
+            prevEl: '.landing-offers__nav--prev',
+            disabledClass: 'landing-offers__nav--disabled'
+          },
+          pagination: {
+            el: '.landing-offers__nav-bullets',
+            type: 'bullets',
+            bulletClass: 'landing-offers__nav-bullet',
+            bulletActiveClass: 'landing-offers__nav-bullet--active',
+            clickable: true
+          },
+          breakpoints: {
+            1920: {
+              slidesPerView: 2
+            }
+          }
+        });
+      }
+
+      if (landingIndustrial) {
+        landingIndustrialSlider = new Swiper(landingIndustrial, {
+          direction: 'horizontal',
+          grabCursor: true,
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 1,
+          spaceBetween: 40,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+          navigation: {
+            nextEl: '.landing-industries__nav--next',
+            prevEl: '.landing-industries__nav--prev',
+            disabledClass: 'landing-industries__nav--disabled'
+          },
+          pagination: {
+            el: '.landing-industries__nav-bullets',
+            type: 'bullets',
+            bulletClass: 'landing-industries__nav-bullet',
+            bulletActiveClass: 'landing-industries__nav-bullet--active',
+            clickable: true
+          },
+          breakpoints: {
+            1920: {
+              spaceBetween: 20,
+              slidesPerView: 'auto'
+            }
+          }
+        });
+      }
+    }
 
     const getTabletSlider = function () {
       if (crmTrainingHead) {
@@ -684,6 +805,7 @@
 
     breakpointTablet.addListener(breakpointChecker);
     breakpointDesktop.addListener(breakpointChecker);
+    breakpointLarge.addListener(breakpointChecker);
     breakpointChecker();
   };
 

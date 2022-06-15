@@ -16,12 +16,11 @@ html(lang="ru-RU")
     if pageClass === "contacts"
       script(src="https://api-maps.yandex.ru/2.1/?apikey=API&lang=ru_RU", type="text/javascript")
   body
-    .wrapper
+    .wrapper(class=wrapper)
       include ../modules/header/header
       .content
         block content
-      if pageClass !== "landing-page"
-        include ../modules/footer/footer
+      include ../modules/footer/footer
     block modal
     block script
       script(src="static/js/libs.js")

@@ -1,0 +1,339 @@
+.landing-stages {
+  margin: 0 0 40px 0;
+
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 80px 0;
+  }
+
+  @media screen and (min-width: $large-size) {
+    margin: 0 0 100px 0;
+  }
+
+  @media screen and (min-width: $big-size) {
+    margin: 0 0 55px 0;
+  }
+
+  &__tabs {
+    @media screen and (min-width: $tablet-size) {
+      position: relative;
+    }
+
+    @media screen and (min-width: $large-size) {
+      display: flex;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 30px 0;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 30px;
+      line-height: 44px;
+      margin: 0 0 40px 0;
+      text-align: left;
+    }
+
+    @media screen and (min-width: $large-size) {
+      font-size: 36px;
+      line-height: 52px;
+      margin: 0 0 80px 0;
+    }
+
+    @media screen and (min-width: $big-size) {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 40px 0;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 65px 0;
+      max-width: 240px;
+      width: 100%;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      margin: 0 0 85px 0;
+      max-width: 376px;
+    }
+
+    @media screen and (min-width: $large-size) {
+      margin: 0 30px 0 0;
+      max-width: 393px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      margin: 0 20px 0 0;
+      max-width: 328px;
+    }
+  }
+
+  &__control {
+    align-items: center;
+    display: flex;
+
+    &:not(:last-child) {
+      margin: 0 0 15px 0;
+
+      @media screen and (min-width: $small-desktop-size) {
+        margin: 0 0 30px 0;
+      }
+
+      @media screen and (min-width: $large-size) {
+        margin: 0 0 40px 0;
+      }
+    }
+  }
+
+  &__control-button {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    padding: 0;
+    transition: all ease-out .3s;
+  }
+
+  &__control-button.is-active {
+    align-items: flex-end;
+    width: 100%;
+
+    .landing-stages__number {
+      height: 80px;
+      margin: 0 0 13px;
+      width: 124px;
+
+      @media screen and (min-width: $small-desktop-size) {
+        height: 105px;
+        width: 162px;
+      }
+    }
+
+    .landing-stages__control-head {
+      background-color: $white;
+      color: $purple-dark-color;
+      font-weight: 700;
+      padding: 6px 0 6px 0;
+      margin: 0 0 0 -124px;
+      transition: all ease-out .3s, background-color ease-out .3s .3s;
+      width: 100%;
+
+      @media screen and (min-width: $small-desktop-size) {
+        margin: 0 0 0 -162px;
+      }
+    }
+
+    + .landing-stages__images-tabs {
+      @media screen and (min-width: $tablet-size) {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__number {
+    margin: 0 30px 0 0;
+    transition: all ease-out .3s;
+
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 auto;
+      height: 30px;
+      width: 45px;
+    }
+
+    @media screen and (min-width: $large-size) {
+      height: 40px;
+      width: 50px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      height: 32px;
+      width: 40px;
+    }
+  }
+
+  &__control-head {
+    color: $black;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    transition: all ease-out .3s;
+    text-align: left;
+
+    @media screen and (min-width: $small-desktop-size) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @media screen and (min-width: $large-size) {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: $large-size) {
+      flex: 1 0 auto;
+    }
+  }
+
+  &__element {
+    @media screen and (min-width: $large-size) {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $large-size) {
+      max-width: 48.2%;
+      position: relative;
+    }
+
+    @media screen and (min-width: $big-size) {
+      max-width: unset;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 30px 0;
+
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    p {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin: 0 0 15px 0;
+      }
+    }
+  }
+
+  &__link {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  &__link-icon {
+    margin: 0 0 0 20px;
+  }
+
+  &__images-tabs {
+    border-radius: 10px 0 0 10px;
+    display: none;
+    overflow: hidden;
+    height: 396px;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    transition: all ease-out .3s;
+    right: -40px;
+    width: 459px;
+
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      height: 464px;
+      right: 0;
+      width: 538px;
+    }
+
+    @media screen and (min-width: $large-size) {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(.8627 * 100%);
+      width: 100%;
+    }
+  }
+
+  &__images {
+    border-radius: 10px 0 0 10px;
+    display: none;
+    overflow: hidden;
+    height: 424px;
+    left: calc(100% + 30px);
+    position: absolute;
+    top: 0;
+    transition: all ease-out .3s;
+    width: 493px;
+
+    @media screen and (min-width: $large-size) {
+      display: flex;
+    }
+
+    @media screen and (min-width: $big-size) {
+      border-radius: 10px;
+      height: auto;
+      left: unset;
+      margin: 20px 0 0 0;
+      position: relative;
+      top: unset;
+      width: 100%;
+
+      &::before {
+        content: "";
+        display: block;
+        padding-bottom: calc(.7100 * 100%);
+        width: 100%;
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    object-fit: contain;
+    top: 0;
+    width: 100%;
+  }
+}

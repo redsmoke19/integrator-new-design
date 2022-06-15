@@ -1,0 +1,296 @@
+.landing-promo {
+  margin: -165px 0 60px;
+
+  @media screen and (min-width: $tablet-size) {
+    margin: -130px 0 140px;
+  }
+
+  @media screen and (min-width: $small-desktop-size) {
+    margin: -130px 0 80px;
+  }
+
+  @media screen and (min-width: $big-size) {
+    margin: -110px 0 55px;
+  }
+
+  &--example {
+    margin: -70% 0 60px;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: -25% 0 140px;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      margin: -20% 0 80px;
+    }
+
+    @media screen and (min-width: $large-size) {
+      margin: -15% 0 80px;
+    }
+  }
+
+  &__content {
+    background-color: $yellow-color;
+    box-shadow: 0 12px 40px rgba(255, 203, 104, .3);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 30px 20px 60px;
+    position: relative;
+
+    @media screen and (min-width: $tablet-size) {
+      padding: 40px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      padding: 55px 40px;
+    }
+  }
+
+  &__icon {
+    bottom: 0;
+    position: absolute;
+    right: -20px;
+    z-index: 0;
+
+    @media screen and (min-width: $tablet-size) {
+      bottom: unset;
+      height: 264px;
+      top: -60px;
+      right: -60px;
+      width: 264px;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      height: 320px;
+      top: 0;
+      width: 320px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      height: 240px;
+      right: -50px;
+      top: 30px;
+      width: 240px;
+    }
+
+    &--example {
+      @media screen and (min-width: $tablet-size) {
+        bottom: -80px;
+        height: 240px;
+        top: unset;
+        width: 240px;
+      }
+
+      @media screen and (min-width: $small-desktop-size) {
+        bottom: -80px;
+        height: 240px;
+        top: unset;
+        width: 240px;
+      }
+
+      @media screen and (min-width: $large-size) {
+        bottom: -20px;
+      }
+
+      @media screen and (min-width: $big-size) {
+        bottom: 0;
+        top: unset;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0 0 30px 0;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 30px;
+      line-height: 44px;
+      position: relative;
+      text-align: left;
+      z-index: 1;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      max-width: 770px;
+    }
+
+    @media screen and (min-width: $large-size) {
+      font-size: 36px;
+      line-height: 52px;
+      margin: 0 0 40px 0;
+      max-width: unset;
+    }
+
+    @media screen and (min-width: $big-size) {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 30px 0;
+    }
+
+    &--example {
+      @media screen and (min-width: $small-desktop-size) {
+        margin: 0 auto 30px;
+        text-align: center;
+      }
+
+      @media screen and (min-width: $big-size) {
+        text-align: left;
+        margin: 0 0 30px 0;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (min-width: $tablet-size) {
+      flex-direction: row;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      max-width: 620px;
+    }
+  }
+
+  &__box {
+    flex: 3 0 auto;
+    margin: 0 0 20px 0;
+    position: relative;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 30px 0 0;
+    }
+  }
+
+  &__input {
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 30px 20px 10px;
+    width: 100%;
+
+    @media screen and (min-width: $large-size) {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 39px 28px 19px;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    left: 20px;
+    opacity: .7;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all ease-out .3s;
+
+    @media screen and (min-width: $large-size) {
+      font-size: 16px;
+      line-height: 22px;
+      left: 28px;
+    }
+
+    &._active {
+      transform: translateY(-130%);
+    }
+  }
+
+  &__button {
+    box-shadow: 0 12px 30px rgba(255, 203, 104, .2);
+    border-radius: 10px;
+
+    @media screen and (min-width: $tablet-size) {
+      flex: 1 0 auto;
+    }
+
+    &::after {
+      content: "Оставить заявку";
+
+      @media screen and (min-width: $big-size) {
+        content: "Отправить";
+      }
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 30px 0;
+    position: relative;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      margin: 0 auto 30px;
+      max-width: 60%;
+    }
+
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 28px;
+      margin: 0 auto 40px;
+      max-width: unset;
+    }
+
+    @media screen and (min-width: $big-size) {
+      margin: 0 0 30px 0;
+      max-width: 784px;
+      text-align: left;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin: 0 0 15px 0;
+      }
+    }
+  }
+
+  &__inner {
+    display: grid;
+    gap: 20px;
+    position: relative;
+
+    @media screen and (min-width: $tablet-size) {
+      grid-template-columns: 1fr 1fr;
+      margin: 0 auto;
+      max-width: 409px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      margin: 0;
+    }
+  }
+
+  &__button-example {
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 20px;
+
+    @media screen and (min-width: $large-size) {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 27px 20px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      border-radius: 25px;
+      padding: 15px 20px;
+    }
+  }
+}

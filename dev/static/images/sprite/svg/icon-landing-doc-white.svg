@@ -1,0 +1,7 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M140 20H60C54.6957 20 49.6086 22.1071 45.8579 25.8579C42.1071 29.6086 40 34.6957 40 40V200C40 205.304 42.1071 210.391 45.8579 214.142C49.6086 217.893 54.6957 220 60 220H180C185.304 220 190.391 217.893 194.142 214.142C197.893 210.391 200 205.304 200 200V80L140 20Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M140 20V80H200" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 130H80" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160 170H80" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M100 90H90H80" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

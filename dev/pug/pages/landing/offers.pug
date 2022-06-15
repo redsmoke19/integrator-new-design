@@ -1,0 +1,33 @@
+.landing-offers
+  .container
+    .landing-offers__content
+      .landing-offers__heading
+        h2.landing-offers__title Мы предлагаем разработку:
+      .landing-offers__sliders.swiper
+        ul.landing-offers__list.swiper-wrapper
+          li.landing-offers__item.swiper-slide
+            .landing-offers__inner
+              h3.landing-offers__head.landing-offers__head--green ЛК Клиента
+              p.landing-offers__text Оформление заявок, статусы заказов, оформление счетов, документация
+            .landing-offers__images
+              img.landing-offers__img(src="static/images/content/landing/offers-1.png" alt="Картинка услуги" width="320" height="242")
+          li.landing-offers__item.swiper-slide
+            .landing-offers__inner
+              h3.landing-offers__head.landing-offers__head--blue ЛК Сотрудника
+              p.landing-offers__text Список клиентов, документация, обработка заявок, выставление счетов, обучающие материалы
+            .landing-offers__images
+              img.landing-offers__img(src="static/images/content/landing/offers-2.png" alt="Картинка услуги" width="320" height="242")
+          li.landing-offers__item.swiper-slide
+            .landing-offers__inner
+              h3.landing-offers__head.landing-offers__head--pink ЛК Партнера
+              p.landing-offers__text Заявки, история заказов, документация, реквизиты, финансовые отчеты, счета
+            .landing-offers__images
+              img.landing-offers__img(src="static/images/content/landing/offers-3.png" alt="Картинка услуги" width="320" height="242")
+        .landing-offers__navigation
+          .landing-offers__nav-bullets
+          .landing-offers__nav-arrows(data-da=".landing-offers__heading,1920,last")
+            button.landing-offers__nav.landing-offers__nav--prev
+              +icon("icon-arrow-round", "landing-hero__nav-icon", "6", "23")
+            button.landing-offers__nav.landing-offers__nav--next
+              +icon("icon-arrow-round", "landing-hero__nav-icon", "6", "12")
+

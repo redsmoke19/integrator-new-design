@@ -3,7 +3,15 @@ extends layout/main
 block variables
   -var title = 'Страница с презентацией'
   -var pageClass = 'landing-page'
+  -var wrapper = 'landing-wrapper'
 
 block content
   main(class=pageClass)
     include pages/landing/hero
+    include pages/landing/offers
+    include pages/landing/capabilities
+    include pages/landing/industries
+    include pages/landing/stages
+    include pages/landing/examples
+    include pages/landing/competencies
+    include pages/landing/answer

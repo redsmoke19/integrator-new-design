@@ -1,0 +1,127 @@
+.landing-capabilities {
+  margin: 0 0 20px 0;
+
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 80px 0;
+  }
+
+  @media screen and (min-width: $large-size) {
+    margin: 0 0 188px 0;
+    padding: 40px 0 0 0;
+  }
+
+  @media screen and (min-width: $big-size) {
+    margin: 0 0 55px 0;
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 40px 0;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 30px;
+      line-height: 44px;
+      margin: 0 0 60px 0;
+    }
+
+    @media screen and (min-width: $large-size) {
+      font-size: 36px;
+      line-height: 52px;
+      margin: 0 0 80px 0;
+    }
+
+    @media screen and (min-width: $big-size) {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 40px 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 60px 20px;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (min-width: $tablet-size) {
+      gap: 60px 30px;
+    }
+
+    @media screen and (min-width: $large-size) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: $big-size) {
+      gap: 60px;
+    }
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $big-size) {
+      align-items: flex-start;
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(112, 65, 196, .1);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    margin: 0 0 30px 0;
+    width: 80px;
+
+    @media screen and (min-width: $tablet-size) {
+      height: 100px;
+      width: 100px;
+
+      svg {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    @media screen and (min-width: $big-size) {
+      height: 64px;
+      margin: 0 0 20px 0;
+      width: 64px;
+
+      svg {
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 30px;
+      padding: 0 15px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      font-size: 16px;
+      line-height: 21px;
+      text-align: left;
+    }
+  }
+}

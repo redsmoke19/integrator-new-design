@@ -1,0 +1,134 @@
+.landing-competencies {
+  margin: 0 0 60px 0;
+
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 80px 0;
+  }
+
+  @media screen and (min-width: $large-size) {
+    margin: 0 0 100px 0;
+  }
+
+  @media screen and (min-width: $big-size) {
+    margin: 0;
+  }
+
+  &__content {
+    @media screen and (min-width: $big-size) {
+      background: url("../images/common/big-logo-integrator.png") no-repeat;
+      background-size: 320px 320px;
+      background-position: 152px 80%;
+      padding: 0 0 225px 0;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 30px;
+      line-height: 44px;
+      margin: 0 0 30px 0;
+    }
+
+    @media screen and (min-width: $large-size) {
+      font-size: 36px;
+      line-height: 52px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 15px 0;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 30px 0;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 0 40px 0;
+    }
+
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 28px;
+      margin: 0 0 60px 0;
+    }
+
+    @media screen and (min-width: $big-size) {
+      text-align: left;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (min-width: $tablet-size) {
+      gap: 30px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: $large-size) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    box-shadow: 0 10px 40px rgba(112, 65, 196, .1);
+    background-color: $white;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 220px;
+    padding: 30px 20px;
+    position: relative;
+
+    @media screen and (min-width: $tablet-size) {
+      min-height: 280px;
+      padding: 40px 30px;
+    }
+
+    @media screen and (min-width: $large-size) {
+      min-height: 308px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      min-height: 268px;
+    }
+  }
+
+  &__icon {
+    bottom: 30px;
+    left: -25px;
+    position: absolute;
+  }
+
+  &__head {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+}

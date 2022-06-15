@@ -46,6 +46,15 @@
     line-height: 20px;
     padding: 20px 40px;
   }
+  &--white {
+    background-color: $white;
+    color: $purple-dark-color;
+    &:hover {
+      border-color: $white;
+      background-color: $purple-dark-color;
+      color: $white;
+    }
+  }
   &--yellow {
     background-color: $yellow-color;
     box-shadow: 0 12px 30px rgba(255, 203, 104, .2);

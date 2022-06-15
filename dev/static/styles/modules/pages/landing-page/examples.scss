@@ -1,0 +1,346 @@
+.landing-examples {
+  background-color: $purple-light-color;
+  overflow: hidden;
+  padding: 40px 0 306px;
+
+  @media screen and (min-width: $tablet-size) {
+    padding: 80px 0 258px;
+  }
+
+  @media screen and (min-width: $large-size) {
+    padding: 100px 0 276px;
+  }
+
+  @media screen and (min-width: $big-size) {
+    padding: 55px 0 165px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 30px 0;
+    text-align: center;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 30px;
+      line-height: 44px;
+      margin: 0 0 40px 0;
+    }
+
+    @media screen and (min-width: $large-size) {
+      font-size: 36px;
+      line-height: 52px;
+      margin: 0 0 60px 0;
+    }
+
+    @media screen and (min-width: $big-size) {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 40px 0;
+    }
+  }
+
+  &__swiper {
+    overflow: inherit;
+
+    @media screen and (min-width: $big-size) {
+      overflow: hidden;
+    }
+  }
+
+  &__list {
+    margin: 0 0 40px 0;
+
+    @media screen and (min-width: $big-size) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet-size) {
+      position: relative;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      align-items: flex-start;
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+
+  &__box {
+    @media screen and (min-width: $small-desktop-size) {
+      flex: 0 0 auto;
+      margin: 0 40px 0 0;
+      max-width: 367px;
+      position: relative;
+    }
+
+    @media screen and (min-width: $large-size) {
+      max-width: 32%;
+    }
+
+    @media screen and (min-width: $big-size) {
+      margin: 0 30px 0 0;
+      max-width: 318px;
+    }
+  }
+
+  &__head {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 24px;
+      line-height: 34px;
+      margin: 0 0 30px 0;
+    }
+
+    @media screen and (min-width: $big-size) {
+      color: $purple-dark-color;
+      font-size: 20px;
+      line-height: 26px;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 30px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 40px 0;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      margin: 0 0 50px 0;
+    }
+
+    @media screen and (min-width: $large-size) {
+      font-size: 18px;
+      line-height: 28px;
+      margin: 0 0 40px 0;
+    }
+
+    @media screen and (min-width: $big-size) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  &__images-big {
+    border-radius: 10px;
+    filter: drop-shadow(0 10px 40px rgba(112, 65, 196, .1));
+    overflow: hidden;
+    margin: 0 -20px;
+    position: relative;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+      width: 87%;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      flex: 0 0 auto;
+      width: 72.4%;
+    }
+
+    @media screen and (min-width: $large-size) {
+      width: 79%;
+    }
+
+    @media screen and (min-width: $big-size) {
+      filter: unset;
+      width: 66%;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(.8222 * 100%);
+      width: 100%;
+
+      @media screen and (min-width: $tablet-size) {
+        padding-bottom: calc(.8193 * 100%);
+      }
+
+      @media screen and (min-width: $small-desktop-size) {
+        padding-bottom: calc(.8187 * 100%);
+      }
+    }
+  }
+
+  &__images-small {
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(112, 65, 196, .1);
+    overflow: hidden;
+    margin: -70px 0 0 0;
+    position: relative;
+
+    @media screen and (min-width: $tablet-size) {
+      bottom: 60px;
+      left: 59.5%;
+      position: absolute;
+      width: 48%;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      bottom: unset;
+      left: 30px;
+      margin: 0;
+      position: relative;
+      top: unset;
+      width: 125%;
+      z-index: 1;
+    }
+
+    @media screen and (min-width: $large-size) {
+      left: 0;
+      width: 127%;
+    }
+
+    @media screen and (min-width: $big-size) {
+      width: 131%;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(.7406 * 100%);
+      width: 100%;
+
+      @media screen and (min-width: $tablet-size) {
+        padding-bottom: calc(.7446 * 100%);
+      }
+
+      @media screen and (min-width: $large-size) {
+        padding-bottom: calc(.7414 * 100%);
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media screen and (min-width: $small-desktop-size) {
+        display: flex;
+      }
+    }
+
+    &--tablet {
+      @media screen and (min-width: $small-desktop-size) {
+        display: none;
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__navigation {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: $small-desktop-size) {
+      max-width: 376px;
+    }
+
+    @media screen and (min-width: $big-size) {
+      max-width: unset;
+    }
+  }
+
+  &__nav-bullets {
+    align-items: center;
+    display: flex;
+  }
+
+  &__nav-bullet {
+    cursor: pointer;
+    height: 20px;
+    position: relative;
+    transition: all ease-out .2s;
+    width: 20px;
+
+    &:not(:last-child) {
+      margin: 0 12px 0 0;
+    }
+
+    &::after {
+      content: "";
+      border: 2px solid $purple-color;
+      border-radius: 50%;
+      height: 8px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all ease-out .2s;
+      width: 8px;
+    }
+
+    &--active {
+      &::after {
+        background-color: $purple-color;
+        height: 13px;
+        width: 13px;
+      }
+    }
+  }
+
+  &__nav-arrows {
+    align-items: center;
+    display: flex;
+  }
+
+  &__nav {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    height: 24px;
+    padding: 0;
+    transition: all ease-out .15s;
+    width: 24px;
+
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+
+    &--next {
+      transform: rotate(180deg);
+    }
+
+    &--disabled {
+      opacity: .5;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__nav-icon {
+    stroke: $purple-color;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}

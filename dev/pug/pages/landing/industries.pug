@@ -1,0 +1,86 @@
+section.landing-industries
+  .container
+    .landing-industries__content
+      .landing-industries__heading
+        h2.landing-industries__title Для разных отраслей и видов деятельности
+      .landing-industries__swiper.swiper
+        ul.landing-industries__list.swiper-wrapper
+          li.landing-industries__item.swiper-slide
+            .landing-industries__box
+              .landing-industries__images
+                img.landing-industries__img(src="static/images/content/landing/capabilities-1.jpg" width="360" height="320" alt="Изображение индустрии")
+              .landing-industries__inner
+                +icon("icon-landing-bag", "landing-industries__icon", "32", "32")
+                h3.landing-industries__head Оптовые магазины
+                ul.landing-industries__advantages
+                  li.landing-industries__advantage
+                    span.landing-industries__text Отслеживание заказа
+                  li.landing-industries__advantage
+                    span.landing-industries__text Отчетные документы
+                  li.landing-industries__advantage
+                    span.landing-industries__text Интеграция с 1С
+                  li.landing-industries__advantage
+                    span.landing-industries__text Каталог партнеров с оптовыми ценами
+          li.landing-industries__item.swiper-slide
+            .landing-industries__box
+              .landing-industries__images
+                img.landing-industries__img(src="static/images/content/landing/capabilities-2.jpg" width="360" height="320" alt="Изображение индустрии")
+              .landing-industries__inner
+                +icon("icon-landing-car", "landing-industries__icon", "32", "32")
+                h3.landing-industries__head Логистические компании
+                ul.landing-industries__advantages
+                  li.landing-industries__advantage
+                    span.landing-industries__text Отслеживание груза
+                  li.landing-industries__advantage
+                    span.landing-industries__text Отслеживание своего заказа клиентами
+                  li.landing-industries__advantage
+                    span.landing-industries__text Бухгалтерские документы
+                  li.landing-industries__advantage
+                    span.landing-industries__text Отчеты
+          li.landing-industries__item.swiper-slide
+            .landing-industries__box
+              .landing-industries__images
+                img.landing-industries__img(src="static/images/content/landing/capabilities-3.jpg" width="360" height="320" alt="Изображение индустрии")
+              .landing-industries__inner
+                +icon("icon-landing-home", "landing-industries__icon", "32", "32")
+                h3.landing-industries__head Агенства недвижимости
+                ul.landing-industries__advantages
+                  li.landing-industries__advantage
+                    span.landing-industries__text ЛК арендатора
+                  li.landing-industries__advantage
+                    span.landing-industries__text ЛК клиента ЖКХ компании
+                  li.landing-industries__advantage
+                    span.landing-industries__text ЛК управляющей компании
+          li.landing-industries__item.swiper-slide
+            .landing-industries__box
+              .landing-industries__images
+                img.landing-industries__img(src="static/images/content/landing/capabilities-4.jpg" width="360" height="320" alt="Изображение индустрии")
+              .landing-industries__inner
+                +icon("icon-landing-doc", "landing-industries__icon", "32", "32")
+                h3.landing-industries__head Дилерские сети
+                ul.landing-industries__advantages
+                  li.landing-industries__advantage
+                    span.landing-industries__text Тестирование и сертификация
+                  li.landing-industries__advantage
+                    span.landing-industries__text Обмен файлами
+                  li.landing-industries__advantage
+                    span.landing-industries__text Утверждение маршрутных листов
+        .landing-industries__navigation
+          .landing-industries__nav-bullets
+          .landing-industries__nav-arrows(data-da=".landing-industries__heading,1920,last")
+            button.landing-industries__nav.landing-industries__nav--prev
+              +icon("icon-arrow-round", "landing-hero__nav-icon", "6", "23")
+            button.landing-industries__nav.landing-industries__nav--next
+              +icon("icon-arrow-round", "landing-hero__nav-icon", "6", "12")
+.landing-promo
+  .container
+    .landing-promo__content
+      +icon("icon-help-cirlce", "landing-promo__icon", "100", "100")
+      h2.landing-promo__title Узнайте, что мы можем предложить для вас, оставьте заявку:
+      form.landing-promo__form(action="" method="POST")
+        .landing-promo__box
+          label.landing-promo__label(for="answerPhone") Номер телефона
+          input.landing-promo__input._phone-mask._js-input-label(type="tel" name="answerPhone" id="answerPhone")
+        button.button.button--purple.landing-promo__button(type="submit")
+
+
