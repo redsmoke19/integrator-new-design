@@ -473,7 +473,7 @@
       });
     }
     if (landingHeroSlider) {
-      new Swiper(landingHeroSlider, {
+      const heroLandingSlider = new Swiper(landingHeroSlider, {
         direction: 'horizontal',
         grabCursor: true,
         preventClicks: true,
@@ -503,6 +503,10 @@
           }
         }
       });
+      if (heroLandingSlider.slides.length < 2) {
+        heroLandingSlider.disable();
+        document.querySelector('.landing-hero__navigation').style.display = 'none';
+      }
     }
     if (boxedAboutSlider) {
       new Swiper(boxedAboutSlider, {
