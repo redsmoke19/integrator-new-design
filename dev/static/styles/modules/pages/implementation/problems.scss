@@ -1,0 +1,110 @@
+.implementation-problems {
+  padding: 35px 0 30px;
+
+  @media screen and (min-width: $tablet-size) {
+    padding: 45px 0 25px;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    padding: 0;
+  }
+
+  .container {
+    @media screen and (min-width: $desktop-size) {
+      padding: 140px 20px;
+      position: relative;
+    }
+  }
+
+  &__item {
+    &:nth-child(even) {
+      @media screen and (min-width: $desktop-size) {
+        background: linear-gradient(270deg, #f9f8fb 0%, rgba(249, 248, 251, 0) 100%);
+
+        .implementation-problems__img {
+          left: unset;
+          right: 0;
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      @media screen and (min-width: $desktop-size) {
+        .implementation-problems__box {
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin: 0 0 15px 0;
+
+      @media screen and (min-width: $tablet-size) {
+        margin: 0 0 20px 0;
+      }
+
+      @media screen and (min-width: $desktop-size) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__box {
+    align-items: flex-start;
+    display: flex;
+
+    @media screen and (min-width: $desktop-size) {
+      max-width: 50%;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+    margin: 0 15px 0 0;
+
+    @media screen and (min-width: $tablet-size) {
+      height: 30px;
+      width: 40px;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      height: 86px;
+      margin: 0 30px 0 0;
+      width: 112px;
+    }
+  }
+
+  &__heading {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 24px;
+      line-height: 30px;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @media screen and (min-width: $desktop-size) {
+      bottom: 0;
+      display: block;
+      left: 0;
+      position: absolute;
+    }
+  }
+}

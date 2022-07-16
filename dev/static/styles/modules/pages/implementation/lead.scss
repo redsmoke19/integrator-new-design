@@ -1,0 +1,94 @@
+.implementation-lead {
+  &.settings-digital {
+    border: none;
+    margin: 0 0 20px 0;
+    padding: 35px 0 0;
+
+    @media screen and (min-width: $tablet-size) {
+      padding: 60px 0 70px;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      padding: 68px 0 110px;
+    }
+  }
+
+  .settings-digital {
+    &__content {
+      &::before {
+        @media screen and (min-width: $tablet-size) {
+          left: -162px;
+        }
+
+        @media screen and (min-width: $desktop-size) {
+          left: -40px;
+        }
+      }
+    }
+
+    &__inner {
+      @media screen and (min-width: $desktop-size) {
+        margin: 0 100px 0 0;
+      }
+    }
+
+    &__item {
+      align-items: center;
+
+      &:nth-child(2n) {
+        @media screen and (min-width: $tablet-size) {
+          margin: 0 0 0 30px;
+        }
+
+        @media screen and (min-width: $desktop-size) {
+          margin: 0 0 0 90px;
+        }
+      }
+
+      &:nth-child(3n) {
+        @media screen and (min-width: $tablet-size) {
+          margin: 0 0 0 45px;
+        }
+
+        @media screen and (min-width: $desktop-size) {
+          margin: 0 0 0 100px;
+        }
+      }
+
+      &:nth-child(4n) {
+        @media screen and (min-width: $tablet-size) {
+          margin: 0 0 0 45px;
+        }
+
+        @media screen and (min-width: $desktop-size) {
+          margin: 0 0 0 95px;
+        }
+      }
+
+      &:nth-child(5n) {
+        @media screen and (min-width: $tablet-size) {
+          margin: 0 0 0 30px;
+        }
+
+        @media screen and (min-width: $desktop-size) {
+          margin: 0 0 0 65px;
+        }
+      }
+    }
+
+    &__heading {
+      margin: 0;
+
+      @media screen and (min-width: $tablet-size) {
+        font-size: 16px;
+        line-height: 21px;
+      }
+    }
+
+    &__inner {
+      @media screen and (min-width: $tablet-size) {
+        max-width: 285px;
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.implementation-help {
+  border-bottom: 1px solid $pagination-color;
+  margin: 0 0 35px 0;
+  padding: 0 0 35px;
+
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 40px;
+    padding: 0 0 40px;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 55px 0;
+    padding: 0 0 55px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 30px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 auto 30px;
+      max-width: 635px;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet-size) {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      align-items: center;
+    }
+
+    &:not(:last-child) {
+      margin: 0 0 30px 0;
+
+      @media screen and (min-width: $tablet-size) {
+        margin: 0 0 40px 0;
+      }
+
+      @media screen and (min-width: $desktop-size) {
+        margin: 0 0 55px 0;
+      }
+    }
+
+    &:nth-child(even) {
+      .implementation-help__image {
+        @media screen and (min-width: $tablet-size) {
+          order: 1;
+          margin: 0 0 0 22px;
+        }
+
+        @media screen and (min-width: $desktop-size) {
+          margin: 0 0 0 30px;
+        }
+      }
+    }
+  }
+
+  &__image {
+    margin: 0 0 30px 0;
+    position: relative;
+
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 330px;
+      margin: 0 22px 0 0;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 502px;
+      margin: 0 30px 0 0;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(.7357 * 100%);
+      width: 100%;
+
+      @media screen and (min-width: $desktop-size) {
+        padding-bottom: calc(.7331 * 100%);
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__head {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0 0 10px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 30px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 21px;
+      margin: 0 0 20px 0;
+    }
+  }
+
+  &__button-wrap {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+    }
+  }
+}
