@@ -15,13 +15,16 @@
 
   .settings-digital {
     &__content {
+      @media screen and (min-width: $desktop-size) {
+        justify-content: center;
+      }
       &::before {
         @media screen and (min-width: $tablet-size) {
           left: -162px;
         }
 
         @media screen and (min-width: $desktop-size) {
-          left: -40px;
+          left: 50px;
         }
       }
     }
@@ -88,6 +91,10 @@
     &__inner {
       @media screen and (min-width: $tablet-size) {
         max-width: 285px;
+      }
+
+      @media screen and (min-width: $desktop-size) {
+        max-width: 310px;
       }
     }
   }
