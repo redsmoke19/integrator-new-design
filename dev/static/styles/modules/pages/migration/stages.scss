@@ -42,7 +42,13 @@
 
   .landing-stages__content {
     @media screen and (min-width: $desktop-size) {
-      width: 100%;
+      flex: 1 0 auto;
+    }
+  }
+
+  .landing-stages__description {
+    @media screen and (min-width: 1440px) {
+      max-width: unset;
     }
   }
 }
