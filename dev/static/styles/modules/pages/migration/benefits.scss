@@ -1,0 +1,11 @@
+.migration-benefits {
+  &.main-offer {
+    margin: 0;
+    padding: 0 0 35px;
+    border: none;
+
+    @media screen and (min-width: $desktop-size) {
+      padding: 0 0 55px;
+    }
+  }
+}

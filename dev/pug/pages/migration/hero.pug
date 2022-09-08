@@ -1,0 +1,17 @@
+section.migration-hero
+  .container
+    h1.visually-hidden Коробочная версия битрикса
+    .migration-hero__content
+      .migration-hero__inner
+        h2.migration-hero__title
+          span #[span.migration-hero__title-purple Миграция из зарубежных] CRM-систем в
+          picture.migration-hero__logo-picture
+            source(media="(min-width: 1280px)", srcset="static/images/content/bitrix-img-desktop.png")
+            source(media="(min-width: 768px)", srcset="static/images/content/bitrix-img-tablet.png")
+            img.migration-hero__logo-img(src="static/images/content/bitrix-img-mobile.png")
+        p.migration-hero__text Поможем перейти на отечественное ПО без потерь. Оставьте заявку и мы свяжемся с вами!
+        form.migration-hero__form(action="#" method="POST")
+          input.migration-hero__input._phone-mask(type="phone" name="migrationPhone" placeholder="+7 ( ___ )  ___ - __ - __")
+          a.button.button--fill.migration-hero__button(href="#" data-mobile-text="Оставить заявку" data-desktop-text="Позвонить")
+      picture.migration-hero__picture
+        img.migration-hero__img(src="static/images/content/migration/hero.png" width="455", height="336" alt="Изображение продукта")

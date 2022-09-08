@@ -1,0 +1,30 @@
+mixin migration-item(options)
+  li.migration-offer__item
+    h3.migration-offer__heading
+      span.migration-offer__number!=options.number
+      span.migration-offer__head!=options.head
+    .migration-offer__inner
+      p.migration-offer__text!=options.text
+
+section.migration-offer
+  .container
+    .migration-offer__content
+      h2.migration-offer__title Что мы предлагаем?
+      ul.migration-offer__list
+        +migration-item({
+          number: '01',
+          head: 'Подбор и настройка',
+          text: 'Подбор и настройка инструментов Битрикс24, соответствующих по функционалу вашей текущей системе. Глубокая кастомизация или разработка новых инструментов, при необходимости.'
+        })
+        +migration-item({
+          number: '02',
+          head: 'Перенос данных',
+          text: 'Бережно перенесём дынные, настроим этапы воронок продаж, бизнес-процессы, аналитику, подключим сторонние сервисы и системы.'
+        })
+        +migration-item({
+          number: '03',
+          head: 'Обучение',
+          text: 'Подключим источники поступления данных, обучим сотрудников, составим понятные инструкции и видеоуроки, по уже настроенному порталу Битрикс24.'
+        })
+
+

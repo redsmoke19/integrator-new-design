@@ -1,0 +1,133 @@
+.migration-hero {
+  background-color: $purple-light-color;
+  padding: 40px 0 50px;
+
+  &__content {
+    @media screen and (min-width: $tablet-size) {
+      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      gap: 25px;
+      grid-template-columns: 1fr 455px;
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 10px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  &__title-purple {
+    color: $purple-dark-color;
+    display: block;
+  }
+
+  &__logo-picture {
+    display: block;
+    height: 32px;
+    margin: 5px 0 0 0;
+    width: 180px;
+
+    @media screen and (min-width: $desktop-size) {
+      display: inline-block;
+      height: 45px;
+      width: 250px;
+      margin: 0 0 -12px 10px;
+    }
+  }
+
+  &__logo-img {
+    height: 32px;
+    width: 180px;
+
+    @media screen and (min-width: $tablet-size) {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 26px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 21px;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $desktop-size) {
+      display: grid;
+      gap: 10px;
+      width: 100%;
+      grid-template-columns: min-content min-content;
+    }
+  }
+
+  &__input {
+    border: 1px solid $input-gray-color;
+    border-radius: 25px;
+    color: $black;
+    font-size: 16px;
+    margin: 0 0 20px 0;
+    padding: 15px 35px;
+    width: 100%;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
+      width: auto;
+    }
+
+    &::placeholder {
+      color: $input-gray-color;
+    }
+  }
+
+  &__button {
+    color: $white;
+    font-size: 16px;
+    line-height: 1;
+
+    @media screen and (min-width: $desktop-size) {
+      width: auto;
+    }
+
+    &::after {
+      content: attr(data-mobile-text);
+
+      @media screen and (min-width: $tablet-size) {
+        content: attr(data-desktop-text);
+      }
+    }
+  }
+
+  &__picture {
+    display: none;
+
+    @media screen and (min-width: $tablet-size) {
+      display: block;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+    margin: 0 0 0 auto;
+  }
+}

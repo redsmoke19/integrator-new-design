@@ -1,0 +1,97 @@
+.migration-important {
+  padding: 0 0 35px;
+
+  @media screen and (min-width: $desktop-size) {
+    padding: 0 0 55px;
+  }
+
+  &__content {
+    @media screen and (min-width: $tablet-size) {
+      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      gap: 83px;
+    }
+  }
+
+  &__description {
+    @media screen and (min-width: $desktop-size) {
+      grid-column: 2 / -1;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__list {
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin: 0 0 20px 0;
+
+      @media screen and (min-width: $desktop-size) {
+        margin: 0 0 30px 0;
+      }
+    }
+  }
+
+  &__subtitle {
+    color: $purple-dark-color;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 8px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 20px;
+      line-height: 26px;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.3;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+    }
+  }
+
+  &__picture {
+    display: block;
+    height: 207px;
+    margin: 0 auto;
+    width: 280px;
+
+    @media screen and (min-width: $desktop-size) {
+      grid-column: 1 / 2;
+      grid-row: 1;
+      height: 325px;
+      width: 439px;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}

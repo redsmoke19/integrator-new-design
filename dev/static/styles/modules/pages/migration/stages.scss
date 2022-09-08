@@ -1,0 +1,48 @@
+.migration-stages {
+  &.landing-stages {
+    border-bottom: 1px solid $pagination-color;
+    margin: 0 0 35px 0;
+    padding: 35px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 55px 0;
+      padding: 55px 0;
+    }
+  }
+
+  .landing-stages__title {
+    text-align: left;
+  }
+
+  .landing-stages__link {
+    color: $black;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: unset;
+    letter-spacing: 0;
+    text-decoration: underline;
+  }
+
+  .landing-stages__controls {
+    @media screen and (min-width: $tablet-size) {
+      max-width: unset;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 45px 0 0;
+      max-width: 393px;
+    }
+  }
+
+  .landing-stages__tabs {
+    @media screen and (min-width: $desktop-size) {
+      display: flex;
+    }
+  }
+
+  .landing-stages__content {
+    @media screen and (min-width: $desktop-size) {
+      width: 100%;
+    }
+  }
+}

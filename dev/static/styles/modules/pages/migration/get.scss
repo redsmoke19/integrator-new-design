@@ -1,0 +1,82 @@
+.migration-get {
+  background-color: $purple-light-color;
+  padding: 35px 0 40px;
+
+  @media screen and (min-width: $desktop-size) {
+    padding: 55px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @media screen and (min-width: $tablet-size) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item {
+    align-items: flex-start;
+    background-color: $white;
+    border-radius: 10px;
+    border: 1px solid $pagination-color;
+    display: flex;
+    padding: 22px 16px 22px 26px;
+
+    @media screen and (min-width: $desktop-size) {
+      padding: 20px 36px 20px 20px;
+    }
+  }
+
+  &__number {
+    align-items: center;
+    background-color: $white;
+    box-shadow: 0 0 15px rgba(98, 63, 162, .1);
+    border-radius: 50%;
+    color: $yellow-color;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.3;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    margin: 0 16px 0 0;
+    height: 50px;
+    width: 50px;
+  }
+
+  &__subtitle {
+    color: $purple-dark-color;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 8px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 20px;
+      line-height: 26px;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.3;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+    }
+  }
+}

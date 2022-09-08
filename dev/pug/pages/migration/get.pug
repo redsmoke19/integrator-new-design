@@ -1,0 +1,32 @@
+mixin migration-get(options)
+  li.migration-get__item
+    span.migration-get__number!=options.number
+    .migration-get__inner
+      h3.migration-get__subtitle!=options.subtitle
+      p.migration-get__text!=options.text
+
+section.migration-get
+  .container
+    .migration-get__content
+      h2.migration-get__title Что вы получите?
+      ul.migration-get__list
+        +migration-get({
+          number: '01',
+          subtitle: 'CRM-систему под ваши задачи',
+          text: 'Мы постараемся осуществить бесшовный переход из одной системы в другую. Данные будут бережно перенесены, проверены на дубликаты и нормализованы для работы в новой системе.'
+        })
+        +migration-get({
+          number: '02',
+          subtitle: 'Автоматизацию рутинных процессов',
+          text: 'Благодаря использованию модуля бизнес-процессов Битрикс24. Настроим генерацию документов, с контролем серий, а также единое хранилище корпоративных документов и реестров.'
+        })
+        +migration-get({
+          number: '03',
+          subtitle: 'Интеграцию с нужными сервисами',
+          text: 'Настроим открытые линии и источники поступления данных из внешних систем, подключим те же сервисы или подберем равноценную замену.'
+        })
+        +migration-get({
+          number: '04',
+          subtitle: 'Обучение и сопровождение',
+          text: 'Обучим сотрудников и руководителей, ответим на все ваши вопросы. По Вашему запросу настроим необходимые отчеты по данным из CRM или подключим cервис внешней аналитики. '
+        })

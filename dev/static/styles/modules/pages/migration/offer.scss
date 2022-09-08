@@ -1,0 +1,87 @@
+.migration-offer {
+  border-bottom: 1px solid $pagination-color;
+  margin: 0 0 35px 0;
+  padding: 35px 0 35px;
+
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 55px 0;
+    padding: 55px 0 55px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 37px 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: $tablet-size) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    align-items: center;
+    display: flex;
+    margin: 0 0 6px 0;
+  }
+
+  &__number {
+    color: $yellow-color;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin: 0 8px 0 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 30px;
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &__head {
+    color: $purple-dark-color;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 20px;
+    }
+  }
+
+  &__inner {
+    border: 1px solid $pagination-color;
+    border-radius: 10px;
+    height: 100%;
+    padding: 22px 25px;
+
+    @media screen and (min-width: $desktop-size) {
+      padding: 14px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.3;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
