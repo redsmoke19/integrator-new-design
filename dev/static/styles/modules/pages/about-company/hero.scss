@@ -1,0 +1,24 @@
+.about-company-hero {
+  background-image: linear-gradient(90deg, #f9f8fb 0%, rgba(249, 248, 251, 0) 100%);
+  padding: 20px 0 0;
+
+  @media screen and (min-width: $tablet-size) {
+    padding: 52px 0 0;
+  }
+
+  &__picture {
+    display: block;
+  }
+
+  &__img {
+    display: flex;
+    margin: 0 auto;
+
+    @media screen and (min-width: $tablet-size) {
+      height: 400px;
+      width: 780px;
+      object-fit: contain;
+      object-position: bottom;
+    }
+  }
+}
