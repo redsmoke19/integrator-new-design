@@ -11,7 +11,7 @@
       this.type = type;
     }
 
-    DynamicAdapt.prototype.init = function () {
+    DynamicAdapt.prototype.init = function() {
       const _this = this;
       // массив объектов
       this.оbjects = [];
@@ -39,7 +39,7 @@
       // массив уникальных медиа-запросов
       this.mediaQueries = Array.prototype.map.call(
         this.оbjects,
-        function (item) {
+        function(item) {
           return (
             '(' +
             this.type +
@@ -49,13 +49,13 @@
             item.breakpoint
           );
         },
-        this
+        this,
       );
       this.mediaQueries = Array.prototype.filter.call(
         this.mediaQueries,
-        function (item, index, self) {
+        function(item, index, self) {
           return Array.prototype.indexOf.call(self, item) === index;
-        }
+        },
       );
 
       // навешивание слушателя на медиа-запрос
@@ -69,18 +69,18 @@
         // массив объектов с подходящим брейкпоинтом
         const оbjectsFilter = Array.prototype.filter.call(
           this.оbjects,
-          function (item) {
+          function(item) {
             return item.breakpoint === mediaBreakpoint;
-          }
+          },
         );
-        matchMedia.addListener(function () {
+        matchMedia.addListener(function() {
           _this.mediaHandler(matchMedia, оbjectsFilter);
         });
         this.mediaHandler(matchMedia, оbjectsFilter);
       }
     };
 
-    DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
+    DynamicAdapt.prototype.mediaHandler = function(matchMedia, оbjects) {
       if (matchMedia.matches) {
         for (let i = 0; i < оbjects.length; i++) {
           const оbject = оbjects[i];
@@ -98,7 +98,7 @@
     };
 
     // Функция перемещения
-    DynamicAdapt.prototype.moveTo = function (place, element, destination) {
+    DynamicAdapt.prototype.moveTo = function(place, element, destination) {
       element.classList.add(this.daClassname);
       if (place === 'last' || place >= destination.children.length) {
         destination.insertAdjacentElement('beforeend', element);
@@ -112,7 +112,7 @@
     };
 
     // Функция возврата
-    DynamicAdapt.prototype.moveBack = function (parent, element, index) {
+    DynamicAdapt.prototype.moveBack = function(parent, element, index) {
       element.classList.remove(this.daClassname);
       if (parent.children[index] !== undefined) {
         parent.children[index].insertAdjacentElement('beforebegin', element);
@@ -122,7 +122,7 @@
     };
 
     // Функция получения индекса внутри родителя
-    DynamicAdapt.prototype.indexInParent = function (parent, element) {
+    DynamicAdapt.prototype.indexInParent = function(parent, element) {
       const array = Array.prototype.slice.call(parent.children);
       return Array.prototype.indexOf.call(array, element);
     };
@@ -130,9 +130,9 @@
     // Функция сортировки массива по breakpoint и place
     // по возрастанию для this.type = min
     // по убыванию для this.type = max
-    DynamicAdapt.prototype.arraySort = function (arr) {
+    DynamicAdapt.prototype.arraySort = function(arr) {
       if (this.type === 'min') {
-        Array.prototype.sort.call(arr, function (a, b) {
+        Array.prototype.sort.call(arr, function(a, b) {
           if (a.breakpoint === b.breakpoint) {
             if (a.place === b.place) {
               return 0;
@@ -152,7 +152,7 @@
           return a.breakpoint - b.breakpoint;
         });
       } else {
-        Array.prototype.sort.call(arr, function (a, b) {
+        Array.prototype.sort.call(arr, function(a, b) {
           if (a.breakpoint === b.breakpoint) {
             if (a.place === b.place) {
               return 0;
@@ -177,7 +177,7 @@
 
     const da = new DynamicAdapt('min');
     da.init();
-  }
+  };
 
   function bodyLock(delay) {
     const body = document.querySelector('body');
@@ -202,7 +202,7 @@
       }, delay);
 
       unlock = false;
-      setTimeout(function () {
+      setTimeout(function() {
         unlock = true;
       }, delay);
     }
@@ -226,7 +226,7 @@
       body.classList.add('_lock');
 
       unlock = false;
-      setTimeout(function () {
+      setTimeout(function() {
         unlock = true;
       }, delay);
     }
@@ -255,6 +255,7 @@
         }
       });
     }
+
     function popup_open(item, video = '') {
       const activePopup = document.querySelectorAll('.popup._active');
       if (activePopup.length > 0) {
@@ -264,7 +265,7 @@
       if (curent_popup && unlock) {
         if (video != '' && video != null) {
           const popup_video = document.querySelector('.popup_video');
-          popup_video.querySelector('.popup__video').innerHTML = `<iframe src="https://www.youtube.com/embed/${video}?autoplay=1"  allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+          popup_video.querySelector('.popup__video').innerHTML = `<iframe src='https://www.youtube.com/embed/${video}?autoplay=1'  allow='autoplay; encrypted-media' allowfullscreen></iframe>`;
         }
         if (!document.querySelector('.menu__body._active')) {
           bodyLockAdd(500);
@@ -273,6 +274,7 @@
         history.pushState('', '', `#${item}`);
       }
     }
+
     function popup_close(item, bodyUnlock = true) {
       if (unlock) {
         if (!item) {
@@ -297,8 +299,9 @@
         history.pushState('', '', window.location.href.split('#')[0]);
       }
     }
+
     const popup_close_icon = document.querySelectorAll(
-      '.popup__close,._popup-close'
+      '.popup__close,._popup-close',
     );
     if (popup_close_icon) {
       for (let index = 0; index < popup_close_icon.length; index += 1) {
@@ -333,14 +336,16 @@
     }
     window.addEventListener('resize', resizeThrottler, false);
     let resizeTimeout;
+
     function resizeThrottler() {
       if (!resizeTimeout) {
-        resizeTimeout = setTimeout(function () {
+        resizeTimeout = setTimeout(function() {
           resizeTimeout = null;
           actualResizeHandler();
         }, 100);
       }
     }
+
     function actualResizeHandler() {
       getPageVh();
       if (headerInner.classList.contains('_active')) {
@@ -359,7 +364,7 @@
         }
       }
     }
-  }
+  };
 
   const getSandwich = () => {
     const sandwich = document.querySelector('.sandwich');
@@ -367,7 +372,7 @@
 
     if (sandwich != null) {
       const delay = 500;
-      sandwich.addEventListener('click', function (e) {
+      sandwich.addEventListener('click', function(e) {
         if (unlock) {
           bodyLock(delay);
           sandwich.classList.toggle('_active');
@@ -375,7 +380,7 @@
           body.classList.toggle('_overlay');
         }
       });
-      document.addEventListener('click', function (e) {
+      document.addEventListener('click', function(e) {
         if (!headerInner.classList.contains('_active')) return;
         if (!e.target.closest('._active')) {
           bodyLock(delay);
@@ -424,7 +429,7 @@
         // sublist.classList.toggle('is-active');
       });
     });
-  }
+  };
 
   const getAllBreakpointsSlider = () => {
     const mainAreasTabs = document.querySelector('.main-areas__controls');
@@ -432,6 +437,7 @@
     const landingHeroSlider = document.querySelector('.landing-hero__wrapper');
     const boxedAboutSlider = document.querySelector('.boxed-about__slider');
     const landingExampleSlider = document.querySelector('.landing-examples__swiper');
+    const aboutCompanyTeam = document.querySelector('.about-company-team__box');
     if (mainAreasTabs) {
       new Swiper(mainAreasTabs, {
         direction: 'horizontal',
@@ -445,8 +451,8 @@
         breakpoints: {
           1280: {
             slidesOffsetAfter: 0,
-          }
-        }
+          },
+        },
       });
     }
     if (mainBlogMaterial) {
@@ -468,8 +474,8 @@
           1280: {
             slidesPerView: 3,
             // autoHeight: false,
-          }
-        }
+          },
+        },
       });
     }
     if (landingHeroSlider) {
@@ -485,14 +491,14 @@
         navigation: {
           nextEl: '.landing-hero__nav--next',
           prevEl: '.landing-hero__nav--prev',
-          disabledClass: 'landing-hero__nav--disabled'
+          disabledClass: 'landing-hero__nav--disabled',
         },
         pagination: {
           el: '.landing-hero__nav-bullets',
           type: 'bullets',
           bulletClass: 'landing-hero__nav-bullet',
           bulletActiveClass: 'landing-hero__nav-bullet--active',
-          clickable: true
+          clickable: true,
         },
         breakpoints: {
           768: {
@@ -500,8 +506,8 @@
           },
           1024: {
             spaceBetween: 0,
-          }
-        }
+          },
+        },
       });
       if (heroLandingSlider.slides.length < 2) {
         heroLandingSlider.disable();
@@ -524,7 +530,7 @@
           type: 'bullets',
           bulletClass: 'boxed-about__nav-bullet',
           bulletActiveClass: 'boxed-about__nav-bullet--active',
-          clickable: true
+          clickable: true,
         },
       });
     }
@@ -541,32 +547,70 @@
         navigation: {
           nextEl: '.landing-examples__nav--next',
           prevEl: '.landing-examples__nav--prev',
-          disabledClass: 'landing-examples__nav--disabled'
+          disabledClass: 'landing-examples__nav--disabled',
         },
         pagination: {
           el: '.landing-examples__nav-bullets',
           type: 'bullets',
           bulletClass: 'landing-examples__nav-bullet',
           bulletActiveClass: 'landing-examples__nav-bullet--active',
-          clickable: true
+          clickable: true,
         },
         breakpoints: {
           768: {
-            spaceBetween: '14.5%'
+            spaceBetween: '14.5%',
           },
           1024: {
-            spaceBetween: '20%'
+            spaceBetween: '20%',
           },
           1440: {
-            spaceBetween: '25%'
+            spaceBetween: '25%',
           },
           1920: {
-            spaceBetween: 20
-          }
-        }
+            spaceBetween: 20,
+          },
+        },
       });
     }
-  }
+    if (aboutCompanyTeam) {
+      const aboutCompanyTeamSlider = new Swiper(aboutCompanyTeam, {
+        direction: 'horizontal',
+        grabCursor: true,
+        preventClicks: true,
+        preventClicksPropagation: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+        slideActiveClass: 'is-active',
+        on: {
+          reachEnd: function() {
+            // this.snapGrid = [...this.slidesGrid];
+          },
+          slideChangeTransitionStart: function() {
+            this.update();
+          }
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 'auto',
+          }
+        },
+        pagination: {
+          el: '.about-company-team__nav-bullets',
+          type: 'bullets',
+          bulletClass: 'about-company-team__nav-bullet',
+          bulletActiveClass: 'about-company-team__nav-bullet--active',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.about-company-team__nav--next',
+          prevEl: '.about-company-team__nav--prev',
+          disabledClass: 'about-company-team__nav--disabled',
+        },
+      });
+    }
+  };
 
   const getSlider = () => {
     const breakpointMobile = window.matchMedia('(max-width: 767px');
@@ -580,6 +624,7 @@
     const settingsAwards = document.querySelector('.settings-awards__swiper');
     const landingOffer = document.querySelector('.landing-offers__sliders');
     const landingIndustrial = document.querySelector('.landing-industries__swiper');
+    const aboutHistory = document.querySelector('.about-company-history__slider');
     let crmTrainingHeadSlider;
     let crmMaterialSlider;
     let navSlider;
@@ -587,17 +632,29 @@
     let settingsAwardsSlider;
     let landingOfferSlider;
     let landingIndustrialSlider;
+    let aboutHistorySlider;
 
-    const breakpointChecker = function () {
+    const breakpointChecker = function() {
       let resizeTimeout;
       if (!resizeTimeout) {
-        resizeTimeout = setTimeout(function () {
+        resizeTimeout = setTimeout(function() {
           resizeTimeout = null;
           resizeHandlerTablet();
           resizeHandlerDesktop();
           resizeBetween();
           resizeMobileandLarge();
+          resizeHandlerMobile();
         }, 100);
+      }
+
+      function resizeHandlerMobile() {
+        if (breakpointTablet.matches === false) {
+          if (aboutHistorySlider !== undefined) {
+            aboutHistorySlider.destroy(true, true);
+          }
+        } else if (breakpointTablet.matches === true) {
+          getMobileSlider();
+        }
       }
 
       function resizeHandlerTablet() {
@@ -650,6 +707,25 @@
       }
     };
 
+    const getMobileSlider = function() {
+      if (aboutHistory) {
+        aboutHistorySlider = new Swiper(aboutHistory, {
+          direction: 'vertical',
+          grabCursor: true,
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+          freeMode: true,
+          mousewheel: true,
+          watchSlidesVisibility: true,
+          slideActiveClass: 'is-active',
+        });
+      }
+    };
+
     const getMobilAndLargeSlider = function() {
       if (landingOffer) {
         landingOfferSlider = new Swiper(landingOffer, {
@@ -664,20 +740,20 @@
           navigation: {
             nextEl: '.landing-offers__nav--next',
             prevEl: '.landing-offers__nav--prev',
-            disabledClass: 'landing-offers__nav--disabled'
+            disabledClass: 'landing-offers__nav--disabled',
           },
           pagination: {
             el: '.landing-offers__nav-bullets',
             type: 'bullets',
             bulletClass: 'landing-offers__nav-bullet',
             bulletActiveClass: 'landing-offers__nav-bullet--active',
-            clickable: true
+            clickable: true,
           },
           breakpoints: {
             1920: {
-              slidesPerView: 2
-            }
-          }
+              slidesPerView: 2,
+            },
+          },
         });
       }
 
@@ -694,26 +770,26 @@
           navigation: {
             nextEl: '.landing-industries__nav--next',
             prevEl: '.landing-industries__nav--prev',
-            disabledClass: 'landing-industries__nav--disabled'
+            disabledClass: 'landing-industries__nav--disabled',
           },
           pagination: {
             el: '.landing-industries__nav-bullets',
             type: 'bullets',
             bulletClass: 'landing-industries__nav-bullet',
             bulletActiveClass: 'landing-industries__nav-bullet--active',
-            clickable: true
+            clickable: true,
           },
           breakpoints: {
             1920: {
               spaceBetween: 20,
-              slidesPerView: 'auto'
-            }
-          }
+              slidesPerView: 'auto',
+            },
+          },
         });
       }
-    }
+    };
 
-    const getTabletSlider = function () {
+    const getTabletSlider = function() {
       if (crmTrainingHead) {
         crmTrainingHeadSlider = new Swiper(crmTrainingHead, {
           direction: 'horizontal',
@@ -741,7 +817,7 @@
       }
     };
 
-    const getDesktopSliders = function () {
+    const getDesktopSliders = function() {
       if (crmMaterial) {
         crmMaterialSlider = new Swiper(crmMaterial, {
           direction: 'horizontal',
@@ -754,14 +830,14 @@
           slidesOffsetAfter: 0,
           breakpoints: {
             768: {
-              spaceBetween: 40
-            }
+              spaceBetween: 40,
+            },
           },
           navigation: {
             nextEl: '.crm-material__nav--next',
             prevEl: '.crm-material__nav--prev',
-            disabledClass: 'crm-material__nav--disabled'
-          }
+            disabledClass: 'crm-material__nav--disabled',
+          },
         });
       }
 
@@ -780,13 +856,13 @@
             type: 'bullets',
             bulletClass: 'settings-awards__bullet',
             bulletActiveClass: 'settings-awards__bullet--active',
-            clickable: true
+            clickable: true,
           },
           breakpoints: {
             768: {
               slidesPerView: 1,
               // spaceBetween: 0,
-            }
+            },
           },
         });
       }
@@ -816,11 +892,11 @@
   const getInputMask = () => {
     const phoneElement = document.querySelectorAll('._phone-mask');
     const phoneMaskOption = {
-      mask: '+{7} (000) 000-00-00'
-    }
+      mask: '+{7} (000) 000-00-00',
+    };
     phoneElement.forEach(item => {
       IMask(item, phoneMaskOption);
-    })
+    });
   };
 
   const getInputLabelFields = () => {
@@ -901,7 +977,7 @@
 
       map.behaviors.disable('scrollZoom');
       map.geoObjects.add(myPlacemark);
-    }
+    };
 
     if (ymaps) {
       ymaps.ready(init);
@@ -923,6 +999,65 @@
     window.accordions = accordions;
   };
 
+  const initAboutHistoryMore = () => {
+    const moreButton = document.querySelector('.about-company-history__more');
+    const moreList = document.querySelector('.about-company-history__list');
+    const moreItem = [...document.querySelectorAll('.about-company-history__item')];
+    const breakpoint = window.matchMedia('(min-width: 768px)');
+
+    const copyItems = moreItem.concat();
+    copyItems.splice(0, 3);
+
+    const calcInitialHeight = () => {
+      let height = 0;
+
+      moreItem.forEach((item, index) => {
+        if (3 > index) {
+          height += item.clientHeight;
+        }
+      });
+
+      return height;
+    };
+
+    const getHeightList = () => {
+      if (!breakpoint.matches) {
+        const initialHeight = calcInitialHeight();
+        moreList.style.maxHeight = `${initialHeight}px`;
+        moreButton.style.display = 'flex';
+
+        moreButton.addEventListener('click', (evt) => {
+          evt.preventDefault();
+          if (moreButton.classList.contains('is-open')) {
+            moreButton.classList.remove('is-open');
+            moreButton.textContent = 'Загрузить еще';
+            moreList.style.maxHeight = `${initialHeight}px`;
+          } else {
+            moreButton.classList.add('is-open');
+            moreButton.textContent = 'Скрыть';
+            moreList.style.maxHeight = `${moreList.scrollHeight}px`;
+          }
+        });
+      } else {
+        moreList.style.maxHeight = 'unset';
+        moreButton.style.display = 'none';
+      }
+    };
+
+    const showMore = () => {
+      if (!moreList) {
+        return;
+      }
+
+      getHeightList();
+      window.addEventListener('resize', () => {
+        getHeightList();
+      });
+    };
+
+    showMore();
+  };
+
   dynamicAdaptiv();
   getPopup();
   getPageVh();
@@ -939,4 +1074,5 @@
   initAccordions();
   getMorePartners();
   getMap();
+  initAboutHistoryMore();
 })();

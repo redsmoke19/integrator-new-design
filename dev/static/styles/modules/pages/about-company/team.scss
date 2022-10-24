@@ -1,0 +1,253 @@
+.about-company-team {
+  $root: &;
+
+  border-bottom: 1px solid $pagination-color;
+  margin: 0 0 35px 0;
+  padding: 0 0 35px;
+
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 55px 0;
+    padding: 0 0 55px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 14px 0;
+
+    &::after {
+      content: attr(data-title-mobile);
+
+      @media screen and (min-width: $tablet-size) {
+        content: attr(data-title-desktop);
+      }
+    }
+  }
+
+  &__wrapper {
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__slider {
+    @media screen and (min-width: $tablet-size) {
+      margin: -30px 0 0;
+      min-width: 0;
+      position: relative;
+    }
+  }
+
+  &__note {
+    color: $text-note-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0 0 10px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__list {
+    margin: 0 0 10px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    padding: 10px 26px;
+
+    @media screen and (min-width: $tablet-size) {
+      padding: 50px 10px 10px;
+      width: 120px;
+    }
+  }
+
+  &__item.is-active {
+    @media screen and (min-width: $tablet-size) {
+      padding: 10px;
+      width: 240px;
+
+      #{$root}__inner {
+        padding: 35px 20px 18px;
+      }
+
+      #{$root}__name,
+      #{$root}__position,
+      #{$root}__phone {
+        display: block;
+      }
+
+      #{$root}__img {
+        height: 172px;
+        margin: 0 0 15px 0;
+      }
+    }
+  }
+
+  &__inner {
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(98, 63, 162, .1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px;
+
+    @media screen and (min-width: $tablet-size) {
+      padding: 33px 20px;
+    }
+  }
+
+  &__img {
+    height: 160px;
+    margin: 0 0 20px 0;
+    object-fit: contain;
+    width: 172px;
+
+    @media screen and (min-width: $tablet-size) {
+      height: auto;
+      margin: 0;
+    }
+  }
+
+  &__name {
+    color: $purple-dark-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
+  }
+
+  &__position {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 5px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    color: $yellow-color;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
+  }
+
+  &__nav-bullets {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      display: none;
+    }
+  }
+
+  &__nav-bullet {
+    background-color: $pagination-color;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+
+    &:not(:last-child) {
+      margin: 0 8px 0 0;
+    }
+
+    &--active {
+      background-color: $purple-dark-color;
+    }
+  }
+
+  &__nav-arrows {
+    display: none;
+
+    @media screen and (min-width: $tablet-size) {
+      bottom: 60px;
+      display: flex;
+      left: 65%;
+      position: absolute;
+    }
+  }
+
+  &__nav {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all ease-out .3s;
+
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+
+    &--prev {
+      transform: rotate(180deg);
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &--disabled {
+      opacity: .4;
+
+      &:hover {
+        opacity: .4;
+      }
+    }
+  }
+
+  &__description {
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 40%;
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 14px;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  &__link {
+    color: $black;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: underline;
+    transition: opacity ease-out .15s;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}

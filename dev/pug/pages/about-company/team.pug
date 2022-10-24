@@ -1,0 +1,39 @@
+section.about-company-team
+  .container
+    .about-company-team__content
+      h2.about-company-team__title(data-title-mobile="Наша команда", data-title-desktop="Ключевые сотрудники")
+      .about-company-team__wrapper
+        .about-company-team__slider
+          p.about-company-team__note И еще 42 сотрудника
+          .about-company-team__box.swiper
+            ul.about-company-team__list.swiper-wrapper
+              li.about-company-team__item.swiper-slide
+                .about-company-team__inner
+                  img.about-company-team__img(src="static/images/content/about-company/team-1.png", width="173", height="160", alt="Фотография сотрудника")
+                  h3.about-company-team__name Владимир Безюков
+                  span.about-company-team__position Генеральный директор
+                  span.about-company-team__phone Добавочный 105
+              li.about-company-team__item.swiper-slide
+                .about-company-team__inner
+                  img.about-company-team__img(src="static/images/content/about-company/team-2.png", width="173", height="160", alt="Фотография сотрудника")
+                  h3.about-company-team__name Владимир Безюков
+                  span.about-company-team__position Генеральный директор
+                  span.about-company-team__phone Добавочный 105
+              li.about-company-team__item.swiper-slide
+                .about-company-team__inner
+                  img.about-company-team__img(src="static/images/content/about-company/team-3.png", width="173", height="160", alt="Фотография сотрудника")
+                  h3.about-company-team__name Юрий Лужков
+                  span.about-company-team__position Генеральный директор
+                  span.about-company-team__phone Добавочный 105
+            .about-company-team__nav-bullets
+            .about-company-team__nav-arrows
+              button.about-company-team__nav.about-company-team__nav--prev
+                +icon("icon-arrow-slider", "about-company-team__nav-icon", "23", "20")
+              button.about-company-team__nav.about-company-team__nav--next
+                +icon("icon-arrow-slider", "about-company-team__nav-icon", "23", "20")
+        .about-company-team__description
+          .about-company-team__text
+            p Мы очень внимательно относимся к найму сотрудника.
+            p Оцениваем не только профессиональные качества, но и умение работать в команде, заинтересованность и совпадение личных ценностей с корпоративными ценностями нашей компании.
+            p Это дает свои плоды - 90% сотрудников работает у нас с момента основания.
+          a.about-company-team__link(href="#") Стать частью команды

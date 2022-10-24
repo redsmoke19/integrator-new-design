@@ -1,0 +1,164 @@
+.about-company-history {
+  $root: &;
+
+  border-bottom: 1px solid $pagination-color;
+  margin: 0 0 35px 0;
+  padding: 35px 0;
+
+  @media screen and (min-width: $tablet-size) {
+    margin: 0 0 55px 0;
+    padding: 55px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      margin: 0 0 26px 0;
+    }
+  }
+
+  &__wrapper {
+    @media screen and (min-width: $tablet-size) {
+      height: 460px;
+      position: relative;
+      user-select: none;
+
+      &::after {
+        background-color: $purple-dark-color;
+        content: "";
+        height: 100%;
+        left: 100px;
+        position: absolute;
+        top: 0;
+        width: 2px;
+      }
+    }
+  }
+
+  &__slider {
+    @media screen and (min-width: $tablet-size) {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    transition: all ease-out .3s;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      padding: 0 0 20px 0;
+
+      @media screen and (min-width: $tablet-size) {
+        padding: 0;
+      }
+    }
+
+    @media screen and (min-width: $tablet-size) {
+      height: auto;
+      position: relative;
+
+      &::after {
+        background-color: $white;
+        border: 2px solid $purple-dark-color;
+        border-radius: 50%;
+        content: "";
+        height: 30px;
+        left: 86px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all ease-out .3s;
+        width: 30px;
+      }
+    }
+
+    &.is-active {
+      @media screen and (min-width: $tablet-size) {
+        &::after {
+          background-color: $purple-dark-color;
+        }
+
+        #{$root}__text {
+          background-color: $purple-dark-color;
+          border-color: transparent;
+          color: $white;
+        }
+      }
+    }
+
+    &:hover {
+      @media screen and (min-width: $tablet-size) {
+        &::after {
+          background-color: $purple-dark-color;
+        }
+
+        #{$root}__text {
+          background-color: $purple-dark-color;
+          border-color: transparent;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__inner {
+    @media screen and (min-width: $tablet-size) {
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  &__year {
+    color: $purple-dark-color;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    margin: 0 0 8px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 auto;
+      font-size: 20px;
+      line-height: 26px;
+      margin: 0 90px 0 0;
+      width: 60px;
+      word-break: break-all;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+
+    @media screen and (min-width: $tablet-size) {
+      border: 1px solid $pagination-color;
+      border-radius: 10px;
+      width: 100%;
+      padding: 25px 20px;
+      transition: all ease-out .3s;
+    }
+  }
+
+  &__more {
+    color: $black;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    line-height: 1;
+    margin: 30px 0 0 0;
+    text-decoration: underline;
+    transition: opacity .15s ease-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
