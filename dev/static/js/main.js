@@ -573,28 +573,44 @@
       });
     }
     if (aboutCompanyTeam) {
+      const slides = aboutCompanyTeam.querySelector('.swiper-slide')
+
       const aboutCompanyTeamSlider = new Swiper(aboutCompanyTeam, {
         direction: 'horizontal',
         grabCursor: true,
         preventClicks: true,
         preventClicksPropagation: true,
         slidesPerView: 1,
-        spaceBetween: 0,
-        slidesOffsetBefore: 0,
-        slidesOffsetAfter: 0,
+        spaceBetween: 20,
+        loop: true,
         slideActiveClass: 'is-active',
         on: {
-          reachEnd: function() {
-            // this.snapGrid = [...this.slidesGrid];
-          },
+          /*init: function () {
+            for (let i = 0; i < slides.length; i++) {
+              if (i === 3) {
+                slides[i].style.marginLeft = '-120px';
+              }
+            }
+          },*/
+
           slideChangeTransitionStart: function() {
-            this.update();
-          }
+            this.updateSize();
+          },
+
+          /*activeIndexChange: function () {
+            for (let i = 0; i < slides.length; i++) {
+              const activeIndex = aboutCompanyTeamSlider.activeIndex;
+
+              if (i === activeIndex + 2) {
+                slides[i].style.marginLeft = '-120px';
+              }
+            }
+          }*/
         },
         breakpoints: {
           768: {
             slidesPerView: 'auto',
-          }
+          },
         },
         pagination: {
           el: '.about-company-team__nav-bullets',
@@ -709,6 +725,8 @@
 
     const getMobileSlider = function() {
       if (aboutHistory) {
+        const slides = aboutHistory.querySelectorAll('.swiper-slide')
+
         aboutHistorySlider = new Swiper(aboutHistory, {
           direction: 'vertical',
           grabCursor: true,
@@ -716,12 +734,127 @@
           preventClicksPropagation: true,
           slidesPerView: 'auto',
           spaceBetween: 30,
-          slidesOffsetBefore: 0,
-          slidesOffsetAfter: 0,
-          freeMode: true,
+          freeMode: {
+            enabled: true,
+            sticky: true,
+          },
           mousewheel: true,
           watchSlidesVisibility: true,
           slideActiveClass: 'is-active',
+          on: {
+            init: function () {
+              for (let i = 0; i < slides.length; i++) {
+                const point = slides[i].querySelector('.about-company-history__point');
+                const year = slides[i].querySelector('.about-company-history__year');
+                const text = slides[i].querySelector('.about-company-history__text');
+
+                slides[i].style.opacity = '0';
+
+                if (i === 0 || i === 1 || i === 2) {
+                  slides[i].style.opacity = '1';
+
+                  point.style.width = '30px';
+                  point.style.height = '30px';
+                  point.style.left = '86px';
+
+                  year.style.fontSize = '20px';
+                  year.style.lineHeight = '26px';
+
+                  text.style.display = 'block';
+                }
+
+                if (i === 3) {
+                  slides[i].style.opacity = '1';
+
+                  point.style.width = '24px';
+                  point.style.height = '24px';
+                  point.style.left = '89px';
+
+                  year.style.fontSize = '16px';
+                  year.style.lineHeight = '21px';
+
+                  text.style.display = 'none';
+                }
+
+                if (i === 4) {
+                  slides[i].style.opacity = '1';
+
+                  point.style.width = '16px';
+                  point.style.height = '16px';
+                  point.style.left = '93px';
+
+                  year.style.fontSize = '12px';
+                  year.style.lineHeight = '16px';
+
+                  text.style.display = 'none';
+                }
+              }
+            }
+          }
+        });
+
+        aboutHistorySlider.on('activeIndexChange', function () {
+          for (let i = 0; i < slides.length; i++) {
+            const activeIndex = aboutHistorySlider.activeIndex;
+
+            const point = slides[i].querySelector('.about-company-history__point');
+            const year = slides[i].querySelector('.about-company-history__year');
+            const text = slides[i].querySelector('.about-company-history__text');
+
+            slides[i].style.opacity = '0';
+
+            point.style.width = '30px';
+            point.style.height = '30px';
+            point.style.left = '86px';
+
+            year.style.fontSize = '20px';
+            year.style.lineHeight = '26px';
+
+            text.style.display = 'block';
+
+            if (i === activeIndex || i === activeIndex + 1 || i === activeIndex + 2) {
+              slides[i].style.opacity = '1';
+            }
+
+            if (i === activeIndex + 3) {
+              slides[i].style.opacity = '1';
+
+              point.style.width = '24px';
+              point.style.height = '24px';
+              point.style.left = '89px';
+
+              year.style.fontSize = '16px';
+              year.style.lineHeight = '21px';
+
+              text.style.display = 'none';
+            }
+
+            if (i === activeIndex + 4) {
+              slides[i].style.opacity = '1';
+
+              point.style.width = '16px';
+              point.style.height = '16px';
+              point.style.left = '93px';
+
+              year.style.fontSize = '12px';
+              year.style.lineHeight = '16px';
+
+              text.style.display = 'none';
+            }
+
+            if (i === slides.length - 1 && activeIndex === slides.length - 4) {
+              slides[i].style.opacity = '1';
+
+              point.style.width = '30px';
+              point.style.height = '30px';
+              point.style.left = '86px';
+
+              year.style.fontSize = '20px';
+              year.style.lineHeight = '26px';
+
+              text.style.display = 'block';
+            }
+          }
         });
       }
     };
