@@ -438,6 +438,7 @@
     const boxedAboutSlider = document.querySelector('.boxed-about__slider');
     const landingExampleSlider = document.querySelector('.landing-examples__swiper');
     const aboutCompanyTeam = document.querySelector('.about-company-team__box');
+    const aboutCompanyCertificate = document.querySelectorAll('.about-company-certificate__inner');
     if (mainAreasTabs) {
       new Swiper(mainAreasTabs, {
         direction: 'horizontal',
@@ -609,6 +610,36 @@
           disabledClass: 'about-company-team__nav--disabled',
         },
       });
+    }
+    if (aboutCompanyCertificate.length) {
+      aboutCompanyCertificate.forEach(item => {
+        const pagination = item.querySelector('.about-company-certificate__nav-bullets')
+        console.log(item);
+        const slider = new Swiper(item, {
+          // init: false,
+          direction: 'horizontal',
+          grabCursor: true,
+          preventClicks: true,
+          preventClicksPropagation: true,
+          slidesPerView: 'auto',
+          spaceBetween: 20,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+          breakpoints: {
+            1024: {
+              slidesPerView: 3,
+            }
+          },
+          pagination: {
+            el: pagination,
+            type: 'bullets',
+            bulletClass: 'about-company-certificate__nav-bullet',
+            bulletActiveClass: 'about-company-certificate__nav-bullet--active',
+            clickable: true,
+          }
+        });
+
+      })
     }
   };
 
@@ -1065,12 +1096,13 @@
   getSandwich();
   getNavSubMenu();
   getSubItemsFooter();
+  initTabs();
   getAllBreakpointsSlider();
   getSlider();
   getInputMask();
   getInputLabelFields();
   getAsideAction();
-  initTabs();
+  // initTabs();
   initAccordions();
   getMorePartners();
   getMap();

@@ -7,6 +7,7 @@ const vendorsScripts = [
   'node_modules/imask/dist/imask.js',
   'dev/static/js/vendor/tabs.js',
   'dev/static/js/vendor/accordion.js',
+  // 'dev/static/js/vendor/swiper.js',
 ];
 
 module.exports = function vendors(cb) {

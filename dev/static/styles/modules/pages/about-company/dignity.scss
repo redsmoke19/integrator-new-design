@@ -1,0 +1,30 @@
+.about-company-dignity {
+  margin: 0 0 35px 0;
+
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 55px 0;
+  }
+
+  .settings-think__list {
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 30px 0 0;
+    }
+  }
+
+  .settings-think__picture {
+    @media screen and (min-width: $tablet-size) {
+      flex: 0 0 371px;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      flex: 0 0 470px;
+      margin: 0;
+    }
+  }
+
+  .settings-think__img {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+}

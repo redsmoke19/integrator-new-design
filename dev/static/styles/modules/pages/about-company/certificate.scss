@@ -1,0 +1,94 @@
+.about-company-certificate {
+  overflow: hidden;
+
+  .main-areas {
+    border: unset;
+    margin: 0;
+    overflow: inherit;
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 5px 0;
+  }
+
+  &__text {
+    color: $text-note-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0 0 40px 0;
+  }
+
+  &__inner {
+    min-width: 0;
+    width: 100%;
+  }
+
+  &__list {
+    margin: 0 0 20px 0;
+    width: 100%;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__item {
+    width: 280px;
+  }
+
+  &__picture {
+    margin: 0 0 20px 0;
+  }
+
+  &__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__heading {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: 0 0 5px 0;
+    text-align: center;
+  }
+
+  &__note {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  &__nav-bullets {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+  }
+
+  &__nav-bullet {
+    background-color: $pagination-color;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+
+    @media screen and (min-width: $desktop-size) {
+      height: 10px;
+      width: 10px;
+    }
+
+    &:not(:last-child) {
+      margin: 0 8px 0 0;
+    }
+
+    &--active {
+      background-color: $purple-dark-color;
+    }
+  }
+}

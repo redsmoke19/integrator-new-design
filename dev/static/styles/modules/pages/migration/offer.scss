@@ -19,6 +19,18 @@
     }
   }
 
+  &__description {
+    color: $text-note-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    margin: -15px 0 20px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: -30px 0 30px;
+    }
+  }
+
   &__list {
     display: grid;
     gap: 25px;

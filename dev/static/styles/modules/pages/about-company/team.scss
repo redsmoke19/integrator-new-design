@@ -2,11 +2,9 @@
   $root: &;
 
   border-bottom: 1px solid $pagination-color;
-  margin: 0 0 35px 0;
   padding: 0 0 35px;
 
   @media screen and (min-width: $tablet-size) {
-    margin: 0 0 55px 0;
     padding: 0 0 55px;
   }
 
