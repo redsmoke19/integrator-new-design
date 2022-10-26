@@ -64,25 +64,11 @@
     @media screen and (min-width: $tablet-size) {
       height: auto;
       position: relative;
-
-      &::after {
-        background-color: $white;
-        border: 2px solid $purple-dark-color;
-        border-radius: 50%;
-        content: "";
-        height: 30px;
-        left: 86px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: all ease-out .3s;
-        width: 30px;
-      }
     }
 
     &.is-active {
       @media screen and (min-width: $tablet-size) {
-        &::after {
+        #{$root}__point {
           background-color: $purple-dark-color;
         }
 
@@ -94,9 +80,9 @@
       }
     }
 
-    &:hover {
+    /*&:hover {
       @media screen and (min-width: $tablet-size) {
-        &::after {
+        #{$root}__point {
           background-color: $purple-dark-color;
         }
 
@@ -106,6 +92,22 @@
           color: $white;
         }
       }
+    }*/
+  }
+
+  &__point {
+    @media screen and (min-width: $tablet-size) {
+      background-color: $white;
+      border: 2px solid $purple-dark-color;
+      border-radius: 50%;
+      content: "";
+      height: 30px;
+      left: 86px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: background-color ease-out .3s;
+      width: 30px;
     }
   }
 
@@ -130,6 +132,8 @@
       margin: 0 90px 0 0;
       width: 60px;
       word-break: break-all;
+
+      transition: all ease-out .3s;
     }
   }
 
@@ -161,4 +165,50 @@
       opacity: .7;
     }
   }
+
+  /*.swiper-slide {
+    @media screen and (min-width: $tablet-size) {
+      #{$root}__point {
+        left: 93px;
+        width: 16px;
+        height: 16px;
+      }
+
+      #{$root}__year {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+    &.is-active {
+      @media screen and (min-width: $tablet-size) {
+        #{$root}__point {
+          left: 86px;
+          width: 30px;
+          height: 30px;
+        }
+
+        #{$root}__year {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  .swiper-slide-next,
+  .swiper-slide-prev {
+    @media screen and (min-width: $tablet-size) {
+      #{$root}__point {
+        left: 89px;
+        width: 24px;
+        height: 24px;
+      }
+
+      #{$root}__year {
+        font-size: 16px;
+        line-height: 21px;
+      }
+    }
+  }*/
 }

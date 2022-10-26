@@ -27,6 +27,7 @@
     @media screen and (min-width: $tablet-size) {
       display: flex;
       flex-direction: row-reverse;
+      justify-content: space-between;
     }
   }
 
@@ -34,7 +35,12 @@
     @media screen and (min-width: $tablet-size) {
       margin: -30px 0 0;
       min-width: 0;
+      min-height: 342px;
       position: relative;
+    }
+
+    @media screen and (min-width: $small-desktop-size) {
+      width: 521px;
     }
   }
 
@@ -64,15 +70,22 @@
     padding: 10px 26px;
 
     @media screen and (min-width: $tablet-size) {
-      padding: 50px 10px 10px;
-      width: 120px;
+      /*padding: 50px 10px 10px;*/
+      margin-top: 36px;
+      padding: 0;
+      width: 240px;
+      height: 300px;
+      transform: scale(0.5) translate(-50%, -50%);
+      transition:transform ease-out 0.3s;
     }
   }
 
   &__item.is-active {
     @media screen and (min-width: $tablet-size) {
-      padding: 10px;
-      width: 240px;
+      /*padding: 10px;*/
+      margin-top: 0;
+      padding: 0;
+      transform: scale(1);
 
       #{$root}__inner {
         padding: 35px 20px 18px;
@@ -91,6 +104,14 @@
     }
   }
 
+  .swiper-slide-next {
+    + .swiper-slide {
+      @media screen and (min-width: $tablet-size) {
+        margin-left: -120px;
+      }
+    }
+  }
+
   &__inner {
     align-items: center;
     border-radius: 10px;
@@ -101,6 +122,7 @@
 
     @media screen and (min-width: $tablet-size) {
       padding: 33px 20px;
+      height: 100%;
     }
   }
 
@@ -179,6 +201,7 @@
     display: none;
 
     @media screen and (min-width: $tablet-size) {
+      z-index: 10;
       bottom: 60px;
       display: flex;
       left: 65%;
