@@ -630,7 +630,7 @@
     if (aboutCompanyCertificate.length) {
       aboutCompanyCertificate.forEach(item => {
         const pagination = item.querySelector('.about-company-certificate__nav-bullets')
-        console.log(item);
+        // console.log(item);
         const slider = new Swiper(item, {
           // init: false,
           direction: 'horizontal',
