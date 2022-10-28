@@ -23,7 +23,7 @@
 
   &__wrapper {
     @media screen and (min-width: $tablet-size) {
-      height: 460px;
+      height: 520px;
       position: relative;
       user-select: none;
 
@@ -36,6 +36,10 @@
         top: 0;
         width: 2px;
       }
+    }
+
+    @media screen and (min-width: 800px) {
+      height: 460px;
     }
   }
 
@@ -64,6 +68,7 @@
     @media screen and (min-width: $tablet-size) {
       height: auto;
       position: relative;
+      transition: transform 0.3s ease-out;
     }
 
     &.is-active {
@@ -76,6 +81,43 @@
           background-color: $purple-dark-color;
           border-color: transparent;
           color: $white;
+        }
+      }
+    }
+
+    &.small {
+      @media screen and (min-width: $tablet-size) {
+        transform: translateY(-39px);
+
+        .about-company-history__year {
+          transform: scale(0.8);
+        }
+
+        .about-company-history__point {
+          transform: scale(0.7) translateY(-50%);;
+        }
+
+        .about-company-history__text {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+
+    &.small ~ .about-company-history__item {
+      @media screen and (min-width: $tablet-size) {
+        transform: translateY(-112px);
+        .about-company-history__year {
+          transform: scale(0.6);
+        }
+
+        .about-company-history__point {
+          transform: scale(0.5) translateY(-50%);;
+        }
+
+        .about-company-history__text {
+          opacity: 0;
+          visibility: hidden;
         }
       }
     }
@@ -106,7 +148,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      transition: background-color ease-out .3s;
+      transition: background-color ease-out .3s, transform 0.3s ease-out;
       width: 30px;
     }
   }
@@ -123,6 +165,8 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 23px;
+    transition: transform 0.3s ease-out;
+    transform-origin: left bottom;
     margin: 0 0 8px 0;
 
     @media screen and (min-width: $tablet-size) {

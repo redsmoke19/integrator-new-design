@@ -33,14 +33,24 @@
 
   &__slider {
     @media screen and (min-width: $tablet-size) {
-      margin: -30px 0 0;
+      margin: -45px 0 0;
       min-width: 0;
       min-height: 342px;
       position: relative;
+      padding-left: 74px;
+      margin-left: -15px;
+      padding-top: 15px;
+      overflow: hidden;
     }
 
     @media screen and (min-width: $small-desktop-size) {
-      width: 521px;
+      width: 535px;
+    }
+  }
+
+  &__box {
+    @media screen and (min-width: $tablet-size) {
+      overflow: visible;
     }
   }
 
@@ -53,8 +63,14 @@
 
     @media screen and (min-width: $tablet-size) {
       position: absolute;
+      font-size: 13px;
+      margin-top: 15px;
       right: 0;
       top: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 16px;
     }
   }
 
@@ -67,34 +83,67 @@
   }
 
   &__item {
+    position: relative;
     padding: 10px 26px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
 
     @media screen and (min-width: $tablet-size) {
       /*padding: 50px 10px 10px;*/
       margin-top: 36px;
       padding: 0;
-      width: 240px;
-      height: 300px;
-      transform: scale(0.5) translate(-50%, -50%);
-      transition:transform ease-out 0.3s;
+      width: 120px;
+      height: 150px;
+      transform: translate(-60px);
+      //width: 240px;
+      //height: 300px;
+      //transform: scale(0.5) translate(-50%, -50%);
+      transition: transform 0.3s ease-out;
+      will-change: transform;
     }
+
+
+    //&.swiper-slide-duplicate-prev,
+    //&.swiper-slide-prev {
+    //  transform: translate(-60px);
+    //}
+    //
+    ////&.swiper-slide-duplicate-active,
+    ////&.swiper-slide-active {
+    ////  transform: scale(1) translate(0);
+    ////}
+    //
+    //&.swiper-slide-duplicate-next,
+    //&.swiper-slide-next {
+    //  transform: translate(60px);
+    //}
+    //
+    //&.swiper-slide-duplicate-next + .about-company-team__item,
+    //&.swiper-slide-next + .about-company-team__item {
+    //  transform: translate(60px);
+    //}
   }
 
-  &__item.is-active {
+  &__item.swiper-slide-active {
     @media screen and (min-width: $tablet-size) {
+      transform: translate(0) !important;
       /*padding: 10px;*/
-      margin-top: 0;
-      padding: 0;
-      transform: scale(1);
+      //margin-top: 0;
+      //padding: 0;
+      //transform: scale(1);
 
       #{$root}__inner {
         padding: 35px 20px 18px;
+        transform: translateX(-50%) translateY(-36px) scale(1);
       }
 
       #{$root}__name,
       #{$root}__position,
       #{$root}__phone {
-        display: block;
+        //display: block;
+        opacity: 1;
+        visibility: visible;
+        max-height: none;
       }
 
       #{$root}__img {
@@ -104,10 +153,18 @@
     }
   }
 
+  &__item.swiper-slide-active {
+    ~ .about-company-team__item {
+      @media screen and (min-width: $tablet-size) {
+        transform: translate(60px);
+      }
+    }
+  }
+
   .swiper-slide-next {
     + .swiper-slide {
       @media screen and (min-width: $tablet-size) {
-        margin-left: -120px;
+        //margin-left: -120px;
       }
     }
   }
@@ -121,8 +178,17 @@
     padding: 20px 25px;
 
     @media screen and (min-width: $tablet-size) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 240px;
+      height: 300px;
+      transform: translateX(-50%) scale(0.5);
+      transform-origin: center top;
       padding: 33px 20px;
-      height: 100%;
+      will-change: transform;
+      transition: transform 0.3s ease-out;
+      //height: 100%;
     }
   }
 
@@ -146,7 +212,10 @@
     margin: 0 0 5px 0;
 
     @media screen and (min-width: $tablet-size) {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+      //display: none;
     }
   }
 
@@ -156,7 +225,10 @@
     margin: 0 0 5px 0;
 
     @media screen and (min-width: $tablet-size) {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+      //display: none;
     }
   }
 
@@ -167,7 +239,10 @@
     line-height: 16px;
 
     @media screen and (min-width: $tablet-size) {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+      //display: none;
     }
   }
 
@@ -202,7 +277,7 @@
 
     @media screen and (min-width: $tablet-size) {
       z-index: 10;
-      bottom: 60px;
+      bottom: 66px;
       display: flex;
       left: 65%;
       position: absolute;
