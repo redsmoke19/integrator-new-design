@@ -1190,6 +1190,7 @@
     const moreItem = [...document.querySelectorAll('.about-company-history__item')];
     const breakpoint = window.matchMedia('(min-width: 768px)');
     let initialHeight = 0;
+    let windowWidth = window.innerWidth;
 
     const copyItems = moreItem.concat();
     copyItems.splice(0, 3);
@@ -1241,6 +1242,10 @@
 
       getHeightList();
       window.addEventListener('resize', () => {
+        if (windowWidth === window.innerWidth) {
+          return;
+        }
+        windowWidth = window.innerWidth;
         getHeightList();
       });
     };
