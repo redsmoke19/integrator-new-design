@@ -768,6 +768,7 @@
           grabCursor: true,
           preventClicks: true,
           preventClicksPropagation: true,
+          slideToClickedSlide: true,
           slidesPerView: 'auto',
           spaceBetween: 30,
           // freeMode: {

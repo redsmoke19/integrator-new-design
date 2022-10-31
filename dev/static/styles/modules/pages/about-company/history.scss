@@ -87,6 +87,7 @@
 
     &.small {
       @media screen and (min-width: $tablet-size) {
+        pointer-events: none;
         transform: translateY(-39px);
 
         .about-company-history__year {
@@ -106,6 +107,7 @@
 
     &.small ~ .about-company-history__item {
       @media screen and (min-width: $tablet-size) {
+        pointer-events: none;
         transform: translateY(-112px);
         .about-company-history__year {
           transform: scale(0.6);
