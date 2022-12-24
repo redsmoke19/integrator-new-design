@@ -1,0 +1,87 @@
+-
+  var cards = [
+    {
+      img: ["static/images/content/crm-development/card-img-1.jpg", "257", "265", "img"],
+      icon: ["icon-landing-home", "activities-card__svg", "26", "26"],
+      title: "Агентства недвижимости",
+      list: [
+        "Отслеживание заказов",
+        "Отчетные документы",
+        "Интеграция с 1С",
+        "Каталог партнеров с оптовыми ценами",
+      ]
+    },
+    {
+      img: ["static/images/content/crm-development/card-img-2.jpg", "257", "265", "img"],
+      icon: ["icon-enterprises", "activities-card__svg", "26", "26"],
+      title: "Предприятия",
+      list: [
+        "Отслеживание груза",
+        "Отслеживание своего заказа клиентами",
+        "Бухгалтерские документы",
+      ]
+    },
+    {
+      img: ["static/images/content/crm-development/card-img-3.jpg", "257", "265", "img"],
+      icon: ["icon-landing-bag", "activities-card__svg", "26", "26"],
+      title: "Интернет-магазины",
+      list: [
+        "Отслеживание заказов",
+        "Отчетные документы",
+        "Интеграция с 1C",
+      ]
+    },
+    {
+      img: ["static/images/content/crm-development/card-img-4.jpg", "257", "265", "img"],
+      icon: ["icon-landing-doc", "activities-card__svg", "26", "26"],
+      title: "Банки",
+      list: [
+        "Обмен файлами",
+        "Бухгалтерские документы",
+        "Отчеты",
+      ]
+    },
+    {
+      img: ["static/images/content/crm-development/card-img-5.jpg", "257", "265", "img"],
+      icon: ["icon-building", "activities-card__svg", "26", "26"],
+      title: "Строительные компании",
+      list: [
+        "Обмен файлами",
+        "Бухгалтерские документы",
+        "Отчеты",
+      ]
+    },
+    {
+      img: ["static/images/content/crm-development/card-img-6.jpg", "257", "265", "img"],
+      icon: ["icon-travel", "activities-card__svg", "26", "26"],
+      title: "Туризм",
+      list: [
+        "Отслеживание заказов",
+        "Отчетные документы",
+        "Интеграция с 1C",
+      ]
+    },
+  ]
+
+section.activities
+  .container
+    h2.activities__title Для разных отраслей и видов деятельности
+    .activities__slider
+      .activities__wrapper.swiper-wrapper
+        each card in cards
+          .activities__item.swiper-slide
+            .activities-card
+              .activities-card__picture
+                img(src=card.img[0], width=card.img[1], height=card.img[2] alt=card.img[3])
+              .activities-card__content
+                .activities-card__icon
+                  +icon(card.icon[0], card.icon[1], card.icon[2], card.icon[3])
+                h3.activities-card__title !{card.title}
+                ul.activities-card__list
+                  each item in card.list
+                    li.activities-card__item !{item}
+      .activities__navigation
+        .activities__nav-bullets
+
+
+

@@ -1,0 +1,11 @@
+extends layout/main
+
+block variables
+  -var title = 'Разработка CRM-систем'
+  -var pageClass = 'crm-development'
+
+block content
+  main(class=pageClass)
+    include pages/crm-development/activities
+    include pages/crm-development/individual-development
+    include pages/crm-development/dev-conditions

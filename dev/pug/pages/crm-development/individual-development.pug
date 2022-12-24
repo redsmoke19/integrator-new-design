@@ -1,0 +1,71 @@
+section.individual-development
+  .container
+    h2.individual-development__title Сравним готовую CRM-систему с индивидуальной разработкой
+    .individual-development__table
+      .individual-development__table-head(data-accordion="parent")
+        .individual-development__table-row
+          .individual-development__accordion.individual-development__accordion--hide-mobile
+            .individual-development__accordion-button
+              .individual-development__accordion-inner
+                span.individual-development__accordion-title Свойство
+          .individual-development__accordion(data-accordion="element")
+            .individual-development__accordion-button(data-accordion="button")
+              .individual-development__accordion-inner
+                span.individual-development__accordion-title Готовая CRM
+                +icon("icon-chevrone-button", "individual-development__accordion-icon", "15", "8")
+            .individual-development__accordion-content.individual-development__accordion-content--ready(data-accordion="content")
+              .individual-development__table-item(data-da=".individual-development__table-row--personalization,768,last")
+                .individual-development__cell-name Персонализация
+                .individual-development__table-cell Позволяет настраивать  предусмотренные вендором параметры интерфейса и логики вывода данных
+              .individual-development__table-item(data-da=".individual-development__table-row--speed,768,last")
+                .individual-development__cell-name Скорость работы
+                .individual-development__table-cell Как правило очень требовательны к каналам и скорости передаче данных, нет возможности персонализировать мобильное приложение и адаптивную версию
+              .individual-development__table-item(data-da=".individual-development__table-row--automation,768,last")
+                .individual-development__cell-name Автоматизация и бизнес-процессы
+                .individual-development__table-cell Роботы и Бизнес-процессы, работающие внутри одной сущности CRM. Нет возможности делать сложные расчеты, калькуляторы и взаимодействовать с внешними системами
+              .individual-development__table-item.individual-development__table-item--no-border(data-da=".individual-development__table-row--modules,768,last")
+                .individual-development__cell-name Модули
+                .individual-development__table-cell Перечень модулей ограничен предоставляемым вендором, индивидуальная разработка ограничена возможностью api
+          .individual-development__accordion.is-active(data-accordion="element")
+            .individual-development__accordion-button(data-accordion="button")
+              .individual-development__accordion-inner
+                span.individual-development__accordion-title Индивидуальная CRM
+                +icon("icon-chevrone-button", "individual-development__accordion-icon", "15", "8")
+            .individual-development__accordion-content.individual-development__accordion-content--individual(data-accordion="content")
+              .individual-development__table-item(data-da=".individual-development__table-row--personalization,768,last")
+                .individual-development__cell-name Персонализация
+                .individual-development__table-cell Полностью кастомизированные интерфейсы, сделанные по разработанным и согласованным с вами прототипам
+              .individual-development__table-item(data-da=".individual-development__table-row--speed,768,last")
+                .individual-development__cell-name Скорость работы
+                .individual-development__table-cell Кастомный интерфейс, с возможностью сокращения  графики, в зависимости от скорости и качества связи, при необходимости реализуется оффлайн режим с дискретной передачей данных
+              .individual-development__table-item(data-da=".individual-development__table-row--automation,768,last")
+                .individual-development__cell-name Автоматизация и бизнес-процессы
+                .individual-development__table-cell Полностью индивидуальные возможности автоматизации рутинной работы, сложные многоуровневые процессы и регламенты
+              .individual-development__table-item.individual-development__table-item--no-border(data-da=".individual-development__table-row--modules,768,last")
+                .individual-development__cell-name Модули
+                .individual-development__table-cell Любой индивидуальный набор модулей расширений и функций
+      .individual-development__table-body
+        .individual-development__table-row.individual-development__table-row--personalization
+          .individual-development__table-item
+            .individual-development__table-cell Персонализация
+
+
+        .individual-development__table-row.individual-development__table-row--speed
+          .individual-development__table-item
+            .individual-development__table-cell Скорость работы
+
+
+        .individual-development__table-row.individual-development__table-row--automation
+          .individual-development__table-item
+            .individual-development__table-cell Автоматизация и бизнес-процессы
+
+
+        .individual-development__table-row.individual-development__table-row--modules
+          .individual-development__table-item.individual-development__table-item--no-border
+            .individual-development__table-cell Модули
+
+
+    a.individual-development__link(href="#") Узнать больше об этом
+
+
+

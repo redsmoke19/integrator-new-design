@@ -78,6 +78,7 @@
         });
         this.mediaHandler(matchMedia, оbjectsFilter);
       }
+      console.log(this.mediaQueries);
     };
 
     DynamicAdapt.prototype.mediaHandler = function(matchMedia, оbjects) {
@@ -672,6 +673,7 @@
     const landingOffer = document.querySelector('.landing-offers__sliders');
     const landingIndustrial = document.querySelector('.landing-industries__swiper');
     const aboutHistory = document.querySelector('.about-company-history__slider');
+    const activities = document.querySelector('.activities__slider');
     let crmTrainingHeadSlider;
     let crmMaterialSlider;
     let navSlider;
@@ -680,6 +682,7 @@
     let landingOfferSlider;
     let landingIndustrialSlider;
     let aboutHistorySlider;
+    let activitiesSlider = null;
 
     const breakpointChecker = function() {
       let resizeTimeout;
@@ -1072,6 +1075,32 @@
     breakpointDesktop.addListener(breakpointChecker);
     breakpointLarge.addListener(breakpointChecker);
     breakpointChecker();
+
+    if (activities) {
+      const activitiesChecker = () => {
+        if (!breakpointTablet.matches) {
+          if (!activitiesSlider) {
+            activitiesSlider = new Swiper(activities, {
+              spaceBetween: 20,
+              pagination: {
+                el: '.activities__nav-bullets',
+                type: 'bullets',
+                bulletClass: 'activities__nav-bullet',
+                bulletActiveClass: 'activities__nav-bullet--active',
+                clickable: true,
+              },
+            });
+          }
+        } else {
+          if (activitiesSlider) {
+            activitiesSlider.destroy(true, true);
+            activitiesSlider = null;
+          }
+        }
+      };
+      activitiesChecker();
+      breakpointTablet.addListener(activitiesChecker);
+    }
   };
 
   const getInputMask = () => {
