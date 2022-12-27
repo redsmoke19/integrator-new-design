@@ -1,0 +1,43 @@
+mixin migration-item(options)
+  li.migration-offer__item
+    h3.migration-offer__heading
+      span.migration-offer__number!=options.number
+      span.migration-offer__head!=options.head
+    .migration-offer__inner
+      p.migration-offer__text!=options.text
+
+section.migration-offer.crm-dev-we-do
+  .container
+    .migration-offer__content
+      h2.migration-offer__title Что мы делаем?
+      ul.migration-offer__list
+        +migration-item({
+          number: '01',
+          head: 'Разработка CRM-систем',
+          text: 'Напишем CRM-систему с нуля или на основе готовой системы например, Битрикс24'
+        })
+        +migration-item({
+          number: '02',
+          head: 'Дизайн и аналитика',
+          text: 'Возьмем все работы по дизайну и аналитике проекта на себя'
+        })
+        +migration-item({
+          number: '03',
+          head: 'Доработка проекта',
+          text: 'У вас уже готовый проект? Сможем взять его на доработку/поддержку'
+        })
+        +migration-item({
+          number: '04',
+          head: 'Настройка интеграций',
+          text: 'Интеграции с любыми внешними системами, включая 1С разных версий'
+        })
+        +migration-item({
+          number: '05',
+          head: 'Автоматизация бизнеса',
+          text: 'Корпоративные информационные системы, ИМ и автоматизация бизнес-процессов любой сложности'
+        })
+        +migration-item({
+          number: '06',
+          head: 'Поддержка проекта',
+          text: 'Долгосрочные отношения с клиентами и последующее ведение вашего проекта'
+        })

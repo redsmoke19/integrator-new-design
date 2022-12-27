@@ -1,0 +1,83 @@
+.crm-dev-advantages {
+  margin: 0 0 35px 0;
+  padding: 35px 0 0 0;
+
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 55px 0;
+    padding: 55px 0 0 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+
+    @media screen and (min-width: $tablet-size) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item {
+    align-items: flex-start;
+    border: 1px solid $pagination-color;
+    border-radius: 10px;
+    display: flex;
+    padding: 22px 16px 22px 16px;
+
+    @media screen and (min-width: $desktop-size) {
+      padding: 20px 36px 20px 32px;
+    }
+  }
+
+  &__number {
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(98, 63, 162, .1);
+    color: $yellow-color;
+    display: flex;
+    flex: 1 0 auto;
+    font-family: $roboto-font;
+    font-size: 22px;
+    font-weight: 900;
+    height: 50px;
+    justify-content: center;
+    line-height: 28px;
+    margin: 0 16px 0 0;
+    width: 50px;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &__heading {
+    color: $purple-dark-color;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0 0 8px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 26px;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}

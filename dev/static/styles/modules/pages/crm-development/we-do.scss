@@ -1,0 +1,8 @@
+.crm-dev-we-do {
+  border: none;
+  margin: 0;
+
+  @media screen and (min-width: $desktop-size) {
+    margin: 0;
+  }
+}

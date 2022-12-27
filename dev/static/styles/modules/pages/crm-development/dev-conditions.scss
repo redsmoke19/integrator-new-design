@@ -1,5 +1,10 @@
 .dev-conditions {
   background-color: $purple-light-color;
+  margin: 0 0 35px 0;
+
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 55px 0;
+  }
 
   .container {
     @media screen and (min-width: $tablet-size) {

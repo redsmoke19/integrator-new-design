@@ -1,0 +1,7 @@
+.crm-dev-works {
+  .main-areas__picture {
+    @media screen and (min-width: $tablet-size) {
+      height: 255px;
+    }
+  }
+}

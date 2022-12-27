@@ -1,0 +1,78 @@
+.crm-dev-hero {
+  background-color: $purple-light-color;
+  padding: 40px 0 55px;
+
+  @media screen and (min-width: $tablet-size) {
+    padding: 44px 0 0;
+  }
+
+  &__content {
+    @media screen and (min-width: $tablet-size) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media screen and (min-width: $tablet-size) {
+      width: 38%;
+      flex-shrink: 0;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      width: unset;
+      flex-shrink: unset;
+      margin: 0 50px 0 0;
+    }
+  }
+
+  &__title {
+    color: $purple-dark-color;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0 0 10px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      font-size: 40px;
+      line-height: 50px;
+      margin: 0 0 16px 0;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0 0 22px 0;
+
+    @media screen and (min-width: $tablet-size) {
+      font-size: 16px;
+      line-height: 21px;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__picture {
+    display: none;
+    flex-shrink: 0;
+
+    @media screen and (min-width: $tablet-size) {
+      display: flex;
+      align-self: flex-end;
+      width: 60%;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      width: unset;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+}
