@@ -59,18 +59,11 @@
 
 .activities-card__picture {
   position: relative;
-  padding-top: 93%;
+  height: 311px;
   clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 20px), 0 100%);
 
-  @media screen and (min-width: 426px) {
-    padding-top: 360px;
-  }
-
-  @media screen and (min-width: $tablet-size) {
-    padding-top: 79%;
-  }
-
   @media screen and (min-width: $small-desktop-size) {
+    height: auto;
     order: 1;
     width: 52%;
     padding-top: 52.9%;
