@@ -1,0 +1,46 @@
+mixin migration-item(options)
+  li.migration-offer__item
+    h3.migration-offer__heading
+      span.migration-offer__number!=options.number
+      span.migration-offer__head!=options.head
+    .migration-offer__inner
+      p.migration-offer__text!=options.text
+
+section.migration-offer.mobile-development-offer
+  .container
+    .migration-offer__content
+      h2.migration-offer__title Что мы предлагаем?
+      p.migration-offer__subtitle Менеджер проекта сопровождает вас на&nbsp;всех этапах, мы&nbsp;проводим презентации и&nbsp;демонстрации промежуточных результатов.
+      ul.migration-offer__list
+        +migration-item({
+          number: '01',
+          head: 'Интервью с клиентом',
+          text: 'Наш специалист приедет к&nbsp;вам в&nbsp;офис, для заполнения брифов и&nbsp;согласования желаемых результатов.'
+        })
+        +migration-item({
+          number: '02',
+          head: 'Оценка стоимости и сроков',
+          text: 'Менеджер проекта подготовит точную поэтапную смету работ, вы&nbsp;оплачиваете только&nbsp;то, что получаете.'
+        })
+        +migration-item({
+          number: '03',
+          head: 'ТЗ и концепт',
+          text: 'Первым этапом является разработка точного технического задания и&nbsp;прототипов экранов мобильного приложения.'
+        })
+        +migration-item({
+          number: '04',
+          head: 'Frontend и Backend',
+          text: 'Разработка мобильного приложения, согласно утвержденному техническому заданию.'
+        })
+        +migration-item({
+          number: '05',
+          head: 'Юзабилити и дизайн',
+          text: 'Используя ваш фирменный стиль и&nbsp;логотип, мы&nbsp;сделаем приложение узнаваемым и&nbsp;понятным для клиентов.'
+        })
+        +migration-item({
+          number: '06',
+          head: 'Демонстрация и сдача',
+          text: 'Мы&nbsp;считаем работу законченной только после тестирования приложения автоматизированными тестами и&nbsp;фокус-группой.'
+        })
+
+

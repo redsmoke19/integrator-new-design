@@ -1,0 +1,19 @@
+.mobile-development-stages {
+  &.landing-stages {
+    border-top: 1px solid $pagination-color;
+    border-bottom: unset;
+    padding: 35px 0 0;
+
+    @media screen and (min-width: $tablet-size) {
+      border: unset;
+    }
+
+    @media screen and (min-width: $desktop-size) {
+      padding: 55px 0;
+    }
+  }
+
+  .landing-stages__text {
+    margin-bottom: 0;
+  }
+}

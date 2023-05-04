@@ -1,0 +1,9 @@
+.mobile-development-choice {
+  border-bottom: unset;
+  border-top: 1px solid $pagination-color;
+  padding: 35px 0 0 0;
+
+  @media screen and (min-width: $desktop-size) {
+    padding: 55px 0 0 0;
+  }
+}

@@ -1,0 +1,27 @@
+.mobile-development-offer {
+  padding: 0;
+
+  @media screen and (min-width: $desktop-size) {
+    padding: 0;
+    border: unset;
+  }
+
+  .migration-offer__title {
+    margin: 0 0 10px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 5px 0;
+      text-align: center;
+    }
+  }
+
+  .migration-offer__subtitle {
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 auto 30px;
+      max-width: 642px;
+      text-align: center;
+    }
+  }
+}
