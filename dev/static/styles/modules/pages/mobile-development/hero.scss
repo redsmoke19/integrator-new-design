@@ -1,0 +1,42 @@
+.mobile-development-hero {
+  $root: &;
+
+  padding: 40px 0 50px;
+
+  .settings-hero__info {
+    @media screen and (min-width: $desktop-size) {
+      margin: 0;
+    }
+  }
+
+  .settings-hero__text {
+    margin: 0 0 26px 0;
+  }
+
+  .settings-hero__subtitle {
+    br {
+      display: none;
+
+      @media screen and (min-width: $desktop-size) {
+        display: block;
+      }
+    }
+  }
+
+  .settings-hero__form {
+    @media screen and (min-width: $tablet-size) {
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .settings-hero__button {
+    white-space: nowrap;
+  }
+
+  .settings-hero__picture {
+    @media screen and (min-width: $desktop-size) {
+      transform: translateX(-20px);
+    }
+  }
+}
