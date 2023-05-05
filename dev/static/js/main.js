@@ -439,6 +439,7 @@
     const boxedAboutSlider = document.querySelector('.boxed-about__slider');
     const landingExampleSlider = document.querySelector('.landing-examples__swiper');
     const aboutCompanyTeam = document.querySelector('.about-company-team__box');
+    const applicationsSlider = document.querySelector('.applications__slider');
     const aboutCompanyCertificate = document.querySelectorAll('.about-company-certificate__inner');
     if (mainAreasTabs) {
       new Swiper(mainAreasTabs, {
@@ -454,6 +455,20 @@
           1280: {
             slidesOffsetAfter: 0,
           },
+        },
+      });
+    }
+    if (applicationsSlider) {
+      new Swiper(applicationsSlider, {
+        spaceBetween: 0,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: applicationsSlider.querySelector('.swiper-pagination'),
+          type: 'bullets',
+          clickable: true,
         },
       });
     }
