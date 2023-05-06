@@ -462,6 +462,7 @@
       new Swiper(applicationsSlider, {
         spaceBetween: 0,
         effect: 'fade',
+        autoHeight: true,
         fadeEffect: {
           crossFade: true,
         },
