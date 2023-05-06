@@ -3,6 +3,12 @@
 
   padding: 40px 0 50px;
 
+  .settings-hero__content {
+    @media screen and (min-width: $tablet-size) {
+      justify-content: center;
+    }
+  }
+
   .settings-hero__info {
     @media screen and (min-width: $desktop-size) {
       margin: 0;
