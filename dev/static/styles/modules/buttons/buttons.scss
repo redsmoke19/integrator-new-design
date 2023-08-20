@@ -7,37 +7,44 @@
   cursor: pointer;
   display: flex;
   font-weight: 500;
-  line-height: 1;
   justify-content: center;
+  line-height: 1;
   padding: 15px 20px;
   text-decoration: none;
   transition: all ease-out .15s;
   width: auto;
+
   &:hover {
     background-color: rgba($yellow-color, 1);
     color: $white;
     opacity: 1;
   }
+
   &:focus-visible {
     outline: 2px solid black;
   }
+
   &--fill {
     background-color: $yellow-color;
     color: $white;
+
     &:hover {
       background-color: $white;
       color: $yellow-color;
     }
   }
+
   &--purple {
     background-color: $purple-color;
     border-color: $purple-color;
     color: $white;
+
     &:hover {
       background-color: $white;
       color: $purple-color;
     }
   }
+
   &--round {
     border: none;
     border-radius: 10px;
@@ -46,21 +53,25 @@
     line-height: 20px;
     padding: 20px 40px;
   }
+
   &--white {
     background-color: $white;
     color: $purple-dark-color;
+
     &:hover {
-      border-color: $white;
       background-color: $purple-dark-color;
+      border-color: $white;
       color: $white;
     }
   }
+
   &--yellow {
     background-color: $yellow-color;
     box-shadow: 0 12px 30px rgba(255, 203, 104, .2);
   }
+
   &:active {
-    transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    transform: translateY(-1px);
   }
 }

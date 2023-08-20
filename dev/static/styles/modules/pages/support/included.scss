@@ -1,0 +1,20 @@
+.support-included {
+  background-color: $magnolia-color;
+  padding: 35px 0;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $small-desktop-size) {
+      text-align: center;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  .migration-offer__inner {
+    background-color: $white;
+  }
+}
