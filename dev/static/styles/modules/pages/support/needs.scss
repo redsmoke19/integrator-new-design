@@ -40,12 +40,12 @@
 
     @media screen and (min-width: $small-desktop-size) {
       align-items: start;
-      grid-template-columns: 415px 1fr;
+      grid-template-columns: 468px 1fr;
       gap: 50px;
     }
 
     @media screen and (min-width: $desktop-size) {
-      gap: 117px;
+      gap: 54px;
     }
   }
 
@@ -69,15 +69,17 @@
   &__img-wrap {
     overflow: hidden;
     position: relative;
+    margin: 20px 0 0 0;
 
     @media screen and (min-width: $tablet-size) {
       width: 100%;
+      margin: 0;
     }
 
     &::before {
       content: "";
       display: block;
-      padding-bottom: 100%;
+      padding-bottom: calc((415 / 468) * 100%);
     }
 
     img {
