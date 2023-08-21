@@ -5,7 +5,7 @@
 
   @media screen and (min-width: $small-desktop-size) {
     margin: 0 0 55px 0;
-    padding: 15px 0;
+    padding: 15px 0 0;
   }
 
   &__content {
@@ -79,6 +79,7 @@
 
     @media screen and (min-width: $small-desktop-size) {
       width: 420px;
+      align-self: end;
     }
   }
 }
