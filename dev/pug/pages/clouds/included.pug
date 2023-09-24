@@ -1,0 +1,45 @@
+mixin migration-item(options)
+  li.migration-offer__item
+    h3.migration-offer__heading
+      span.migration-offer__number!=options.number
+      span.migration-offer__head!=options.head
+    .migration-offer__inner
+      p.migration-offer__text!=options.text
+
+section.support-included.clouds-included
+  .container
+    .support-included__content
+      h2.support-included__title Почему стоит обратиться к нам?
+      ul.migration-offer__list
+        +migration-item({
+          number: '01',
+          head: 'Лидеры отрасли',
+          text: 'Занимаем 3-е место по внедрению коробочной версии Битрикс24, согласно рейтингу партнеров.'
+        })
+        +migration-item({
+          number: '02',
+          head: 'Индивидуальный подход',
+          text: 'Для заключения договора - наш специалист выезжает к вам в офис, чтобы ответить на все вопросы.'
+        })
+        +migration-item({
+          number: '03',
+          head: 'Работаем по всей России',
+          text: 'Мы оказываем широкий спектр услуг по СПб, Москве и всей России. Обращайтесь!'
+        })
+        +migration-item({
+          number: '04',
+          head: 'Комплексный подход',
+          text: 'Мы предлагаем комплексный подход и выполняем все работы по системе “все включено”'
+        })
+        +migration-item({
+          number: '05',
+          head: 'Богатый опыт',
+          text: 'За годы работы - более 1000 реализованных проектов на Битрикс24.'
+        })
+        +migration-item({
+          number: '06',
+          head: 'Постоянно развиваемся',
+          text: 'Постоянно дорабатываемый и масштабируемый функционал при переезде'
+        })
+
+

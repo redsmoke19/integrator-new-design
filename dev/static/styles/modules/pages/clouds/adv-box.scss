@@ -1,0 +1,8 @@
+.clouds-adv-box {
+  background-color: $magnolia-color;
+  padding: 35px 0;
+
+  @media screen and (min-width: $desktop-size) {
+    padding: 55px 0;
+  }
+}

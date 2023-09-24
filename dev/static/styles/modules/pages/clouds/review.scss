@@ -1,0 +1,51 @@
+.clouds-review {
+  border-top: 1px solid $pagination-color;
+  padding: 35px 0 0;
+  margin: 0 0 35px 0;
+
+  @media screen and (min-width: $desktop-size) {
+    padding: 55px 0 0;
+    margin: 0 0 55px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 20px 0;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+
+    &--mobile {
+      @media screen and (min-width: $small-desktop-size) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media screen and (min-width: $small-desktop-size) {
+        display: flex;
+      }
+    }
+
+    img {
+      height: 206px;
+      width: 280px;
+      object-fit: contain;
+
+      @media screen and (min-width: $small-desktop-size) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

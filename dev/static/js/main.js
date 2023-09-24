@@ -1,5 +1,4 @@
-(function() {
-  'use strict';
+(function () {
   const body = document.querySelector('body');
   let unlock = true;
   const dynamicAdaptiv = () => {
@@ -11,7 +10,7 @@
       this.type = type;
     }
 
-    DynamicAdapt.prototype.init = function() {
+    DynamicAdapt.prototype.init = function () {
       const _this = this;
       // массив объектов
       this.оbjects = [];
@@ -39,23 +38,21 @@
       // массив уникальных медиа-запросов
       this.mediaQueries = Array.prototype.map.call(
         this.оbjects,
-        function(item) {
+        function (item) {
           return (
-            '(' +
-            this.type +
-            '-width: ' +
-            item.breakpoint +
-            'px),' +
-            item.breakpoint
+            `(${
+              this.type
+            }-width: ${
+              item.breakpoint
+            }px),${
+              item.breakpoint}`
           );
         },
         this,
       );
       this.mediaQueries = Array.prototype.filter.call(
         this.mediaQueries,
-        function(item, index, self) {
-          return Array.prototype.indexOf.call(self, item) === index;
-        },
+        (item, index, self) => Array.prototype.indexOf.call(self, item) === index,
       );
 
       // навешивание слушателя на медиа-запрос
@@ -69,11 +66,9 @@
         // массив объектов с подходящим брейкпоинтом
         const оbjectsFilter = Array.prototype.filter.call(
           this.оbjects,
-          function(item) {
-            return item.breakpoint === mediaBreakpoint;
-          },
+          (item) => item.breakpoint === mediaBreakpoint,
         );
-        matchMedia.addListener(function() {
+        matchMedia.addListener(() => {
           _this.mediaHandler(matchMedia, оbjectsFilter);
         });
         this.mediaHandler(matchMedia, оbjectsFilter);
@@ -81,7 +76,7 @@
       console.log(this.mediaQueries);
     };
 
-    DynamicAdapt.prototype.mediaHandler = function(matchMedia, оbjects) {
+    DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
       if (matchMedia.matches) {
         for (let i = 0; i < оbjects.length; i++) {
           const оbject = оbjects[i];
@@ -99,7 +94,7 @@
     };
 
     // Функция перемещения
-    DynamicAdapt.prototype.moveTo = function(place, element, destination) {
+    DynamicAdapt.prototype.moveTo = function (place, element, destination) {
       element.classList.add(this.daClassname);
       if (place === 'last' || place >= destination.children.length) {
         destination.insertAdjacentElement('beforeend', element);
@@ -113,7 +108,7 @@
     };
 
     // Функция возврата
-    DynamicAdapt.prototype.moveBack = function(parent, element, index) {
+    DynamicAdapt.prototype.moveBack = function (parent, element, index) {
       element.classList.remove(this.daClassname);
       if (parent.children[index] !== undefined) {
         parent.children[index].insertAdjacentElement('beforebegin', element);
@@ -123,7 +118,7 @@
     };
 
     // Функция получения индекса внутри родителя
-    DynamicAdapt.prototype.indexInParent = function(parent, element) {
+    DynamicAdapt.prototype.indexInParent = function (parent, element) {
       const array = Array.prototype.slice.call(parent.children);
       return Array.prototype.indexOf.call(array, element);
     };
@@ -131,9 +126,9 @@
     // Функция сортировки массива по breakpoint и place
     // по возрастанию для this.type = min
     // по убыванию для this.type = max
-    DynamicAdapt.prototype.arraySort = function(arr) {
+    DynamicAdapt.prototype.arraySort = function (arr) {
       if (this.type === 'min') {
-        Array.prototype.sort.call(arr, function(a, b) {
+        Array.prototype.sort.call(arr, (a, b) => {
           if (a.breakpoint === b.breakpoint) {
             if (a.place === b.place) {
               return 0;
@@ -153,7 +148,7 @@
           return a.breakpoint - b.breakpoint;
         });
       } else {
-        Array.prototype.sort.call(arr, function(a, b) {
+        Array.prototype.sort.call(arr, (a, b) => {
           if (a.breakpoint === b.breakpoint) {
             if (a.place === b.place) {
               return 0;
@@ -172,7 +167,6 @@
 
           return b.breakpoint - a.breakpoint;
         });
-        return;
       }
     };
 
@@ -203,7 +197,7 @@
       }, delay);
 
       unlock = false;
-      setTimeout(function() {
+      setTimeout(() => {
         unlock = true;
       }, delay);
     }
@@ -215,19 +209,17 @@
       const lockPadding = document.querySelectorAll('._lp');
       for (let index = 0; index < lockPadding.length; index++) {
         const el = lockPadding[index];
-        el.style.paddingRight =
-          window.innerWidth -
-          document.querySelector('.wrapper').offsetWidth +
-          'px';
+        el.style.paddingRight = `${window.innerWidth
+          - document.querySelector('.wrapper').offsetWidth
+        }px`;
       }
-      body.style.paddingRight =
-        window.innerWidth -
-        document.querySelector('.wrapper').offsetWidth +
-        'px';
+      body.style.paddingRight = `${window.innerWidth
+        - document.querySelector('.wrapper').offsetWidth
+      }px`;
       body.classList.add('_lock');
 
       unlock = false;
-      setTimeout(function() {
+      setTimeout(() => {
         unlock = true;
       }, delay);
     }
@@ -262,7 +254,7 @@
       if (activePopup.length > 0) {
         popup_close('', false);
       }
-      let curent_popup = document.querySelector(`.popup_${item}`);
+      const curent_popup = document.querySelector(`.popup_${item}`);
       if (curent_popup && unlock) {
         if (video != '' && video != null) {
           const popup_video = document.querySelector('.popup_video');
@@ -340,7 +332,7 @@
 
     function resizeThrottler() {
       if (!resizeTimeout) {
-        resizeTimeout = setTimeout(function() {
+        resizeTimeout = setTimeout(() => {
           resizeTimeout = null;
           actualResizeHandler();
         }, 100);
@@ -357,7 +349,7 @@
       }
       if (breakpointTablet.matches === true) {
         if (footerSubList.length > 0) {
-          footerSubList.forEach(item => {
+          footerSubList.forEach((item) => {
             if (item.classList.contains('is-active')) {
               item.classList.remove('is-active');
             }
@@ -373,7 +365,7 @@
 
     if (sandwich != null) {
       const delay = 500;
-      sandwich.addEventListener('click', function(e) {
+      sandwich.addEventListener('click', (e) => {
         if (unlock) {
           bodyLock(delay);
           sandwich.classList.toggle('_active');
@@ -381,7 +373,7 @@
           body.classList.toggle('_overlay');
         }
       });
-      document.addEventListener('click', function(e) {
+      document.addEventListener('click', (e) => {
         if (!headerInner.classList.contains('_active')) return;
         if (!e.target.closest('._active')) {
           bodyLock(delay);
@@ -414,7 +406,7 @@
       if (menuItem && menuItem.matches('.nav__sub-list')) {
         menuItem.previousElementSibling.classList.add('_active');
         menuItem.classList.add('_active');
-        menuItem.style.maxHeight = menuItem.scrollHeight + 'px';
+        menuItem.style.maxHeight = `${menuItem.scrollHeight}px`;
         currentTarget = menuItem;
       }
     };
@@ -423,7 +415,7 @@
 
   const getSubItemsFooter = () => {
     const toggleButton = document.querySelectorAll('.footer-nav__button');
-    toggleButton.forEach(item => {
+    toggleButton.forEach((item) => {
       item.addEventListener('click', () => {
         const parent = item.parentElement;
         parent.classList.toggle('is-active');
@@ -441,6 +433,7 @@
     const aboutCompanyTeam = document.querySelector('.about-company-team__box');
     const applicationsSlider = document.querySelector('.applications__slider');
     const aboutCompanyCertificate = document.querySelectorAll('.about-company-certificate__inner');
+    const cloudsRateSlider = document.querySelector('.clouds-rate__slider');
     if (mainAreasTabs) {
       new Swiper(mainAreasTabs, {
         direction: 'horizontal',
@@ -591,7 +584,7 @@
       });
     }
     if (aboutCompanyTeam) {
-      const slides = aboutCompanyTeam.querySelectorAll('.swiper-slide')
+      const slides = aboutCompanyTeam.querySelectorAll('.swiper-slide');
 
       const aboutCompanyTeamSlider = new Swiper(aboutCompanyTeam, {
         direction: 'horizontal',
@@ -603,19 +596,19 @@
         loop: true,
         // slideActiveClass: 'is-active',
         on: {
-          /*init: function () {
+          /* init: function () {
             for (let i = 0; i < slides.length; i++) {
               if (i === 3) {
                 slides[i].style.marginLeft = '-120px';
               }
             }
-          },*/
+          }, */
 
-          slideChangeTransitionStart: function() {
+          slideChangeTransitionStart() {
             this.updateSize();
           },
 
-          /*activeIndexChange: function () {
+          /* activeIndexChange: function () {
             for (let i = 0; i < slides.length; i++) {
               const activeIndex = aboutCompanyTeamSlider.activeIndex;
 
@@ -623,7 +616,7 @@
                 slides[i].style.marginLeft = '-120px';
               }
             }
-          }*/
+          } */
         },
         breakpoints: {
           768: {
@@ -645,8 +638,8 @@
       });
     }
     if (aboutCompanyCertificate.length) {
-      aboutCompanyCertificate.forEach(item => {
-        const pagination = item.querySelector('.about-company-certificate__nav-bullets')
+      aboutCompanyCertificate.forEach((item) => {
+        const pagination = item.querySelector('.about-company-certificate__nav-bullets');
         // console.log(item);
         const slider = new Swiper(item, {
           // init: false,
@@ -661,7 +654,7 @@
           breakpoints: {
             1024: {
               slidesPerView: 3,
-            }
+            },
           },
           pagination: {
             el: pagination,
@@ -669,10 +662,45 @@
             bulletClass: 'about-company-certificate__nav-bullet',
             bulletActiveClass: 'about-company-certificate__nav-bullet--active',
             clickable: true,
-          }
+          },
         });
+      });
+    }
 
-      })
+    if (cloudsRateSlider) {
+      const cloudsSliderRate = new Swiper(cloudsRateSlider, {
+        direction: 'horizontal',
+        grabCursor: true,
+        preventClicks: true,
+        preventClicksPropagation: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        slidesOffsetBefore: 20,
+        slidesOffsetAfter: 20,
+        breakpoints: {
+          768: {
+            slidesOffsetBefore: 40,
+            slidesOffsetAfter: 40,
+          },
+          1280: {
+            slidesPerView: 4,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
+          },
+        },
+        pagination: {
+          el: '.clouds-rate__pagination',
+          type: 'bullets',
+          bulletClass: 'clouds-rate__pagination-bullet',
+          bulletActiveClass: 'is-active',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.clouds-rate__nav--next',
+          prevEl: '.clouds-rate__nav--prev',
+          disabledClass: 'is-disabled',
+        },
+      });
     }
   };
 
@@ -700,10 +728,10 @@
     let aboutHistorySlider;
     let activitiesSlider = null;
 
-    const breakpointChecker = function() {
+    const breakpointChecker = function () {
       let resizeTimeout;
       if (!resizeTimeout) {
-        resizeTimeout = setTimeout(function() {
+        resizeTimeout = setTimeout(() => {
           resizeTimeout = null;
           resizeHandlerTablet();
           resizeHandlerDesktop();
@@ -773,9 +801,9 @@
       }
     };
 
-    const getMobileSlider = function() {
+    const getMobileSlider = function () {
       if (aboutHistory) {
-        const slides = aboutHistory.querySelectorAll('.swiper-slide')
+        const slides = aboutHistory.querySelectorAll('.swiper-slide');
         const clear = (elements) => {
           [...elements].forEach((el) => {
             el.classList.remove('small');
@@ -930,7 +958,7 @@
       }
     };
 
-    const getMobilAndLargeSlider = function() {
+    const getMobilAndLargeSlider = function () {
       if (landingOffer) {
         landingOfferSlider = new Swiper(landingOffer, {
           direction: 'horizontal',
@@ -993,7 +1021,7 @@
       }
     };
 
-    const getTabletSlider = function() {
+    const getTabletSlider = function () {
       if (crmTrainingHead) {
         crmTrainingHeadSlider = new Swiper(crmTrainingHead, {
           direction: 'horizontal',
@@ -1021,7 +1049,7 @@
       }
     };
 
-    const getDesktopSliders = function() {
+    const getDesktopSliders = function () {
       if (crmMaterial) {
         crmMaterialSlider = new Swiper(crmMaterial, {
           direction: 'horizontal',
@@ -1072,7 +1100,7 @@
       }
     };
 
-    const getBetweenMobileAndDesktopSliders = function() {
+    const getBetweenMobileAndDesktopSliders = function () {
       if (navMenu) {
         navSlider = new Swiper(navMenu, {
           direction: 'horizontal',
@@ -1107,11 +1135,9 @@
               },
             });
           }
-        } else {
-          if (activitiesSlider) {
-            activitiesSlider.destroy(true, true);
-            activitiesSlider = null;
-          }
+        } else if (activitiesSlider) {
+          activitiesSlider.destroy(true, true);
+          activitiesSlider = null;
         }
       };
       activitiesChecker();
@@ -1124,14 +1150,14 @@
     const phoneMaskOption = {
       mask: '+{7} (000) 000-00-00',
     };
-    phoneElement.forEach(item => {
+    phoneElement.forEach((item) => {
       IMask(item, phoneMaskOption);
     });
   };
 
   const getInputLabelFields = () => {
     const inputs = document.querySelectorAll('._js-input-label');
-    inputs.forEach(item => {
+    inputs.forEach((item) => {
       const label = item.parentElement.querySelector('label');
       item.addEventListener('focus', () => {
         label.classList.add('_active');
@@ -1154,7 +1180,7 @@
         if (subList.style.maxHeight) {
           subList.style.maxHeight = null;
         } else {
-          subList.style.maxHeight = subList.scrollHeight + 'px';
+          subList.style.maxHeight = `${subList.scrollHeight}px`;
         }
       });
     });
@@ -1170,7 +1196,7 @@
         partnersList.classList.remove('_active');
       } else {
         partnersList.classList.add('_active');
-        partnersList.style.maxHeight = partnersList.scrollHeight + 'px';
+        partnersList.style.maxHeight = `${partnersList.scrollHeight}px`;
       }
     });
   };
@@ -1188,14 +1214,14 @@
       const imgUrl = mapBlock.getAttribute('data-placemark');
 
       map = new window.ymaps.Map('map', {
-          center: [59.733080, 30.085400],
-          zoom: 17,
-          controls: [],
-        },
-        {
-          autoFitToViewport: true,
-          suppressMapOpenBlock: true,
-        });
+        center: [59.733080, 30.085400],
+        zoom: 17,
+        controls: [],
+      },
+      {
+        autoFitToViewport: true,
+        suppressMapOpenBlock: true,
+      });
 
       myPlacemark = new window.ymaps.Placemark(map.getCenter(), {},
         {
@@ -1244,7 +1270,7 @@
       let height = 0;
 
       moreItem.forEach((item, index) => {
-        if (3 > index) {
+        if (index < 3) {
           height += item.clientHeight;
         }
       });
@@ -1263,7 +1289,7 @@
         moreButton.textContent = 'Скрыть';
         moreList.style.maxHeight = `${moreList.scrollHeight}px`;
       }
-    }
+    };
 
     const getHeightList = () => {
       if (!breakpoint.matches) {
@@ -1316,4 +1342,4 @@
   getMorePartners();
   getMap();
   initAboutHistoryMore();
-})();
+}());

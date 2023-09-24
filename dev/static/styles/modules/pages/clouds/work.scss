@@ -1,0 +1,12 @@
+.landing-stages.clouds-work {
+  margin: 0 0 35px 0;
+  border-bottom: 1px solid $pagination-color;
+
+  @media screen and (min-width: $desktop-size) {
+    margin: 0 0 55px 0;
+  }
+
+  .landing-stages__text {
+    margin-bottom: 0;
+  }
+}
