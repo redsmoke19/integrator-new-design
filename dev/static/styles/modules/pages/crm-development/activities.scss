@@ -24,6 +24,19 @@
   }
 }
 
+.activities__text {
+  font-size: 16px;
+  line-height: 21px;
+  color: #929292;
+  margin: 0 0 20px 0;
+
+  @media screen and (min-width: $small-desktop-size) {
+    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 700px;
+  }
+}
+
 .activities__wrapper {
   display: flex;
 
@@ -55,6 +68,12 @@
   @media screen and (min-width: $small-desktop-size) {
     display: flex;
   }
+}
+
+.activities-card__text {
+  font-size: 14px;
+  line-height: 19px;
+  margin: 0;
 }
 
 .activities-card__picture {

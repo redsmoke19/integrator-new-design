@@ -5,6 +5,15 @@
     margin: 0 0 55px 0;
   }
 
+  &--sber {
+    padding: 0 0 35px 0;
+    border-bottom: 1px solid #EDEDED;
+
+    @media screen and (min-width: $small-desktop-size) {
+      padding: 0 0 55px 0;
+    }
+  }
+
   &__title {
     font-size: 24px;
     font-weight: 600;

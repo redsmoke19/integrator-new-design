@@ -1,0 +1,49 @@
+-
+  var cards = [
+    {
+      img: ["static/images/content/sber/act-card-1.jpg", "261", "264", "img"],
+      icon: ["icon-enterprises", "activities-card__svg", "26", "26"],
+      title: "Производство и логистика",
+      text: "Гибкая воронка продаж, маркетинговые инструменты, проверка надежности партнеров, анализ сделок на основе ИИ"
+    },
+    {
+      img: ["static/images/content/sber/act-card-2.jpg", "261", "264", "img"],
+      icon: ["icon-headphone", "activities-card__svg", "26", "26"],
+      title: "Сфера услуг",
+      text: "Быстрая запись для клиентов, рейтинг поставщиков, контроль сотрудников, учет материалов на складе и прочее"
+    },
+    {
+      img: ["static/images/content/sber/act-card-3.jpg", "261", "264", "img"],
+      icon: ["icon-farm", "activities-card__svg", "26", "26"],
+      title: "Фарминдустрия",
+      text: "Планирование визитов, GPS-отслеживание сотрудников, построение маршрутов. Удобнвй сервис для совместной работы отделов"
+    },
+    {
+      img: ["static/images/content/sber/act-card-4.jpg", "261", "264", "img"],
+      icon: ["icon-landing-home", "activities-card__svg", "26", "26"],
+      title: "Недвижимость",
+      text: "Автоматизация всего цикла задач — от размещения объявлений до продажи объектов. Готовая воронка продаж для застройщиков. Менеджер задач и автоматизация"
+    },
+  ]
+
+section.activities
+  .container
+    h2.activities__title Решения для любого бизнеса
+    p.activities__text Качественно настроим SberCRM под любой бизнес. Решение подходит для компаний любого профиля - от организаторов мероприятий до производителей.
+    .activities__slider
+      .activities__wrapper.swiper-wrapper
+        each card in cards
+          .activities__item.swiper-slide
+            .activities-card
+              .activities-card__picture
+                img(src=card.img[0], width=card.img[1], height=card.img[2] alt=card.img[3])
+              .activities-card__content
+                .activities-card__icon
+                  +icon(card.icon[0], card.icon[1], card.icon[2], card.icon[3])
+                h3.activities-card__title !{card.title}
+                p.activities-card__text!=card.text
+      .activities__navigation
+        .activities__nav-bullets
+
+
+

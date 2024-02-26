@@ -80,4 +80,33 @@
       }
     }
   }
+
+  &.clouds-price--sber {
+    @media screen and (min-width: $desktop-size) {
+      border: none;
+      padding: 0;
+    }
+
+    .support-price__title {
+      margin: 0 0 20px 0;
+
+      @media screen and (min-width: $small-desktop-size) {
+        margin: 0 0 30px 0;
+      }
+    }
+
+    .support-price__head--gray {
+      background-color: #FFA800;
+    }
+
+    .support-price__name {
+      margin: 0;
+    }
+
+    .support-price__head {
+      @media screen and (min-width: $small-desktop-size) {
+        min-height: 94px;
+      }
+    }
+  }
 }

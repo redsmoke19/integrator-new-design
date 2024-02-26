@@ -7,6 +7,28 @@
     margin: 0 0 115px 0;
   }
 
+  &--sber {
+    padding: 0;
+    border-bottom: 1px solid #EDEDED;
+
+    @media screen and (min-width: $desktop-size) {
+      margin: 0 0 55px 0;
+      padding: 0 0 55px;
+    }
+
+    .clouds-advantages__list {
+      @media screen and (min-width: $desktop-size) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .clouds-advantages__item {
+      @media screen and (min-width: $desktop-size) {
+        align-items: flex-start;
+      }
+    }
+  }
+
   &__title {
     font-size: 24px;
     font-weight: 600;

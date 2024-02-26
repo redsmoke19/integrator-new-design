@@ -8,6 +8,12 @@
     padding: 15px 0 0;
   }
 
+  &--sber {
+    .support-hero__wrapper {
+      max-width: unset;
+    }
+  }
+
   &__content {
     @media screen and (min-width: $tablet-size) {
       display: flex;
@@ -80,6 +86,10 @@
     @media screen and (min-width: $small-desktop-size) {
       width: 420px;
       align-self: end;
+
+      &--sber {
+        width: 501px;
+      }
     }
   }
 }
